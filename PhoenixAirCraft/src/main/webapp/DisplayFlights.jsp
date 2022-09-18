@@ -11,6 +11,7 @@
 </head>
 <body>
 <table border="1">
+//table
  	<tr><td>Airline</td><td>Depature</td><td>Return</td><td>Price</td><td>Date and Time</td></tr>
   <%  
   Vector flight = (Vector)request.getAttribute("Flights");
