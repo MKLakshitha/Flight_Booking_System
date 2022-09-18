@@ -54,6 +54,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.jsp" class="active">Home</a></li>
           <li><a href="about.html">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
           <li><a href="pricing.html">Dashboard</a></li>
