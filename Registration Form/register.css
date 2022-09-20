@@ -188,3 +188,17 @@ body {
 .ct .option .radio {
     display: none;
 }
+
+/* .ct .option:hover {
+    background-color: #1fffff;
+    opacity: 50%;
+}
+
+.ct label {
+    cursor: pointer;
+}
+
+.ct .option .radio {
+    display: none;
+} */
+
