@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    position: relative;
+    width: 1440px;
+    height: 2304px;
+    background: #F5F8FF;
+    background-image: url(img/LinkedPages.png);
+    background-size: 1800px 960px;
+}
+
+.wrapper {
+    position: absolute;
+    width: 1130px;
+    height: 2100px;
+    left: 220px;
+    top: 140px;
+    right: 140px;
+    background: rgba(212, 237, 248, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.joinnow {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 90px;
+    top: 5px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 29px;
+    color: #0000FF;
+}
+
+.inner-wrapper {
+    position: absolute;
+    width: 1055px;
+    height: 2000px;
+    left: 35px;
+    top: 80px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.description {
+    position: absolute;
+    width: 925px;
+    height: 200px;
+    left: 55px;
+    top: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.inner-description {
+    position: absolute;
+    width: 925px;
+    height: 200px;
+    left: 55px;
+    top: 75px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 18px;
+    color: #000000;
+} 
+
+.pd {
+    position: absolute;
+    width: 205px;
+    height: 24px;
+    left: 55px;
+    top: 140px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.title {
+    position: absolute;
+    width: 38px;
+    height: 17px;
+    left: 55px;
+    top: 220px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.ct {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 250px;
+    top: 220px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.ct .options-container {
+    background-color: none;
+    color: #000000;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+
+.ct .selected .updown {
+    content: ;
+    background: url("img/UpDown.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 12px;
+    width: 18px;
+    right: 12px;
+    top: 10px;
+    transition: all0.4s;
+    opacity: 1;
+}
+
+.ct .options-container.active {
+    background: rgba(212, 237, 248, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    opacity: 1;
+    max-height: 500px;
+    overflow-y: 8px; 
+}
+
+.ct .options-container.active + .ct .selected .updown {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
+/* .ct .options-container::-webkit-scrollbar {
+    width: 8px;
+    background-color: #1fffff;
+    border-radius: 0 8px 8px 0;
+}
+
+.ct .options-container::-webkit-scrollbar-thumb {
+    background-color: #F5F8FF;
+    border-radius: 0 8px 8px 0;
+} */
+
+.ct .option, .selected {
+    padding: 6px 24px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-size: 17px;
+}
+
+.ct .selected .default {
+    opacity: 50%;
+}
+
+.ct .option:hover {
+    background-color: #1fffff;
+    opacity: 50%;
+}
+
+.ct label {
+    cursor: pointer;
+}
+
+.ct .option .radio {
+    display: none;
+}
