@@ -8,5 +8,16 @@ body
     background-image: url(img/LinkedPages.png);
     background-size: 1440px 768px;
     
+}
 
+.box
+{
+    position: absolute;
+    width: 1078px;
+    height: 531px;
+    left: 250px;
+    top: 95px;
+    background: rgba(212, 237, 248, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
 }
