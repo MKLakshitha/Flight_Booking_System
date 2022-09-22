@@ -29,12 +29,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Logis - v1.1.0
-  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
@@ -53,7 +48,6 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="index.jsp" class="active">Home</a></li>
           <li><a href="about.html">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
@@ -69,8 +63,8 @@
             </ul>
           </li>
          
-                   <li><a class="get-a-quote" href="#">SignUp/Login</a></li>
-				   <a href="#"> <img  src="assets/img/user-svgrepo-com.svg" alt="" style="visibility:visible; width:45px;height:45px; margin-left:0px; color:blue;"></a>
+               <li><a class="get-a-quote" href="#">SignUp/Login</a></li>
+				<a href="#"> <img  src="assets/img/user-svgrepo-com.svg" alt="" style="visibility:visible; width:45px;height:45px; margin-left:0px; color:blue;"></a>
 
 
         </ul>
@@ -181,14 +175,16 @@ go where you like. We are waiting for you.</p>
       
        <div>
        <p class="exploremap">Looking for Travel ideas? <a href="https://www.google.com/travel/explore?tfs=CBwQAxofahEIAxINL2cvMTFmM3R6MThuchIKMjAyMi0wOS0yNxofEgoyMDIyLTEwLTAxchEIAxINL2cvMTFmM3R6MThucnACggELCP___________wFAAUgBmAEB&tfu=GioaKAoSCeeYtbO1MkNAEaKkYXZAHFpAEhIJVCIzmmPaJEARoqRhdnDkUkA&authuser=0"><span>Explore Map</span></a></p>
+
+       <button type="submit" class="btn btn-primary" >Show Flights</button>
+      
        
-       <button type="submit" class="btn btn-primary">Search</button>
            </div>
            <img class="form-img4" src="assets/img/Location.svg" alt="">
           </form>
           </div>
   </section><!-- End Hero Section -->
-  
+
 <script>
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
