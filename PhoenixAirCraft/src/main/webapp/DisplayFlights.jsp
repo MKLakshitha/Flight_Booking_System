@@ -54,7 +54,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.jsp" class="active">Home</a></li>
-          <li><a href="about.html">Flight</a></li>
+          <li><a href="Flights.jsp">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
           <li><a href="pricing.html">Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -234,7 +234,7 @@ border-radius: 15px; border: 2px solid #120686;">
       <img src="assets/img/Phoenix.svg" class="img-fluid rounded-start" alt="..." style="width:150px; height:285px;">
     </div>
     <div class="col-md-8">
-      <div class="card-body" style="background-color: #3333ff; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      <div class="card-body" style="  background: linear-gradient(270deg, #0000FF 0%, #4B59DD 48.96%, #A7BAED 100%);      ; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px; ">
         <h5 class="card-title">
         

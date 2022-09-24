@@ -8,12 +8,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
 
-
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-
+ 
 public class database {
 public java.sql.Statement st;
 	
@@ -34,22 +34,8 @@ public java.sql.Statement st;
 		// TODO Auto-generated method stub
 		
 		
-		try {
-			connectToDB();
-			String sql="Select * from flights";
-			ResultSet rs = st.executeQuery(sql);
-			String depature = null,Return = null,DateTime = null;
-			
-            depature =rs.getString("depature");
-            Return = rs.getString("Return");
-            DateTime = rs.getString("DateTime");
-            
-			
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		connectToDB();
+		
 		
 		
 	}
