@@ -25,7 +25,7 @@ import java.sql.ResultSet;
 ######   ####### #### ######## ##    ##    ##       ########  #######   ######   #### ##    ## 
 */                                                            
 
-@WebServlet("/login")
+@WebServlet("/client_login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -71,7 +71,6 @@ public class Login extends HttpServlet {
 				dispatcher = request.getRequestDispatcher("login.jsp");
 			}
 			dispatcher.forward(request, response);
-			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
