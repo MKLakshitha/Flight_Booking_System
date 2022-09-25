@@ -24,6 +24,11 @@ import java.sql.ResultSet;
 ##     ## ##     ## ##     ##  ##  ##   ###    ##       ##     ## ##    ##   ##  ##   ### 
 ##     ## ########  ##     ## #### ##    ##    ########  #######   ######   #### ##    ##                                                            
 */
+
+
+/*
+ * This java class validates the administrator credentials and redirects to the Admin dashboard.
+ */
 @WebServlet("/login_staff_admin")
 public class Admin_Staff_Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
