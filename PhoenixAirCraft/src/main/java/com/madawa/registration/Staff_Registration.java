@@ -31,7 +31,6 @@ import java.sql.SQLException;
  * 
  */
 
-
 @WebServlet("/register_staff")
 public class Staff_Registration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -49,11 +48,20 @@ public class Staff_Registration extends HttpServlet {
 		String u_ref = request.getParameter("ref");
 		
 		RequestDispatcher dispatcher = null;
-		
-		PrintWriter out = response.getWriter();
-		out.println();
 		Connection con = null;
+		
+		/*
+		 * 
+		 * A reference code will be provided to each staff member. Depending on the code data will be redirected to the relevant database
+		 * 
+		 * */
+		
 		try {
+			/*
+			 * <<<staff_temp database>>>
+			 * This is visible to the admin and he will direct to the main database
+			 * To the grade_1_staff database
+			 * */
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/system_users?useSSL=false", "root", "N0t_root");
 			PreparedStatement pst = con.prepareStatement("Insert into staff_temp(nic,psswd,first_name,last_name,email,mobile,ref_code) values (?,?,?,?,?,?,?)");
@@ -84,5 +92,4 @@ public class Staff_Registration extends HttpServlet {
 			}
 		}
 	}
-
 }

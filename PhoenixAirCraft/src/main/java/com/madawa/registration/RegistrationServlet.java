@@ -13,7 +13,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /*
-
 ##     ##  ######  ######## ########     ########  ########  ######   ####  ######  ######## ########     ###    ######## ####  #######  ##    ## 
 ##     ## ##    ## ##       ##     ##    ##     ## ##       ##    ##   ##  ##    ##    ##    ##     ##   ## ##      ##     ##  ##     ## ###   ## 
 ##     ## ##       ##       ##     ##    ##     ## ##       ##         ##  ##          ##    ##     ##  ##   ##     ##     ##  ##     ## ####  ## 
@@ -21,8 +20,14 @@ import java.sql.SQLException;
 ##     ##       ## ##       ##   ##      ##   ##   ##       ##    ##   ##        ##    ##    ##   ##   #########    ##     ##  ##     ## ##  #### 
 ##     ## ##    ## ##       ##    ##     ##    ##  ##       ##    ##   ##  ##    ##    ##    ##    ##  ##     ##    ##     ##  ##     ## ##   ### 
  #######   ######  ######## ##     ##    ##     ## ########  ######   ####  ######     ##    ##     ## ##     ##    ##    ####  #######  ##    ## 
-
 */
+/*
+ * 
+ * Only users can Log here
+ * 
+ */
+
+
 @WebServlet("/register")
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

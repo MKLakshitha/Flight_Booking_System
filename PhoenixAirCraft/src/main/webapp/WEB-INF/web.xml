@@ -94,4 +94,14 @@
     <servlet-name>sampleServlet</servlet-name>
     <url-pattern>/sampleServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Admin_Login</display-name>
+    <servlet-name>Admin_Login</servlet-name>
+    <servlet-class>com.madawa.registration.Admin_Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Admin_Login</servlet-name>
+    <url-pattern>/Admin_Login</url-pattern>
+  </servlet-mapping>
 </web-app>
