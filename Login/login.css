@@ -34,3 +34,14 @@ body
     background-size: 428px 530px;
 
 } 
+
+.container
+{
+    position: absolute;
+    width: 522px;
+    height: 473px;
+    left: 500px;
+    top: 30px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
