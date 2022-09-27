@@ -34,3 +34,105 @@ body
     background-size: 428px 530px;
 
 } 
+
+.container
+{
+    position: absolute;
+    width: 522px;
+    height: 473px;
+    left: 500px;
+    top: 30px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.user
+{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 225px;
+    top: 10px;
+}
+.login
+{
+    position: absolute;
+    width: 173px;
+    height: 29px;
+    left: 175px;
+    top: 45px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+/* identical to box height */
+
+
+    color: #050555;
+
+}
+.form
+{
+    position: absolute;
+    width: 451px;
+    height: 167px;
+    left: 55px;
+    top: 110px;
+}
+
+.inputBox1
+{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 281px;
+    height: 29px;
+    left: 165px;
+    top: 62px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+
+}
+.inputBox2
+{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 281px;
+    height: 29px;
+    left: 165px;
+    top: 6px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+
+}
+
+.memberno
+{
+    position: absolute;
+    width: 143px;
+    height: 17px;
+    left: 16px;
+    top: 0.1px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+/* identical to box height */
+
+
+    color: #000000;
+
+}
