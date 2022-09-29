@@ -67,8 +67,8 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.jsp" >Home</a></li>
-          <li><a href="Flights.jsp" class="active">Flight</a></li>
+          <li><a href="index.jsp" class="active">Home</a></li>
+          <li><a href="Flights.jsp">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
           <li><a href="pricing.html">Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -81,17 +81,29 @@
 
             </ul>
           </li>
+          <%
+          HttpSession sessionUser = request.getSession(false);
+          String user= sessionUser.getAttribute("user").toString();
+          %>
          
-               <li><a class="get-a-quote" href="#">SignUp/Login</a></li>
-				<a href="#"> <img  src="assets/img/user-svgrepo-com.svg" alt="" style="visibility:visible; width:45px;height:45px; margin-left:0px; color:blue;"></a>
+               <li class="dropdown" style="margin-top:17px;"> <a href="myAccount.jsp"><span>Hi,<%=user %></span><img  src="assets/img/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
+               <a href="#"> </a>
+                           <ul>
+				<li><a href="ManageAccount.jsp">Manage Account</a></li>
+              <li><a href="login.jsp">Log Out</a></li>
+            
+
+            </ul>
+               
+               </li>
+				
 
 
         </ul>
       </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
-  <!-- End Header -->
+  </header>  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
 
@@ -102,7 +114,9 @@
 	<div class="box-book" style=" background-color: blue;border-radius:15px; margin-top:10px;height:70px; width:1295px; align-items:center; padding-top:12px;">
 	<div style="color:#fff; margin:7px; "> <span style="font-size:9px; padding-left:20px;">Read Instructions Carefully before proceeding</span><span style="float:right; padding-right:30px; padding-left:30px; font-weight:bold;"><img src="assets/img/icons8-circled-2-50.png"> PAY </span><span style="float:right; height:85px; font-weight:bold;padding: 0px 10px 0px 10px; background-color:#fff; color:blue; border-radius:10px;"><img src="assets/img/icons8-level-1-48.png">BOOKING DETAILS</span></div>
 	</div>
-	<div class="container-info" style="background: rgba(219, 239, 251, 0.5); border-radius:10px;  margin-top:40px; width:1295px; height: 200px; color:blue;" ><ul><li><p style="margin:10px 30px 0px 30px; color:black;">Passengers must have a medical certificate with a negative coronavirus (covid-19) RT-PCR test result. The test should have been conducted within 72 hours prior to undertaking the journey.</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Passengers must complete the self-declaration form on the Phoenix Airline portal <a href="">Portal here</a> before departure and to declare their travel history (of the past 14 days).</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Ensure to arrive to the airport before 5 hours from the departure time.</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Ensure that the weight of your luggage does not exceed the permitted weight. (Travel luggage - 30 kg, Hand luggage – 7kg)</p></li></ul>
+	<div style=""></div>
+	<div class="container-info" style="background: rgba(219, 239, 251, 0.5); border-radius:10px;  margin-top:40px; width:1295px; height: 400px; color:blue;" ><ul><li><p style="margin:10px 30px 0px 30px; color:black;">Passengers must have a medical certificate with a negative coronavirus (covid-19) RT-PCR test result. The test should have been conducted within 72 hours prior to undertaking the journey.</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Passengers must complete the self-declaration form on the Phoenix Airline portal <a href="">Portal here</a> before departure and to declare their travel history (of the past 14 days).</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Ensure to arrive to the airport before 5 hours from the departure time.</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Ensure that the weight of your luggage does not exceed the permitted weight. (Travel luggage - 30 kg, Hand luggage – 7kg)</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Passport holders from foreign countries who do not have a valid visa must get a landing permit visa from the Department of Immigration & Emigration prior to their departure.</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Verify that you have your valid Passport , eligible of the visa and the aircraft reservation ticket with you before departure.
+	</p></li></ul>
 	<input type="checkbox" name="check" style="margin:0px 15px 15px 900px;" ><span style="color:red;">I read all the instructions and conditions *</span></div>
 	          
 
@@ -298,8 +312,12 @@ try {
                 <div class="pricingTable pink">
                     <div class="pricingTable-header">
                     <% int  price = Integer.parseInt(rs.getString("Price"));
-                      
+                       
                        int total = (Integer.parseInt(passenger)*price);
+                       String Airline = rs.getString("Airline");
+                       String Depature = rs.getString("Depature");
+                       String Destination = rs.getString("Destination");
+                       String DateTime = rs.getString("DateTime");
                     %>
                         <h3 class="title">	        	<%=rs.getString("Airline") %></h3>
                         <div class="price-value">
@@ -320,14 +338,107 @@ try {
                         <li>Per Person : $<%=rs.getString("Price") %>.00 U.S</li>
                     </ul>
                     <div class="pricingTable-signup">
-                        <a href="#">PAY HERE</a>
+                        <a href="#"><form action="sample" method="get">
+                        <input type="submit"  class="btn btn-white btn-animate" value="PAY HERE" style="font-weight: bold; font-size:24px; body {
+    font-family: sans-serif;
+    background-color: #81d4fa;
+    font-weight: bold;
+}
+
+.text-box {
+    margin-left: 44vw;
+   margin-top: 42vh;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}"></form></a>
+                        <%
+                       
+                        HttpSession sessionPay = request.getSession(true);
+                	    sessionPay.setAttribute("id",id);
+                	    sessionPay.setAttribute("price",price);
+                	    sessionPay.setAttribute("total",total);
+                	    sessionPay.setAttribute("passenger",passenger);
+                	    sessionPay.setAttribute("Depature",Depature);
+                	    sessionPay.setAttribute("Destination",Destination);
+                	    sessionPay.setAttribute("DateTime",DateTime);
+                	    sessionPay.setAttribute("Airline",Airline);
+                	   %>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6" style="color:black; width:880px;"><h1 style="align-items:center;">Pay to Get your Boarding Pass</h1>
+            <div class="box-tkt" style="position: absolute;
+width: 827px;
+height: 404px;
+ background-image: url(assets/img/last.png);
+border: blur(2px);">
             <div class="up-ticket" style="position: absolute;
 width: 610px;
 height: 58px;
+
 
 
 background: linear-gradient(90deg, #FFFFFF 0%, #0000FF 100%);
@@ -335,7 +446,328 @@ border-radius: 30px;">      <img src="assets/img/Phoenix.svg" class="img-fluid r
 left: 10.57%;
 right: 85.2%; margin-bottom:1px; margin-top:8px;"><br><span style="color:blue; font-size:15px; margin-top:0px; margin-left:109px;">Phoenix AirLine</span>
 <span style="color:#fff; font-size:20px; margin-top:0px; margin-left:179px;">BOARDING PASS</span>
+
             </div>
+            
+                       <div class="up-ticket" style="position: absolute;
+width: 610px;
+height: 28px;top:376px;
+
+
+
+background: linear-gradient(90deg, #FFFFFF 0%, #0000FF 100%);
+border-radius: 30px;">     
+
+            </div>
+<div style="margin-left:605px ; color:black; position: absolute;
+width: 220px;
+height: 28px;top:376px;
+
+
+background: linear-gradient(270deg, #FFFFFF -7.38%, #0000FF 100%);
+border-radius: 30px;">
+    </div>
+ <div style="margin-left:605px ; color:black; position: absolute;
+width: 220px;
+height: 58px;
+
+
+background: linear-gradient(270deg, #FFFFFF -7.38%, #0000FF 100%);
+border-radius: 30px;"><br>
+    <span style="color:#fff; font-size:20px;  margin-left:30px ">BOARDING PASS</span>
+</div><div style="position: absolute;
+width: 372px;
+height: 0px;top:200px; right:630px;
+
+border: 0.1px solid rgba(0, 0, 0, 0.1);
+transform: rotate(90deg);"></div>
+<div style="position: absolute;
+width: 372px;
+height: 0px;top:200px; right:-182px;
+
+border: 0.1px solid rgba(0, 0, 0, 0.1);
+transform: rotate(90deg);"></div>
+<div style="position: absolute;
+width: 372px;
+height: 0px;top:200px; right:34px;
+
+border: 0.1px solid rgba(0, 0, 0, 0.1);
+transform: rotate(90deg);"></div>
+
+<div ><img src="assets/img/code.png" style="margin-top:62px;"></div><div style="position: absolute;
+width: 194px;
+height: 48px;
+left:105px;
+    top:90px;
+    
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+
+color: #000000;">Name of passenger:
+Sample Name</div>
+<div style="position: absolute;
+width: 74px;
+height: 48px;
+left: 300px;
+top: 90px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #000000;">Carrier:
+AC</div>
+<div style="position: absolute;
+width: 84px;
+height: 48px;
+left: 410px;
+top: 90px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #000000;">Flight No:
+AC2505</div><div style="position: absolute;
+width: 60px;
+height: 48px;
+left: 510px;
+top: 90px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #000000;"><div style="position: absolute;
+width: 64px;
+height: 48px;
+left: 7px;
+top: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+
+color: #000000;">Class:
+A</div>
+<div style="position: absolute;
+width: 135px;
+height: 48px;
+right: 330px;
+top: 70px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #000000;">From: Depature
+To: Destination</div>
+<div style="position: absolute;
+width: 135px;
+height: 48px;
+right: 137px;
+top: 70px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #000000;">Date:
+DD/MM/YYYY</div>
+<div style="position: absolute;
+width: 75px;
+height: 48px;
+right: 85px;
+top: 70px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #000000;">Luggage:
+Yes</div>
+<div style="position: absolute;
+width: 65px;
+height: 48px;
+left: 7px;
+top: 70px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #000000;">Seat:
+5A
+</div><div style="position: absolute;
+width: 66px;
+height: 67px;
+right: 397px;
+top: 159px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #0000FF;
+">GATE
+B12
+
+</div><div style="position: absolute;
+width: 146px;
+height: 67px;
+right: 127px;
+top: 159px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #0000FF;
+">BORDING TIME
+HH.MM
+</div>
+<div style="position: absolute;
+width: 163px;
+height: 18px;
+top: 181px;right:-36px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+text-align: center;
+
+color: #000000;
+">EBSX 8242365K546E
+</div>
+<div style="position: absolute;
+width: 175px;
+height: 44px;
+left: 115px;
+top: 00px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;">Name of passenger:
+Sample Name</div>
+<div style="position: absolute;
+width: 135px;
+height: 44px;
+left: 115px;
+top: 70px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;">From: Depature
+To: Destination</div><div style="position: absolute;
+position: absolute;
+width: 152px;
+height: 17px;
+left:115px;
+top: 140px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 2px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;">EBSX 8242365K546E</div>
+<div style="position: absolute;
+width: 45px;
+height: 44px;
+left: 115px;
+top: 170px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 22px;
+
+color: #000000;">Seat:
+5A</div>
+<div style="position: absolute;
+width: 100px;
+height: 44px;
+left: 195px;
+top: 170px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 22px;
+
+color: #000000;">Date:
+DD/MM/YYYY</div>
+<div style="position: absolute;
+width: 52px;
+height: 43px;
+left: 110px;
+top: 230px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+
+color: #0000FF;">GATE
+B12</div>
+<div style="position: absolute;
+width: 117px;
+height: 43px;
+left: 195px;
+top: 230px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+
+color: #0000FF;">BORDING TIME
+HH.MM</div>
+
+</div>
+</div>
             </div>
 
         </div>

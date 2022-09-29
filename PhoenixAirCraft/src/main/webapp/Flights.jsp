@@ -54,7 +54,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
+    <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
        
       <a href="index.html" class="logo d-flex align-items-center">
@@ -67,8 +67,8 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.jsp" >Home</a></li>
-          <li><a href="Flights.jsp" class="active">Flight</a></li>
+          <li><a href="index.jsp" class="active">Home</a></li>
+          <li><a href="Flights.jsp">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
           <li><a href="pricing.html">Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -82,23 +82,36 @@
             </ul>
           </li>
          
-               <li><a class="get-a-quote" href="#">SignUp/Login</a></li>
-				<a href="#"> <img  src="assets/img/user-svgrepo-com.svg" alt="" style="visibility:visible; width:45px;height:45px; margin-left:0px; color:blue;"></a>
+                         <%
+          HttpSession sessionUser = request.getSession(false);
+          String user= sessionUser.getAttribute("user").toString();
+          %>
+         
+               <li class="dropdown" style="margin-top:17px;"> <a href="myAccount.jsp"><span>Hi,<%=user %></span><img  src="assets/img/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
+               <a href="#"> </a>
+                           <ul>
+				<li><a href="ManageAccount.jsp">Manage Account</a></li>
+              <li><a href="login.jsp">Log Out</a></li>
+            
+
+            </ul>
+               
+               </li>
+				
 
 
         </ul>
       </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
-  <!-- End Header -->
+  </header>  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
 
   <section id="hero" class="hero d-flex align-items-center">
   
 
-<div class="container" style="background-color: #5F7DDE; border-radius:15px;">
+<div class="container" style="background-color: #5F7DDE; border-radius:15px; margin-top:30px;">
 	<div class="row" style="color:blue; ">
 	    <%  
     Vector flight = (Vector)request.getAttribute("Flights");
@@ -165,13 +178,15 @@ try {
 
         <tfoot>
             <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Flight ID</th>
+                <th>Airline</th>
+                <th>Depature</th>
+                <th>Destination</th>
+                <th>Date and Time</th>
+                <th>Price</th>
+                 <th>Passengers</th>
+                <th>Re Enter ID</th>
+                <th>Book Here</th>
             </tr>
         </tfoot>
                <% 	

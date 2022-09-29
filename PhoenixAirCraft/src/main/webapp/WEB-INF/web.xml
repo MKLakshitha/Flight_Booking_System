@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
-  <display-name>PhoenixAirCraft</display-name>
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
   <servlet>
     <description></description>
     <display-name>J2EE</display-name>
@@ -14,6 +10,13 @@
     <servlet-name>J2EE</servlet-name>
     <url-pattern>/J2EE</url-pattern>
   </servlet-mapping>
+  <display-name>PhoenixAirCraft</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
   <servlet>
     <description></description>
     <display-name>Cookies</display-name>
@@ -96,12 +99,12 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Admin_Login</display-name>
-    <servlet-name>Admin_Login</servlet-name>
-    <servlet-class>com.madawa.registration.Admin_Login</servlet-class>
+    <display-name>pay</display-name>
+    <servlet-name>pay</servlet-name>
+    <servlet-class>com.Kavindu.pay</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Admin_Login</servlet-name>
-    <url-pattern>/Admin_Login</url-pattern>
+    <servlet-name>pay</servlet-name>
+    <url-pattern>/pay</url-pattern>
   </servlet-mapping>
 </web-app>

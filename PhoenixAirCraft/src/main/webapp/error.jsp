@@ -55,7 +55,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.jsp" class="active">Home</a></li>
-          <li><a href="about.html">Flight</a></li>
+          <li><a href="Flights.jsp">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
           <li><a href="pricing.html">Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -69,8 +69,17 @@
             </ul>
           </li>
          
-               <li><a class="get-a-quote" href="#">SignUp/Login</a></li>
-				<a href="#"> <img  src="assets/img/user-svgrepo-com.svg" alt="" style="visibility:visible; width:45px;height:45px; margin-left:0px; color:blue;"></a>
+               <li class="dropdown" style="margin-top:17px;"> <a href="myAccount.jsp"><span>Hi,user<% %></span><img  src="assets/img/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
+               <a href="#"> </a>
+                           <ul>
+				<li><a href="ManageAccount.jsp">Manage Account</a></li>
+              <li><a href="login.jsp">Log Out</a></li>
+            
+
+            </ul>
+               
+               </li>
+				
 
 
         </ul>
@@ -80,117 +89,21 @@
   </header><!-- End Header -->
   <!-- End Header -->
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center" style="margin-top: -192px; margin-bottom:-80px; opacity:0.6;" >
-    <div class="container" style="opacity:1;">
-      
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-       
-               
-          
+<!-- End Hero Section -->
+    <div align="center"  style="background-image :url(assets/img/worldmap.webp);  /* Full height */
+  height: 100%;
 
-          
-
-        <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-          <img src="assets/img/" class="img-fluid mb-3 mb-lg-0" alt="">
-        </div>
-
-      </div>
-       
-    <form action="FlightServlet" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200" autocomplete="off" method="post">
-    
-
-  
-    <img class="form-img" src="assets/img/Depart.svg" alt="">
-    
-          <div class="autocomplete" style="color:black;">
-       
-    <ul>
-              <li class="dropdown"><a href="#"><span>Departure</span> </a>
-                <ul>
-                  <li><a href="#" >Sri Lanka</a></li>
-                  <li><a href="#" >Japan</a></li>
-                  <li><a href="#" >India</a></li>
-                  <li><a href="#" >Russia</a></li>
-                  <li><a href="#">UK</a></li>
-                </ul>
-              </li>
-             
-      </ul>
-       <input type="text" name="From" placeholder="Sri Lanka" class="text-form1" id="myInput" >
-      </div>  
-      <img class="form-img2" src="assets/img/Down Icon.svg" alt="">
-
-
-
-          <img class="form-img" src="assets/img/Return.svg" alt="">
-        <div class="autocomplete" style="color:black;">
-         
-    <ul>
-              <li class="dropdown"><a href="#"><span>Return</span> </a>
-                <ul>
-                  <li><a href="#">Australia</a></li>
-                  <li><a href="#">Singappore</a></li>
-                  <li><a href="#">USA</a></li>
-                  <li><a href="#">German</a></li>
-                  <li><a href="#">France</a></li>
-                </ul>
-              </li>
-             
-      </ul>
-            <input type="text" name="To" placeholder="Japan" class="text-form1" id="myInput1">
-      </div>
-     
-      <img class="form-img2" src="assets/img/Down Icon.svg" alt="">
-      <img class="form-img" src="assets/img/Passenger.svg" alt="">
-      <div >
-      
-       <ul>
-              <li class="dropdown"><a href="#"><span>Passengers</span> </a>
-                <ul>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                </ul>
-              </li>
-             
-      </ul>
-             <input type="number" name="passengers" placeholder="0" class="text-form1">
-      </div>
-       <img class="form-img2" src="assets/img/Down Icon.svg" alt="">
-             <img class="form-img" src="assets/img/calendar-svgrepo-com.svg" alt="">
-      <div >
-      
-       
-      <ul>
-              <li class="dropdown"><a href="#"><span>Date</span> </a>
-             
-      </ul>
-
-             
-      
-      <input type="datetime-local" id="DateLocal" class="text-form1" name="date">
-             
-      </div>
-
-      
-       <div>
-       <p class="exploremap">Looking for Travel ideas? <a href="https://www.google.com/travel/explore?tfs=CBwQAxofahEIAxINL2cvMTFmM3R6MThuchIKMjAyMi0wOS0yNxofEgoyMDIyLTEwLTAxchEIAxINL2cvMTFmM3R6MThucnACggELCP___________wFAAUgBmAEB&tfu=GioaKAoSCeeYtbO1MkNAEaKkYXZAHFpAEhIJVCIzmmPaJEARoqRhdnDkUkA&authuser=0"><span>Explore Map</span></a></p>
-       
-       <button type="submit" class="btn btn-primary">Show Flights</button>
-           </div>
-           <img class="form-img4" src="assets/img/Location.svg" alt="">
-          </form>
-          </div>
-  </section><!-- End Hero Section -->
-    <div align="center"><main>
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  "><main>
  <svg
      viewBox="0 0 541.17206 328.45184"
      height="328.45184"
      width="541.17206"
      id="svg2"
-     version="1.1">
+     version="1.1" style="margin-top:220px;">
     <metadata
        id="metadata8">
     </metadata>
@@ -389,7 +302,7 @@
       </g>
     </g>
   </svg>
-  <div>  <a href="index.jsp"><button type="submit" class="btn btn-primary" style="margin-left:-10px; margin-top:-2px;">Go Back</button></a></div>
+  <div>  <a href="index.jsp"><button type="submit" class="btn btn-primary" style="">Go Back</button></a></div>
   <p id="errorText"> <div class="m-4">
     <div class="alert alert-danger alert-dismissible fade show">
         <h4 class="alert-heading"><i class="bi-exclamation-octagon-fill"></i>  Oops! there is no any flight from that Date!</h4>
@@ -417,7 +330,7 @@ main{
 	font-family: 'Merriweather Sans', sans-serif;}
 	#errorText{
 		font-size: 22px;
-		margin: 14px 0;}
+		margin: 0px 0;}
 	#errorLink{
 		font-size: 20px;
 		padding: 12px;

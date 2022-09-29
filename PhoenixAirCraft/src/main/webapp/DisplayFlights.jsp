@@ -67,17 +67,29 @@
 
             </ul>
           </li>
+          <%
+          HttpSession sessionUser = request.getSession(false);
+          String user= sessionUser.getAttribute("user").toString();
+          %>
          
-               <li><a class="get-a-quote" href="#">SignUp/Login</a></li>
-				<a href="#"> <img  src="assets/img/user-svgrepo-com.svg" alt="" style="visibility:visible; width:45px;height:45px; margin-left:0px; color:blue;"></a>
+               <li class="dropdown" style="margin-top:17px;"> <a href="myAccount.jsp"><span>Hi,<%=user %></span><img  src="assets/img/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
+               <a href="#"> </a>
+                           <ul>
+				<li><a href="ManageAccount.jsp">Manage Account</a></li>
+              <li><a href="login.jsp">Log Out</a></li>
+            
+
+            </ul>
+               
+               </li>
+				
 
 
         </ul>
       </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
-  <!-- End Header -->
+  </header>  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center" style="margin-bottom: -270px;
@@ -227,11 +239,11 @@ try {
 			
 	        while(rs.next()){%>
 	        <div class="card mb-3" style="max-width: 540px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 15px; border: 2px solid #120686;">
+border-radius: 15px; ">
   <div class="row g-0">
   
     <div class="col-md-4">
-      <img src="assets/img/Phoenix.svg" class="img-fluid rounded-start" alt="..." style="width:150px; height:285px;">
+      <img src="assets/img/fly.png" class="img-fluid rounded-start" alt="..." style="border-radius: 15px;">
     </div>
     <div class="col-md-8">
       <div class="card-body" style="  background: linear-gradient(270deg, #0000FF 0%, #4B59DD 48.96%, #A7BAED 100%);      ; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -266,11 +278,12 @@ border-radius: 15px; ">
               
            <div id="myModal" class="modal">
 
+<!-- Help Me -->
   <!-- Modal content -->
   <div class="modal-content">
   <div class="container" style="
 width: 390px;
-height: 428px;
+height: 750px;
 
 
 background: #FFFFFF;
@@ -281,8 +294,15 @@ border-radius: 15px;">
      <div class="data" style="color:black; margin-top:235px;">
       <h3 align="center">How We Are Coping with Covid-19</h3>
       <p align="center">We Take all the necessary precautions<br> related to COVID-19.</p>
-     <a href="covid.jsp"><button type="button" name="details" class="btn btn-primary" style="background-color:red; width:150px; height:45px;align-items:center;border: 1px solid black; border-radius: 20px;">Details</button></a>
-     <a href="DisplayTicket.jsp"><button type="button" name="details" class="btn btn-primary" style="background-color:blue; width:150px;height:45px; margin-left:60px;align-items:center;border: 1px solid #fff; border-radius: 20px;">Confirm Book</button></a>
+       <a href="covid.jsp"><button type="button" name="details" class="btn btn-primary" style="background-color:red; width:150px; height:45px;align-items:center;border: 1px solid black; margin-left:110px; border-radius: 20px;">Details</button></a>
+      <form action="sample" method="post">  
+      <table style="font-weight:bold; margin:15px;  align-items:center;" >
+  <tr><td >Flight ID</td><td ><input type="text" name="id" style="width:75px; border-radius:15px; heigth:35px; margin-left:10px; text-align:center; "></td> 
+  <td style="font-weight:bold;">Passengers</td><td style="width:75px; border-radius:15px; heigth:35px; ">  <input type="text" name="passengers" style="width:75px; border-radius:15px; heigth:35px;   text-align:center;"> </td></tr>
+
+    </table>
+     <a href="DisplayTicket.jsp"><input type="submit" name="details" class="btn btn-primary" value="Confirm Book" style="background-color:blue; width:150px;height:45px; margin-left:110px; margin-bottom:3px;align-items:center;border: 1px solid #fff; border-radius: 20px;"></a>
+     </form> 
      </div>
     </div>
      
@@ -309,13 +329,13 @@ border-radius: 15px;">
 /* Modal Content/Box */
 .modal-content {
 
-background: black;
+background: linear-gradient(270deg, #0000FF 0%, #4B59DD 48.96%, #A7BAED 100%); ;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 30%;
-  height: 60%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 72%;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;
  /* Could be more or less, depending on screen size */
 }
