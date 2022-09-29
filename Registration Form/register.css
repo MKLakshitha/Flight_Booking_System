@@ -345,3 +345,81 @@ body {
     border-radius: 10px;
     border-style: hidden;
 }
+
+.cd {
+    position: absolute;
+    width: 205px;
+    height: 24px;
+    left: 55px;
+    top: 660px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.cor {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 740px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.cor-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 735px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+.pn {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 790px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.pn-box {
+    position: absolute;
+    width: 105px;
+    height: 29px;
+    left: 320px;
+    top: 785px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+.pn-text {
+    position: absolute;
+    width: 155px;
+    height: 29px;
+    left: 440px;
+    top: 785px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;
+}
