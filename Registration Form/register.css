@@ -386,7 +386,7 @@ body {
     border-style: hidden;
 }
 
-.pn {
+.phone {
     position: absolute;
     width: 219px;
     height: 17px;
@@ -400,7 +400,7 @@ body {
     color: #000000;
 }
 
-.pn-box {
+.phone-box {
     position: absolute;
     width: 105px;
     height: 29px;
@@ -412,7 +412,7 @@ body {
     border-style: hidden;
 }
 
-.pn-text {
+.phone-text {
     position: absolute;
     width: 155px;
     height: 29px;
