@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
 
 body
 {
@@ -15,8 +15,8 @@ body
     position: absolute;
     width: 1078px;
     height: 531px;
-    left: 250px;
-    top: 95px;
+    left: 150px;
+    top: 70px;
     background: rgba(212, 237, 248, 0.5);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -27,8 +27,8 @@ body
     position: absolute;
     width: 428px;
     height: 530px;
-    left: 0px;
-    top: 0px;
+    left: 150px;
+    top: 70px;
     background-image: url(images/lOGIN.png);
     border-radius: 15px 0px 0px 15px;
     background-size: 428px 530px;
@@ -49,11 +49,16 @@ body
 .user
 {
     position: absolute;
-    width: 55px;
-    height: 55px;
-    left: 225px;
-    top: 10px;
+    width: 35px;
+    height: 35px;
+    left: 250px;
+    top: 25px;
 }
+
+.userimage{
+    color: #0000FF;
+}
+
 .login
 {
     position: absolute;
@@ -61,7 +66,6 @@ body
     height: 29px;
     left: 175px;
     top: 45px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
@@ -85,35 +89,31 @@ body
 .inputBox1
 {
     box-sizing: border-box;
-
     position: absolute;
-    width: 281px;
+    width: 210px;
     height: 29px;
-    left: 165px;
-    top: 62px;
-
+    left: 185px;
+    top: 40px;
     background: #FFFFFF;
     border: 1px solid #000000;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-
-
+    border-style: none;
 }
+
 .inputBox2
 {
     box-sizing: border-box;
-
     position: absolute;
-    width: 281px;
+    width: 210px;
     height: 29px;
-    left: 165px;
-    top: 6px;
-
+    left: 185px;
+    top: 95px;
     background: #FFFFFF;
     border: 1px solid #000000;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-
+    border-style: none;
 
 }
 
@@ -123,14 +123,118 @@ body
     width: 143px;
     height: 17px;
     left: 16px;
-    top: 0.1px;
-
+    top: 30px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
 /* identical to box height */
+
+
+    color: #000000;
+
+}
+
+.password
+{
+    position: absolute;
+    width: 67px;
+    height: 17px;
+    left: 16px;
+    top: 85px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+/* identical to box height */
+
+
+    color: #000000;
+
+}
+
+.checkBox
+{
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 12px;
+    top: 152px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.signed
+{
+    position: absolute;
+    width: 106px;
+    height: 15px;
+    left: 42px;
+    top: 140px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #3F3C3C;
+
+}
+.forget
+{
+    position: absolute;
+width: 138px;
+height: 15px;
+left: 12px;
+top: 180px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #0000FF;
+
+}
+
+.inputBox
+{
+    box-sizing: border-box;
+    position: absolute;
+    width: 110px;
+    height: 26px;
+    left: 280px;
+    top: 250px;
+    color: #FFFFFF;
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.join
+{
+    position: absolute;
+    width: 171px;
+    height: 17px;
+    left: 137px;
+    top: 300px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
 
 
     color: #000000;
