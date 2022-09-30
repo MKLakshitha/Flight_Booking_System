@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
 		String u_username = request.getParameter("user");
 		String u_psswd = request.getParameter("password");
 		String memberNo = request.getParameter("memberno");
-		HttpSession session = request.getSession();
+		
 		RequestDispatcher dispatcher = null;
 		response.sendRedirect("index.jsp");
 		HttpSession sessionUser = request.getSession(true);

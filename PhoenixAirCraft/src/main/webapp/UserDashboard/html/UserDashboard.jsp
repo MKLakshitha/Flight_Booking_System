@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
-
+<html dir="ltr" lang="en">        
+<%@page import="java.sql.*" %>
+<%@page import="com.Kavindu.*"%>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +21,37 @@
     <link href="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../dist/css/style.min.css" rel="stylesheet">
+      <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!-- help me -->
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <script src="https://kit.fontawesome.com/83325a7e2a.js" crossorigin="anonymous"></script>
+  <!-- Favicons -->
+  <link href="assets/img/Phoenix.svg" rel="icon">
+  <link href="assets/img/Phoenix.svg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/Template-CreditCardPayment/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/Template-CreditCardPayment/font-awesome/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="assets/Template-CreditCardPayment/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="assets/Template-CreditCardPayment/bootstrap/js/bootstrap.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,6 +61,70 @@
 </head>
 
 <body>
+   <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+       
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+                                   <img src="../assets/images/Phoenix.svg" style="width:50px; heigth:50px;" alt="homepage" class="" />
+        <h1>Phoenix Airline</h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.jsp" >Home</a></li>
+          <li><a href="Flights.jsp">Flight</a></li>
+          <li><a href="services.html">Tickets</a></li>
+          <li><a href="UserDashboard/html/UserDashboard.jsp" class="active">Dashboard</a></li>
+          <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+				<li><a href="about.html">Phoenix Airline</a></li>
+              <li><a href="pricing.html">Offers</a></li>
+              <li><a href="services.html">Services</a></li>       
+              <li><a href="contact.html">Contact Us</a></li>  
+              <li><a  href="get-a-quote.html">Get a Quote</a></li>
+
+            </ul>
+          </li>            
+
+            </ul>
+                         <%
+          HttpSession sessionUser = request.getSession(false);
+          String user= sessionUser.getAttribute("user").toString();
+          %>
+               </li>
+				        <ul class="navbar-nav float-end" style="margin-right:40px; margin-top:-20px;" >
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown" style="text-allign:center;">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/icons8-male-user-50.png" alt="user" class="rounded-circle" width="31" style="margin-left:30px;">Hi,<%=user %>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="pages-profile.jsp"><i class="ti-user m-r-5 m-l-5"></i>
+                                    My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i>
+                                    My Balance</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i>
+                                    Inbox</a>
+                            </ul>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+
+
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+ 
+ <div style="margin-top:60px;">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -57,18 +153,12 @@
                         <b class="logo-icon">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/Phoenix.svg" style="width:50px; heigth:50px;" alt="homepage" class="" />
                             <!-- Light Logo icon -->
 
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
-                        <span class="logo-text">
-                            <!-- dark Logo text -->
-                            <img src="../assets/images/Phoenix.png" style="width:160px; left:10px;" alt="homepage" class="dark-logo" />
-                            <!-- Light Logo text -->
-                            <img src="../assets/images/logo-light-text.png" style="left:10px;"class="light-logo" alt="homepage" />
-                        </span>
+
                     </a>
                     <!-- ============================================================== -->
                     <!-- End Logo -->
@@ -88,38 +178,18 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
+                        <li class="nav-item search-box" style="margin-top:30px; width:100px;"> <a class="nav-link waves-effect waves-dark"
                                 href="javascript:void(0)"><i class="mdi mdi-magnify me-1"></i> <span class="font-16">Search</span></a>
                             <form class="app-search position-absolute">
-                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a
-                                    class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                                <input type="text" class="form-control" placeholder="Search " style="width:1100px;"> <a
+                                    class="srh-btn"><i class="mdi mdi-window-close" style=""></i></a>
                             </form>
                         </li>
                     </ul>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
-                    <ul class="navbar-nav float-end">
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/images/users/profile.png" alt="user" class="rounded-circle" width="31">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="pages-profile.jsp"><i class="ti-user m-r-5 m-l-5"></i>
-                                    My Profile</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i>
-                                    My Balance</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i>
-                                    Inbox</a>
-                            </ul>
-                        </li>
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                    </ul>
+
                 </div>
             </nav>
         </header>
@@ -129,21 +199,21 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin6">
+        <aside class="left-sidebar" data-sidebarbg="skin6" style="margin-top:100px;">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                                href="UserDashboard.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="pages-profile.jsp" aria-expanded="false"><i
                                     class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
-                                    class="hide-menu">Table</span></a></li>
+                                href="UserBooking.jsp" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
+                                    class="hide-menu">My Bookings</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Icon</span></a></li>
@@ -155,7 +225,7 @@
                                     class="hide-menu">404</span></a></li>
                         <li class="text-center p-40 upgrade-btn">
                             <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/"
-                                class="btn d-block w-100 btn-danger text-white" target="_blank">Upgrade to Pro</a>
+                                class="btn d-block w-100 btn-danger text-white" target="_blank">Tell Us</a>
                         </li>
                     </ul>
 
@@ -188,7 +258,7 @@
                     <div class="col-6">
                         <div class="text-end upgrade-btn">
                             <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/" class="btn btn-primary text-white"
-                                target="_blank">Upgrade to Pro</a>
+                                target="Flights.jsp">Book a Flight</a>
                         </div>
                     </div>
                 </div>
@@ -203,106 +273,32 @@
                 <!-- ============================================================== -->
                 <!-- Sales chart -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-md-flex align-items-center">
-                                    <div>
-                                        <h4 class="card-title">Sales Summary</h4>
-                                        <h6 class="card-subtitle">Ample admin Vs Pixel admin</h6>
-                                    </div>
-                                    <div class="ms-auto d-flex no-block align-items-center">
-                                        <ul class="list-inline dl d-flex align-items-center m-r-15 m-b-0">
-                                            <li class="list-inline-item d-flex align-items-center text-info"><i class="fa fa-circle font-10 me-1"></i> Ample
-                                            </li>
-                                            <li class="list-inline-item d-flex align-items-center text-primary"><i class="fa fa-circle font-10 me-1"></i> Pixel
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="amp-pxl mt-4" style="height: 350px;">
-                                    <div class="chartist-tooltip"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Weekly Stats</h4>
-                                <h6 class="card-subtitle">Average sales</h6>
-                                <div class="mt-5 pb-3 d-flex align-items-center">
-                                    <span class="btn btn-primary btn-circle d-flex align-items-center">
-                                        <i class="mdi mdi-cart-outline fs-4" ></i>
-                                    </span>
-                                    <div class="ms-3">
-                                        <h5 class="mb-0 fw-bold">Top Sales</h5>
-                                        <span class="text-muted fs-6">Johnathan Doe</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge bg-light text-muted">+68%</span>
-                                    </div>
-                                </div>
-                                <div class="py-3 d-flex align-items-center">
-                                    <span class="btn btn-warning btn-circle d-flex align-items-center">
-                                        <i class="mdi mdi-star-circle fs-4" ></i>
-                                    </span>
-                                    <div class="ms-3">
-                                        <h5 class="mb-0 fw-bold">Best Seller</h5>
-                                        <span class="text-muted fs-6">MaterialPro Admin</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge bg-light text-muted">+68%</span>
-                                    </div>
-                                </div>
-                                <div class="py-3 d-flex align-items-center">
-                                    <span class="btn btn-success btn-circle d-flex align-items-center">
-                                        <i class="mdi mdi-comment-multiple-outline text-white fs-4" ></i>
-                                    </span>
-                                    <div class="ms-3">
-                                        <h5 class="mb-0 fw-bold">Most Commented</h5>
-                                        <span class="text-muted fs-6">Ample Admin</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge bg-light text-muted">+68%</span>
-                                    </div>
-                                </div>
-                                <div class="py-3 d-flex align-items-center">
-                                    <span class="btn btn-info btn-circle d-flex align-items-center">
-                                        <i class="mdi mdi-diamond fs-4 text-white" ></i>
-                                    </span>
-                                    <div class="ms-3">
-                                        <h5 class="mb-0 fw-bold">Top Budgets</h5>
-                                        <span class="text-muted fs-6">Sunil Joshi</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge bg-light text-muted">+15%</span>
-                                    </div>
-                                </div>
 
-                                <div class="pt-3 d-flex align-items-center">
-                                    <span class="btn btn-danger btn-circle d-flex align-items-center">
-                                        <i class="mdi mdi-content-duplicate fs-4 text-white" ></i>
-                                    </span>
-                                    <div class="ms-3">
-                                        <h5 class="mb-0 fw-bold">Best Designer</h5>
-                                        <span class="text-muted fs-6">Nirav Joshi</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge bg-light text-muted">+90%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!-- ============================================================== -->
                 <!-- Sales chart -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
                 <!-- Table -->
                 <!-- ============================================================== -->
+                <%  
+  
+
+
+try {
+	        Statement st;
+	        String sql;
+			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+			st= (Statement) con.createStatement();
+			
+
+			    
+		    sql ="Select * from Flights ";
+			
+			ResultSet rs = st.executeQuery(sql);
+			
+	        %>
                 <div class="row">
                     <!-- column -->
                     <div class="col-12">
@@ -311,124 +307,73 @@
                                 <!-- title -->
                                 <div class="d-md-flex">
                                     <div>
-                                        <h4 class="card-title">Top Selling Products</h4>
-                                        <h5 class="card-subtitle">Overview of Top Selling Items</h5>
+                                        <h4 class="card-title">All Flights</h4>
+                                        <h5 class="card-subtitle" style="font-size:14px">Overview of Available Flights to Tour</h5>
                                     </div>
                                     <div class="ms-auto">
                                         <div class="dl">
                                             <select class="form-select shadow-none">
-                                                <option value="0" selected>Monthly</option>
-                                                <option value="1">Daily</option>
-                                                <option value="2">Weekly</option>
-                                                <option value="3">Yearly</option>
+                                                <option value="0" selected>5</option>
+                                                <option value="1">10</option>
+                                                <option value="2">20</option>
+                                                <option value="3">25</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- title -->
                                 <div class="table-responsive">
-                                    <table class="table mb-0 table-hover align-middle text-nowrap">
+                                    <table class="table mb-0 table-hover align-middle text-nowrap" id="example">
                                         <thead>
                                             <tr>
-                                                <th class="border-top-0">Products</th>
-                                                <th class="border-top-0">License</th>
-                                                <th class="border-top-0">Support Agent</th>
-                                                <th class="border-top-0">Technology</th>
-                                                <th class="border-top-0">Tickets</th>
-                                                <th class="border-top-0">Sales</th>
-                                                <th class="border-top-0">Earnings</th>
+                                                <th class="border-top-0">Flight ID</th>
+                                                
+                                                <th class="border-top-0">Depature</th>
+                                                <th class="border-top-0">Destination</th>
+                                                <th class="border-top-0">Date and Time</th>
+                                                <th class="border-top-0">Price</th>
+                                               
+
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <%while(rs.next()){
+     											 %>
+
+                
+
                                             <tr>
+                                            
                                                 <td>
                                                     <div class="d-flex align-items-center">
                                                         <div class="m-r-10"><a
-                                                                class="btn btn-circle d-flex btn-info text-white">EA</a>
+                                                                class="btn btn-circle d-flex btn-info text-white"><%=rs.getString("id") %></a>
                                                         </div>
                                                         <div class="">
-                                                            <h4 class="m-b-0 font-16">Elite Admin</h4>
+                                                            <h4 class="m-b-0 font-16"><%=rs.getString("Airline") %></h4>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>Single Use</td>
-                                                <td>John Doe</td>
+                                                <td><%=rs.getString("Depature") %></td>
+                                                <td><%=rs.getString("Destination") %></td>
                                                 <td>
-                                                    <label class="badge bg-danger">Angular</label>
+                                                    <label class="badge bg-success"><%=rs.getString("DateTime") %></label>
                                                 </td>
-                                                <td>46</td>
-                                                <td>356</td>
+
                                                 <td>
-                                                    <h5 class="m-b-0">$2850.06</h5>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="m-r-10"><a
-                                                                class="btn btn-circle d-flex btn-orange text-white">MA</a>
-                                                        </div>
-                                                        <div class="">
-                                                            <h4 class="m-b-0 font-16">Monster Admin</h4>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Single Use</td>
-                                                <td>Venessa Fern</td>
-                                                <td>
-                                                    <label class="badge bg-info">Vue Js</label>
-                                                </td>
-                                                <td>46</td>
-                                                <td>356</td>
-                                                <td>
-                                                    <h5 class="m-b-0">$2850.06</h5>
+                                                    <h5  class="badge bg-danger" style="font-size:16px;">$<%=rs.getString("Price") %> U.S</h5>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="m-r-10"><a
-                                                                class="btn btn-circle d-flex btn-success text-white">MP</a>
-                                                        </div>
-                                                        <div class="">
-                                                            <h4 class="m-b-0 font-16">Material Pro Admin</h4>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Single Use</td>
-                                                <td>John Doe</td>
-                                                <td>
-                                                    <label class="badge bg-success">Bootstrap</label>
-                                                </td>
-                                                <td>46</td>
-                                                <td>356</td>
-                                                <td>
-                                                    <h5 class="m-b-0">$2850.06</h5>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="m-r-10"><a
-                                                                class="btn btn-circle d-flex btn-purple text-white">AA</a>
-                                                        </div>
-                                                        <div class="">
-                                                            <h4 class="m-b-0 font-16">Ample Admin</h4>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Single Use</td>
-                                                <td>John Doe</td>
-                                                <td>
-                                                    <label class="badge bg-purple">React</label>
-                                                </td>
-                                                <td>46</td>
-                                                <td>356</td>
-                                                <td>
-                                                    <h5 class="m-b-0">$2850.06</h5>
-                                                </td>
-                                            </tr>
+                                            <% }%>
                                         </tbody>
+                                           <% 	
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+    }    
+
+  %> 
                                     </table>
                                 </div>
                             </div>
@@ -441,146 +386,14 @@
                 <!-- ============================================================== -->
                 <!-- Recent comment and chats -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <!-- column -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Recent Comments</h4>
-                            </div>
-                            <div class="comment-widgets scrollable">
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row m-t-0">
-                                    <div class="p-2"><img src="../assets/images/users/1.jpg" alt="user" width="50"
-                                            class="rounded-circle"></div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">James Anderson</h6>
-                                        <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing
-                                            and type setting industry. </span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">April 14, 2021</span> <span
-                                                class="badge bg-primary">Pending</span> <span
-                                                class="action-icons">
-                                                <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-check"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-heart"></i></a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row">
-                                    <div class="p-2"><img src="../assets/images/users/4.jpg" alt="user" width="50"
-                                            class="rounded-circle"></div>
-                                    <div class="comment-text active w-100">
-                                        <h6 class="font-medium">Michael Jorden</h6>
-                                        <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing
-                                            and type setting industry. </span>
-                                        <div class="comment-footer ">
-                                            <span class="text-muted float-end">April 14, 2021</span>
-                                            <span class="badge bg-success">Approved</span>
-                                            <span class="action-icons active">
-                                                <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                <a href="javascript:void(0)"><i class="icon-close"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-heart text-danger"></i></a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row">
-                                    <div class="p-2"><img src="../assets/images/users/5.jpg" alt="user" width="50"
-                                            class="rounded-circle"></div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Johnathan Doeting</h6>
-                                        <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing
-                                            and type setting industry. </span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">April 14, 2021</span>
-                                            <span class="badge bg-danger">Rejected</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-check"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-heart"></i></a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- column -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Temp Guide</h4>
-                                <div class="d-flex align-items-center flex-row m-t-30">
-                                    <div class="display-5 text-info"><i class="wi wi-day-showers"></i>
-                                        <span>73<sup>°</sup></span></div>
-                                    <div class="m-l-10">
-                                        <h3 class="m-b-0">Saturday</h3><small>Ahmedabad, India</small>
-                                    </div>
-                                </div>
-                                <table class="table no-border mini-table m-t-20">
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-muted">Wind</td>
-                                            <td class="font-medium">ESE 17 mph</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-muted">Humidity</td>
-                                            <td class="font-medium">83%</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-muted">Pressure</td>
-                                            <td class="font-medium">28.56 in</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-muted">Cloud Cover</td>
-                                            <td class="font-medium">78%</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <ul class="row list-style-none text-center m-t-30">
-                                    <li class="col-3">
-                                        <h4 class="text-info"><i class="wi wi-day-sunny"></i></h4>
-                                        <span class="d-block text-muted">09:30</span>
-                                        <h3 class="m-t-5">70<sup>°</sup></h3>
-                                    </li>
-                                    <li class="col-3">
-                                        <h4 class="text-info"><i class="wi wi-day-cloudy"></i></h4>
-                                        <span class="d-block text-muted">11:30</span>
-                                        <h3 class="m-t-5">72<sup>°</sup></h3>
-                                    </li>
-                                    <li class="col-3">
-                                        <h4 class="text-info"><i class="wi wi-day-hail"></i></h4>
-                                        <span class="d-block text-muted">13:30</span>
-                                        <h3 class="m-t-5">75<sup>°</sup></h3>
-                                    </li>
-                                    <li class="col-3">
-                                        <h4 class="text-info"><i class="wi wi-day-sprinkle"></i></h4>
-                                        <span class="d-block text-muted">15:30</span>
-                                        <h3 class="m-t-5">76<sup>°</sup></h3>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Recent comment and chats -->
-                <!-- ============================================================== -->
-            </div>
+               
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center">
-                All Rights Reserved by Flexy Admin. Designed and Developed by <a
-                    href="https://www.wrappixel.com">WrapPixel</a>.
-            </footer>
+
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -589,12 +402,37 @@
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
     </div>
+    </div>
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
+    
+<script>
+$(document).ready(function() {
+    $('#example').DataTable(
+        
+         {     
+
+      "aLengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
+        "iDisplayLength": 5
+       } 
+        );
+} );
+
+
+function checkAll(bx) {
+  var cbs = document.getElementsByTagName('input');
+  for(var i=0; i < cbs.length; i++) {
+    if(cbs[i].type == 'checkbox') {
+      cbs[i].checked = bx.checked;
+    }
+  }
+}
+</script>
+    
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -610,6 +448,15 @@
     <script src="../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../dist/js/pages/dashboards/dashboard1.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
