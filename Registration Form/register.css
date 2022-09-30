@@ -51,7 +51,7 @@ body {
     width: 925px;
     height: 200px;
     left: 55px;
-    top: 15px;
+    top: 25px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -65,7 +65,7 @@ body {
     width: 925px;
     height: 200px;
     left: 55px;
-    top: 75px;
+    top: 85px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -379,7 +379,7 @@ body {
     width: 280px;
     height: 29px;
     left: 320px;
-    top: 735px;
+    top: 725px;
     background: #FFFFFF;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -404,8 +404,8 @@ body {
     position: absolute;
     width: 105px;
     height: 29px;
-    left: 320px;
-    top: 785px;
+    left: -120px;
+    top: 775px;
     background: #FFFFFF;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -414,10 +414,76 @@ body {
 
 .phone-text {
     position: absolute;
-    width: 155px;
+    width: 160px;
     height: 29px;
     left: 440px;
     top: 785px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+.your-email {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 860px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.emailadd {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 890px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.emailadd-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 885px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+.conemail {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 940px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.conemail-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 935px;
     background: #FFFFFF;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;

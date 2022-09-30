@@ -601,7 +601,7 @@
                     <div><h3 class="cd">Contact Details</h3></div>
                     <div class="cor">Country of residence?*</div>
                     <div class="col-sm-5">
-                        <select class="form-control" id="ddlcountryofres" name="ddlcountryofres" onchange="loadCities();"><option value="">Select Country of residence</option>
+                        <select class="cor-box" id="ddlcountryofres" name="ddlcountryofres" onchange="loadCities();"><option value="">Select Country of residence</option>
                             <option value="AF">AFGHANISTAN</option>
                             <option value="AL">ALBANIA</option>
                             <option value="DZ">ALGERIA</option>
@@ -858,7 +858,7 @@
                     </div>
                     <div class="phone">Phone Number*</div>
                     <div class="col-sm-2">
-                        <select id="ddlteltype" name="ddlteltype" class="form-control" onchange="showfield(this.options[this.selectedIndex].value)">
+                        <select id="ddlteltype" name="ddlteltype" class="phone-box" onchange="showfield(this.options[this.selectedIndex].value)">
                             <option value="" disabled="" selected="" hidden="">Select Phone</option>
                             <option value="MOBIL">Mobile</option>
                             <option value="HOME">Home</option>
@@ -866,96 +866,32 @@
                         </select>
                         <span class="red_star" id="errteltype"></span>
                     </div>
-                    <div class="col-sm-1">
+                    <!-- <div class="col-sm-1">
                         <input readonly="readonly" type="text" id="txttelcountycode" name="txttelcountycode" maxlength="6" class="form-control">
                         <span class="red_star" id="errtelcountycode"></span>
-                    </div>
-                    <div class="col-sm-5">
+                    </div> -->
+                    <!-- <div class="col-sm-5">
                         <div class="col-sm-12" style="padding-left:0;min-height:35px">
                             <div id="div1" class="col-sm-5" style="padding-left:0"></div><div id="div2" class="col-sm-7" style="padding-left:0"></div>
                         </div>
                         <div class="col-sm-12" style="padding-left:0"><span class="red_star" id="errtelnumber"></span> </div>
-                    </div>
+                    </div> -->
                     <div>
-                        <input readonly="readonly" type="text" id="txttelcountycode" name="txttelcountycode" maxlength="6" class="pn-text">
+                        <input readonly="readonly" type="text" id="txttelcountycode" name="txttelcountycode" maxlength="6" class="phone-text">
+                    </div>
+                    <div class="your-email">Your Email</div>
+                    <div class="emailadd">Email Address*</div>
+                    <div>
+                        <input type="text" id="txtemail" name="txtemail" placeholder="Email Address" maxlength="200" class="emailadd-box" autocomplete="off">
+                    </div>
+                    <div class="conemail">Confrim Email Address*</div>
+                    <div>
+                        <input type="text" id="txtemailcon" name="txtemailcon" placeholder="Confirm Email Address" onblur="emailCheck();" maxlength="200" class="conemail-box" autocomplete="off">
                     </div>
                 </div>
             </form>
         </div>
     </div>
-    <script src="register.js"></script>
-    <script src="/flysmiles/Scripts/fp-register-min.js" type="text/javascript"></script>
-    <script src="/flysmiles/Scripts/MasterScript.js" type="text/javascript"></script>
-    <script>
-        //debugger;
-        var warningmsgshown = false;
-        $(document).ready(function () {
-            $('#ddltitle').change(
-                function () {
-                    $('#genderFemale').attr('checked', $(this).val() == 'MRS' || $(this).val() == 'MS' || $(this).val() == 'MISS');
-                    $('#genderMale').attr('checked', $(this).val() != 'MRS' && $(this).val() != 'MS' && $(this).val() != 'MISS');
-                });
-            $("#getButtonValue").prop("disabled", true);
-            $("#getBtnValForStudent").prop("disabled", true);
     
-            $(".alpha-only").on("keydown", function (event) {
-                // Allow controls such as backspace, tab etc.
-                var arr = [8, 9, 16, 17, 20, 32, 35, 36, 37, 38, 39, 40, 45, 46];
-    
-                // Allow letters
-                for (var i = 65; i <= 90; i++) {
-                    arr.push(i);
-                }
-    
-                // Prevent default if not in array
-                if (jQuery.inArray(event.which, arr) === -1) {
-                    event.preventDefault();
-                }
-            });
-    
-            $(".alpha-only").on("input", function () {
-                var regexp = /[^a-zA-Z\s]/g;
-                if ($(this).val().match(regexp)) {
-                    $(this).val($(this).val().replace(regexp, ''));
-                }
-            });
-        });
-    
-    
-        function submitValuesBasic() {
-            if (doValidateBasic()) {
-                var title, fname, lname, mname, email, pass, gender;
-                title = $('#ddlguesttitle').val();
-                fname = $('#txtguestfname').val();
-                mname = $('#txtguestmname').val();
-                lname = $('#txtguestlname').val();
-                email = $('#txtguestemail').val();
-                pass = $('#txtguestpass').val();
-                gender = "Male";
-                $.ajax({
-                    url: '/flysmiles/home/RegisterGuestUser',
-                    type: "GET",
-                    data: { title: title, fname: fname, mname: mname, lname: lname, gender: gender, email: email, passwd: pass },
-                    success: function (a) {
-                        if (a.ErrorMsg != null && a.ErrorMsg != "") {
-                            $("#basicerrormsg").html("Something went wrong, please try again");
-                        }
-                        else {
-                            $("#basicloadingmsg").show();
-                            a.FFCardNumber != "" ? (
-                                $("#confirmblock").show(), $("#formblock").hide(), $("#basicerrormsg").html(""), $("#lblshowcardno").text("UL " + a.FFCardNumber), $("#lblshowname").text("Dear " + a.FFMemmberName), $("#lblcardno").text("UL " + a.FFCardNumber), $("#lblcardname").text(a.FFMemmberName), $("#hidffpno").val("UL" + a.FFCardNumber)) : ($("#basicerrormsg").html("error"), $("#basicloadingmsg").hide(), "Invalid Membership Card Number" ==
-                                $.trim("error") && ($("#basicerrormsg").html(""), $("#basicerrormsg").html("Invalid Recommended Membership Card Number")));
-    
-                        }
-    
-                    },
-                    error: function (xhr) {
-                        var result = xhr;
-                        $("#basicerrormsg").html("Something went wrong, please try again");
-                    }
-                });
-            }
-        }
-    </script>
 </body>
 </html>
