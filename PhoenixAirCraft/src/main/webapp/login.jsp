@@ -29,8 +29,8 @@
 
 <body background="assets/css/HomeBack.png">
 
-    <div class="box" ></div>
-          <div img class="box-img" style="background-image:url(assets/css/Login.png)">
+    <div class="box" style="top:100px;" ></div>
+          <div img class="box-img" style="background-image:url(assets/css/lOGIN.png); top:100px;">
             <div class="container">
                 <div class="user">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0S112 64.5 112 144s64.5 144 144 144zm-94.7 32C72.2 320 0 392.2 0 481.3c0 17 13.8 30.7 30.7 30.7H481.3c17 0 30.7-13.8 30.7-30.7C512 392.2 439.8 320 350.7 320H161.3z"/></svg>
@@ -38,26 +38,33 @@
                 <h2 class="login">Login Account</h2>
                 <div class="form">
                     <form action="client_login" method="post">
-                        <div class="inner-form">
-                            <h4 class="memberno">Membership Number</h4>
+                       
+                         <div class="inner-form">
+                            <h4 class="memberno" style="top:130px; left:40px;">Membership Number</h4>
                               <div>
-                                <input class="inputBox1" type="text" name="user">
+                                <input class="inputBox1" style="top:140px; left:240px;"type="text" name="memberno">
                               </div>
                         <br>
-                            <h4 class="password">Password</h4>
+                         
+                            <h4 class="memberno" style="top:185px; left:40px;">Nick Name</h4>
                               <div>
-                                <input class="inputBox2" type="password">
+                                <input class="inputBox1" type="text" name="user" style="top:195px; left:240px;">
+                              </div>
+                        <br> 
+                            <h4 class="password" style="top:240px; left:40px;">Password</h4>
+                              <div>
+                                <input class="inputBox2" type="password" style="top:250px; left:240px;">
                               </div>
                         </div>
                         <br>
                         <div>
-                            <input class="checkBox" type="checkbox"> <p class="signed">Keep me signed in</p>
+                            <input class="checkBox" type="checkbox" style="top:290px; left:40px;"> <p class="signed" style="top:278px; left:70px;">Keep me signed in</p>
                         </div>
-                        <p class="forget"> <a href="#">Forgot your credentials?</a> </p>
+                        <p class="forget" style="top:340px; left:40px;"> <a href="#">Forgot your credentials?</a> </p>
                         <div>
-                          <input class="inputBox" type="submit" value="LOG IN">
+                          <input class="inputBox" type="submit" style="top:380px;" value="LOG IN">
                         </div>
-                          <p class="join">Not a Member? <a href="#">Join Now</a> </p>
+                          <p class="join" style="top:420px;">Not a Member? <a href="#">Join Now</a> </p>
                     </form>
                   </div>
               </div>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+        <%@page import="java.sql.*" %>
+<%@page import="com.Kavindu.*"%>
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -70,6 +71,7 @@
           <%
           HttpSession sessionUser = request.getSession(false);
           String user= sessionUser.getAttribute("user").toString();
+          String MemberID = sessionUser.getAttribute("MemberID").toString();
           %>
          
                <li class="dropdown" style="margin-top:17px;"> <a href="myAccount.jsp"><span>Hi,<%=user %></span><img  src="assets/img/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -106,18 +108,22 @@
   ">
 
 
+<div class="container" style="background-color: #fff; border-radius:15px; height:620px; width:2700px;  align-items:center; margin-top:60px;">
+	<div class="box-book" style=" background-color: blue;border-radius:15px; margin-top:10px;height:70px; width:1295px; align-items:center; padding-top:12px;">
+	<div style="color:#fff; margin:7px; "> <span style="font-size:9px; padding-left:20px;" >Read Instructions Carefully before proceeding</span><span style="float:right; background:#fff; color:blue;padding: 0px 10px 10px 10px; border-radius:10px; padding-left:10px; font-weight:bold;"><img src="assets/img/icons8-circled-2-50.png"> PAY </span><span style="float:right; height:85px; font-weight:bold;padding: 0px 10px 0px 10px;  color:#fff; border-radius:10px;"><img src="assets/img/icons8-level-1-48.png">BOOKING DETAILS</span></div>
+	</div>
 
 
 <!-- Credit Card Payment Form - START -->
 <div class="container-body" style="Width:1200px; heigth: 18
-00px;margin-top:50px;  margin-left:110px;padding:80px 0px 60px 0px; 
+00px;margin-top:-40px;  margin-left:60px;padding:80px 0px 60px 0px; 
 ">    
 <div class="container" style="">
 
 
     <div class="row"style=".col-md-offset-4 {
-    margin-left: 10%;
-}">
+    margin-left: 10%; 
+} ">
  <%HttpSession sessionPay = request.getSession(false);
 	String id= sessionPay.getAttribute("id").toString();
 	String price= sessionPay.getAttribute("price").toString();
@@ -127,7 +133,29 @@
 	String total= sessionPay.getAttribute("total").toString();
 	String DateTime= sessionPay.getAttribute("DateTime").toString();
 	String passenger= sessionPay.getAttribute("passenger").toString();%>
-       <div style="background-image:url(assets/img/LastBox.png);  color:black; heigth:100px; width:550px; margin-left: 60px; padding-bottom:5  0px; border-radius:15px;  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+	       <%  
+  
+
+
+try {
+	        Statement st;
+	        String sql;
+			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+			st= (Statement) con.createStatement();
+			
+
+			    
+		    sql ="Insert Into UserBookings Values('"+MemberID+"','"+id+"','"+Airline+"','"+Depature+"','"+Destination+"','"+DateTime+"','"+passenger+"','"+price+"','"+total+"') ";
+			
+		     st.executeUpdate(sql);
+		     }catch(Exception e){
+	e.printStackTrace();
+}
+			
+	        %>
+       <div style="background-image:url(assets/img/LastBox.png);  border:blue;color:black; heigth:100px; width:550px; margin-left: 60px; padding-bottom:5  0px; border-radius:15px;  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
        ">
        <div style="padding:20px;"> 
        <h1 align="center" style=" -webkit-text-stroke-width: 1px;
@@ -218,6 +246,7 @@ border-radius: 15px;">
     </div>
     <div class="check-shadow"></div>
   </div>
+   
   <h3 align="center" style="color:black;">Your Payment was Successful</h3>
   <a href="Ticket.jsp" class="btn btn-primary" id="myBtn" style="background-color:red;">Get Your Boarding Pass</a>
 </div>
@@ -228,7 +257,9 @@ border-radius: 15px;">
 
 
 </div>
+</div>
 
+    
 <style>
 
 .main-container {

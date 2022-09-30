@@ -82,8 +82,7 @@ body
     position: absolute;
     width: 451px;
     height: 167px;
-    left: 55px;
-    top: 110px;
+
 }
 
 .inputBox1
@@ -93,7 +92,7 @@ body
     width: 210px;
     height: 29px;
     left: 185px;
-    top: 40px;
+    top: 50px;
     background: #FFFFFF;
     border: 1px solid #000000;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -141,8 +140,7 @@ body
     position: absolute;
     width: 67px;
     height: 17px;
-    left: 16px;
-    top: 85px;
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -161,8 +159,7 @@ body
     position: absolute;
     width: 10px;
     height: 10px;
-    left: 12px;
-    top: 152px;
+    
     background: #FFFFFF;
     border: 1px solid #000000;
 }
@@ -172,8 +169,7 @@ body
     position: absolute;
     width: 106px;
     height: 15px;
-    left: 42px;
-    top: 140px;
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -190,8 +186,7 @@ body
     position: absolute;
 width: 138px;
 height: 15px;
-left: 12px;
-top: 180px;
+
 
 font-family: 'Inter';
 font-style: normal;

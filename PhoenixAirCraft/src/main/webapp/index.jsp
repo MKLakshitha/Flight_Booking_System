@@ -51,7 +51,7 @@
           <li><a href="index.jsp" class="active">Home</a></li>
           <li><a href="Flights.jsp">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
-          <li><a href="pricing.html">Dashboard</a></li>
+          <li><a href="UserDashboard/html/UserDashboard.jsp">Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
 				<li><a href="about.html">Phoenix Airline</a></li>

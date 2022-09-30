@@ -114,7 +114,7 @@
 <div class="container" style="background-color: #5F7DDE; border-radius:15px; margin-top:30px;">
 	<div class="row" style="color:blue; ">
 	    <%  
-    Vector flight = (Vector)request.getAttribute("Flights");
+  
 
 
 try {

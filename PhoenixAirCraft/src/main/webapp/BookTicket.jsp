@@ -116,12 +116,15 @@
 	</div>
 	<div style=""></div>
 	<div class="container-info" style="background: rgba(219, 239, 251, 0.5); border-radius:10px;  margin-top:40px; width:1295px; height: 400px; color:blue;" ><ul><li><p style="margin:10px 30px 0px 30px; color:black;">Passengers must have a medical certificate with a negative coronavirus (covid-19) RT-PCR test result. The test should have been conducted within 72 hours prior to undertaking the journey.</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Passengers must complete the self-declaration form on the Phoenix Airline portal <a href="">Portal here</a> before departure and to declare their travel history (of the past 14 days).</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Ensure to arrive to the airport before 5 hours from the departure time.</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Ensure that the weight of your luggage does not exceed the permitted weight. (Travel luggage - 30 kg, Hand luggage – 7kg)</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Passport holders from foreign countries who do not have a valid visa must get a landing permit visa from the Department of Immigration & Emigration prior to their departure.</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">Verify that you have your valid Passport , eligible of the visa and the aircraft reservation ticket with you before departure.
-	</p></li></ul>
-	<input type="checkbox" name="check" style="margin:0px 15px 15px 900px;" ><span style="color:red;">I read all the instructions and conditions *</span></div>
+	</p></li><li><p style="margin:10px 30px 0px 30px; color:black;"> If you have baggage to check in, you can leave it at the Bag Drop desk during your flight's check-in period.</p></li><li><p style="margin:10px 30px 0px 30px; color:black;">
+(i) Shall have a COVID-19 PCR Test done within 72hrs prior to departure or COVID-19 RAT report done within 48hrs prior to departure; <br>(ii) If the above mentioned Tests are Negative, they will be released without quarantine.</p></li>
+</li><li><p style="margin:10px 30px 0px 30px; color:black;">
+You may bring into or take out of the country, including by mail, as much money as you wish. However, if it is more than $10,000, you will need to report it to CBP. Use the online Fincen 105 currency reporting site or ask a CBP officer for the paper copy of the Currency Reporting Form (FinCen 105).</p></li></ul>
 	          
 
       </div>
-
+      <img src="assets/img/icons8-covid-78.png" style="margin-left:20px;">
+	<input type="checkbox" name="check" style="margin:15px 15px 15px 800px;" ><span style="color:red;">I read all the instructions and conditions *</span></div>
 
 	</div>
 </div>

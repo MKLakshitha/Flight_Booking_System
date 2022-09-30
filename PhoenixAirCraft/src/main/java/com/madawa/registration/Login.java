@@ -33,11 +33,13 @@ public class Login extends HttpServlet {
 		/* NIC is the primary key and will be used as the login attribute */
 		String u_username = request.getParameter("user");
 		String u_psswd = request.getParameter("password");
+		String memberNo = request.getParameter("memberno");
 		HttpSession session = request.getSession();
 		RequestDispatcher dispatcher = null;
 		response.sendRedirect("index.jsp");
 		HttpSession sessionUser = request.getSession(true);
 		sessionUser.setAttribute("user",u_username);
+		sessionUser.setAttribute("MemberID",memberNo);
 		/*
 		 * 
 		 * SERVER SIDE VALIDATION
@@ -54,6 +56,12 @@ public class Login extends HttpServlet {
 			dispatcher = request.getRequestDispatcher("login.jsp");
 			dispatcher.forward(request, response);
 		}
+		if (memberNo == null || u_psswd.equals("")) {
+			request.setAttribute("status", "invalidMemberNo");
+			dispatcher = request.getRequestDispatcher("login.jsp");
+			dispatcher.forward(request, response);
+		}
+
 		/*
 		 * VALIDATION ENDS HERE
 		 * */
