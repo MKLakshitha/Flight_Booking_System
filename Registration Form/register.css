@@ -664,3 +664,50 @@ body {
     border-style: hidden;    
 }
 
+.cor2-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 1235px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden; 
+}
+
+.t-c-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 1285px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden; 
+}
+
+.c-s-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 1335px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;  
+}
+
+.p-z-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 1385px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;      
+}
