@@ -489,3 +489,178 @@ body {
     border-radius: 10px;
     border-style: hidden;
 }
+
+.mailing {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 1010px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.where {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 1040px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.al1 {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 1090px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.al2 {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 1140px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.al3 {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 1190px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.cor2 {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 1240px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.t-c {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 1290px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.c-s {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 1340px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.p-z {
+    position: absolute;
+    width: 219px;
+    height: 17px;
+    left: 55px;
+    top: 1390px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.mailing-select {
+    position: absolute;
+    left: 320px;
+    top: 1037px;
+    background: #FFFFFF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.al1-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 1085px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+.al2-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 1135px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+.al3-box {
+    position: absolute;
+    width: 280px;
+    height: 29px;
+    left: 320px;
+    top: 1185px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: hidden;    
+}
+
