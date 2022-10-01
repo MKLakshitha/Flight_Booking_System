@@ -1,11 +1,3 @@
-package com.flightmanagement.pheonixCRUD.service.impl;
-import com.flightmanagement.pheonixCRUD.dto.UserDTO;
-import com.flightmanagement.pheonixCRUD.dto.request.UserSaveRequestDTO;
-import com.flightmanagement.pheonixCRUD.entity.User;
-import com.flightmanagement.pheonixCRUD.repo.UserRepo;
-import com.flightmanagement.pheonixCRUD.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceIMPL implements UserService {
