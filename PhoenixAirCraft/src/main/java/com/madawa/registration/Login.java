@@ -30,7 +30,7 @@ public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		/* NIC is the primary key and will be used as the login attribute */
+		/* GENERATED USERNAME is the primary key and will be used as the login attribute */
 		String u_username = request.getParameter("user");
 		String u_psswd = request.getParameter("password");
 		String memberNo = request.getParameter("memberno");
@@ -46,7 +46,7 @@ public class Login extends HttpServlet {
 		 * 
 		 * */
 		
-		/*if (u_username == null || u_username.equals("")) {
+		if (u_username == null || u_username.equals("")) {
 			request.setAttribute("status", "invalidUsn");
 			dispatcher = request.getRequestDispatcher("login.jsp");
 			dispatcher.forward(request, response);
@@ -65,9 +65,9 @@ public class Login extends HttpServlet {
 		/*
 		 * VALIDATION ENDS HERE
 		 * */
-		/*try {
+		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/system_users?useSSL=false", "root", "N0t_root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/system_users?useSSL=false", "", "");
 			PreparedStatement pst = con.prepareStatement("select * from client where nic = ? and psswd = ?");
 			pst.setString(1, u_username);
 			pst.setString(2, u_psswd);
@@ -85,6 +85,6 @@ public class Login extends HttpServlet {
 			dispatcher.forward(request, response);
 		} catch(Exception e) {
 			e.printStackTrace();
-		}*/
+		}
 	}	
 }
