@@ -433,6 +433,8 @@ function checkAll(bx) {
 }
 </script>
     
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+   <div id="preloader"></div>
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
