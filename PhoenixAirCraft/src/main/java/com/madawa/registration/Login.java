@@ -13,6 +13,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.UUID;
 
 /* Data from the Login.jsp will be validated here */
 /*
@@ -32,14 +34,41 @@ public class Login extends HttpServlet {
 		
 		/* NIC is the primary key and will be used as the login attribute */
 		String u_username = request.getParameter("user");
-		String u_psswd = request.getParameter("password");
+		String password = request.getParameter("password");
 		String memberNo = request.getParameter("memberno");
-		
-		RequestDispatcher dispatcher = null;
-		response.sendRedirect("index.jsp");
 		HttpSession sessionUser = request.getSession(true);
 		sessionUser.setAttribute("user",u_username);
 		sessionUser.setAttribute("MemberID",memberNo);
+
+try {
+	        Statement st;
+	        String sql,pass = null;
+			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+			st= (Statement) con.createStatement();
+
+		    sql ="select * from Users where memberID= '"+memberNo+"'";
+		
+		    ResultSet rs = st.executeQuery(sql);
+		    while(rs.next()) {
+		    	 pass = rs.getString("password");
+		    }
+	         if(password.equals(pass)) {
+	        	 RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
+		     	 rd.forward(request,response);
+	         }
+	         else {
+	        	 response.sendRedirect("UserDashboard/html/error-404.jsp");
+	         }
+
+	     		
+		    
+}catch(Exception e) {
+	e.printStackTrace();
+}
+
+
 		/*
 		 * 
 		 * SERVER SIDE VALIDATION
@@ -87,4 +116,36 @@ public class Login extends HttpServlet {
 			e.printStackTrace();
 		}*/
 	}	
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name = request.getParameter("name");
+		String DOB = request.getParameter("dob");
+		String Phone = request.getParameter("phone");
+		String password = request.getParameter("password");
+		String email = request.getParameter("email");
+		String add1 = request.getParameter("add1");
+		String add2 = request.getParameter("add2");
+		String add3 = request.getParameter("add3");
+		String city = request.getParameter("city");
+		String state = request.getParameter("State");
+		String country = request.getParameter("country");
+	   	String role = request.getParameter("role");
+	   	
+	   	UUID memberID = UUID.randomUUID();
+
+
+try {
+	        Statement st;
+	        String sql;
+			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+			st= (Statement) con.createStatement();
+
+		    sql ="Insert into Users values ('"+memberID+"','"+name+"','"+(password)+"','"+DOB+"','"+Phone+"','"+email+"','"+add1+"','"+add2+"','"+add2+"','"+add3+"','"+city+"','"+state+"','"+country+"','"+role+"')";
+
+}catch(Exception e) {
+	e.printStackTrace();
+}
+	 
+	}
 }

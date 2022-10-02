@@ -18,7 +18,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <!-- Vendor CSS Files -->
 
  
@@ -148,7 +152,7 @@
                 <p class="inner-description">Please complete all the fields marked with an asterisk (*)</p>
             </p>
 
-            <form action="/register" name="Registration" method="Post">
+            <form action="register" name="Registration" method="post">
                 <div>
 
                    <div> 
@@ -774,8 +778,15 @@
                         <div class="col-sm-12" style="padding-left:0"><span class="red_star" id="errtelnumber"></span> </div>
                     </div> -->
                     <div>
-                        <input readonly="readonly" type="text" id="txttelcountycode" name="txttelcountycode" maxlength="6" class="phone-text">
+                         <form id="login" onsubmit="process(event)">
+                           
+  							 <input id="phone" type="tel" name="phone" class="phone-text"/>
+   							<input type="submit" class="btn" value="Verify" />
+					    </form>
+					    
                     </div>
+                    <div class="alert alert-info" style="display: none;"></div>
+                    
                     <div class="your-email">Your Email</div>
                     <div class="emailadd">Email Address*</div>
                     <div>
@@ -785,6 +796,44 @@
                     <div>
                         <input type="email" id="txtemailcon" name="txtemailcon" placeholder="Confirm Email Address" onblur="emailCheck();" maxlength="200" class="conemail-box" autocomplete="off">
                     </div>
+                     <script>
+   const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+   const info = document.querySelector(".alert-info");
+
+   function process(event) {
+    event.preventDefault();
+
+    const phoneNumber = phoneInput.getNumber();
+
+    info.style.display = "";
+    info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+   }
+   function getIp(callback) {
+	   fetch('https://ipinfo.io/json?token=<your token>', { headers: { 'Accept': 'application/json' }})
+	     .then((resp) => resp.json())
+	     .catch(() => {
+	       return {
+	         country: 'us',
+	       };
+	     })
+	     .then((resp) => callback(resp.country));
+	  }
+   const phoneInput = window.intlTelInput(phoneInputField, {
+	   initialCountry: "auto",
+	   geoIpLookup: getIp,
+	   utilsScript:
+	     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+	  });
+   const phoneInput = window.intlTelInput(phoneInputField, {
+	   preferredCountries: ["us", "co", "in", "de"],
+	   utilsScript:
+	     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+	 });
+ </script>
                     <div class="mailing">Mailing Address</div>
                     <div class="where">Where would you prefer us to mail you</div>
                     <div class="mailing-select">

@@ -96,6 +96,7 @@ right: 85.2%; margin-bottom:1px; margin-top:8px;">
                         <div class="d-md-flex flex-md-wrap">
                             <div class="mb-4 mb-md-2 text-left"> <span class="text-muted">Invoice To:</span>
                                 <ul class="list list-unstyled mb-0">
+                                
                                     <li>
                                         <h5 class="my-2">Sample Name</h5>
                                     </li>

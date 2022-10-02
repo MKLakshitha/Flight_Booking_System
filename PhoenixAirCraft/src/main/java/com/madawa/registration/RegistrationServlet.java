@@ -66,12 +66,14 @@ try {
 			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
 			st= (Statement) con.createStatement();
 
-		    sql ="Insert into Users values ('"+memberID+"','"+name+"','"+MD5(password)+"','"+DOB+"','"+Phone+"','"+email+"','"+add1+"','"+add2+"','"+add2+"','"+add3+"','"+city+"','"+state+"','"+country+"','"+role+"')";
+		    sql ="Insert into Users values ('"+memberID+"','"+name+"','"+password+"','"+DOB+"','"+Phone+"','"+email+"','"+add1+"','"+add2+"','"+add3+"','"+city+"','"+state+"','"+country+"','"+role+"')";
 			
-			ResultSet rs = st.executeQuery(sql);
+		    st.executeUpdate(sql);
 }catch(Exception e) {
 	e.printStackTrace();
 }
+  RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+  rd.forward(request,response);
 	   	
 		/*if (name == null || name.equals("")) {
 			request.setAttribute("status", "invalidNIC");
@@ -144,9 +146,6 @@ try {
 		}*/
 	}
 
-	private String MD5(String password) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 }

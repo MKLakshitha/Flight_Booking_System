@@ -70,7 +70,7 @@
                <li class="dropdown" style="margin-top:17px;"> <a href="myAccount.jsp"><span>Hi,<%=user %></span><img  src="assets/img/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                <a href="#"> </a>
                            <ul>
-				<li><a href="ManageAccount.jsp">Manage Account</a></li>
+				<li><a href="UserDashboard/html/pages-profile.jsp">Manage Account</a></li>
               <li><a href="login.jsp">Log Out</a></li>
             
 

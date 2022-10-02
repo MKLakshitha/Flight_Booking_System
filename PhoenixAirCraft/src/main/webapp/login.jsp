@@ -53,7 +53,7 @@
                         <br> 
                             <h4 class="password" style="top:240px; left:40px;">Password</h4>
                               <div>
-                                <input class="inputBox2" type="password" style="top:250px; left:240px;padding-left:20px;">
+                                <input class="inputBox2" type="password" name="password" style="top:250px; left:240px;padding-left:20px;">
                               </div>
                         </div>
                         <br>

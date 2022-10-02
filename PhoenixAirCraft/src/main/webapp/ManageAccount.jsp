@@ -122,10 +122,9 @@ try {
 			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
 			st= (Statement) con.createStatement();
 			
-            HttpSession sessionUser = request.getSession(false);
-            String id = sessionUser.getAttribute("userid");
+           
 			    
-		    sql ="Select * from Bookings where id='"+id+"' ";
+
 			
 			ResultSet rs = st.executeQuery(sql);
 			

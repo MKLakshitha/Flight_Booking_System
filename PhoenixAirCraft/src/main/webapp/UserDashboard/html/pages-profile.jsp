@@ -93,6 +93,36 @@
                          <%
           HttpSession sessionUser = request.getSession(false);
           String user= sessionUser.getAttribute("user").toString();
+          String MemberID = sessionUser.getAttribute("MemberID").toString();
+          try {
+  	        Statement st;
+  	        String sql;
+  			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+  			Class.forName("com.mysql.cj.jdbc.Driver");
+  			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+  			st= (Statement) con.createStatement();
+  		    sql ="Select * from Users where memberID ='"+MemberID+"'";
+  			
+  			ResultSet rs = st.executeQuery(sql);
+  			
+  	        		while(rs.next()){
+  	        	       String name = rs.getString("name");
+  	        	       String dob = rs.getString("dob");
+  	        	       String phone = rs.getString("phone");
+  	        	       String email = rs.getString("email");
+  	        	       String add1 = rs.getString("add1");
+  	        	     String add2 = rs.getString("add2");
+  	        	   String add3 = rs.getString("add3");
+  	        	 String city = rs.getString("city");
+  	        	String state = rs.getString("state");
+  	        	String country = rs.getString("country");
+  	        	String role = rs.getString("role");
+  	          	    }
+             }
+  	       catch(Exception e){
+  	    	   e.printStackTrace();
+  	        	
+  	        }
           %>
                </li>
 				        <ul class="navbar-nav float-end" style="margin-right:40px; margin-top:-20px;" >
