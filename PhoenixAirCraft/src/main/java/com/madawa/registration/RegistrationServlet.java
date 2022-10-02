@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.UUID;
 
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSession;
 
 /*
 ##     ##  ######  ######## ########     ########  ########  ######   ####  ######  ######## ########     ###    ######## ####  #######  ##    ## 
@@ -145,7 +145,49 @@ try {
 			}
 		}*/
 	}
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	String name = request.getParameter("name");
+	String password = request.getParameter("password");
 
+	String email = request.getParameter("email");
 
+	String phone = request.getParameter("phone");
+	String dob = request.getParameter("dob");
+	String country = request.getParameter("country");
+	HttpSession sessionUser = (HttpSession) request.getSession(false);
+	
+	
 
+	try {
+        Statement st;
+        String sql;
+		String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+		st= (Statement) con.createStatement();
+	    PreparedStatement ps =null;
+	    sql= "Update Users set name=?,password=?,email=?,phone=?,dob=?,country=? where memberID='"+sessionUser.getAttribute("MemberID")+"'";
+	    ps = con.prepareStatement(sql);
+	    ps.setString(1,name);
+	    ps.setString(2, password);
+	    ps.setString(3, email);
+	    ps.setString(4, phone);
+	    ps.setString(5, dob);
+	    ps.setString(6, country);
+	    int i = ps.executeUpdate();
+	    if(i > 0)
+	    {
+	     RequestDispatcher rd = request.getRequestDispatcher("UserDashboard/html/pages-profile.jsp");
+	     rd.forward(request,response);
+	    }
+	    else
+	    {
+	    response.sendRedirect("error-404.jsp");
+	    } 
+	}
+	catch(Exception e) {
+      e.printStackTrace();
+	}
+	}
 }
+

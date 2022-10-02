@@ -107,4 +107,14 @@
     <servlet-name>pay</servlet-name>
     <url-pattern>/pay</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>accountUpdate</display-name>
+    <servlet-name>accountUpdate</servlet-name>
+    <servlet-class>com.Kavindu.accountUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>accountUpdate</servlet-name>
+    <url-pattern>/accountUpdate</url-pattern>
+  </servlet-mapping>
 </web-app>

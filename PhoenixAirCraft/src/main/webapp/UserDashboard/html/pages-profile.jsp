@@ -347,50 +347,51 @@
                     color:black;
                     }
                     </style>
+
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <form class="form-horizontal form-material mx-2">
+                                <form class="form-horizontal form-material mx-2" method="get" action="../../register">
                                     <div class="form-group">
                                         <label class="col-md-12">Full Name</label>
                                         <div class="col-md-12">
                                             <input type="text" placeholder="<%= rs.getString("name") %>"
-                                                class="form-control form-control-line">
+                                                class="form-control form-control-line" name="name">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="example-email" class="col-md-12">Email</label>
                                         <div class="col-md-12">
                                             <input type="email" placeholder="<%=rs.getString("email") %>"
-                                                class="form-control form-control-line" name="example-email"
-                                                id="example-email">
+                                                class="form-control form-control-line" 
+                                                id="example-email" name="email">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Password</label>
                                         <div class="col-md-12">
                                             <input type="password" placeholder="password"
-                                                class="form-control form-control-line">
+                                                class="form-control form-control-line" name="password">
                                         </div>
                                     </div>
                                       <div class="form-group">
                                         <label class="col-md-12">Date of Birth</label>
                                         <div class="col-md-12">
                                             <input type="password" placeholder="<%=rs.getString("dob") %>"
-                                                class="form-control form-control-line">
+                                                class="form-control form-control-line" name="dob">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Phone No</label>
                                         <div class="col-md-12">
                                             <input type="text" placeholder="<%= rs.getString("phone")%>"
-                                                class="form-control form-control-line">
+                                                class="form-control form-control-line" name="phone">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-12" style="color:black;">Select Country</label>
                                         <div class="col-sm-12">
-                                            <select class="form-select shadow-none form-control-line">
+                                            <select class="form-select shadow-none form-control-line" name="country">
                                 <option value="-1">Update Nationality</option>
                                 <option value="AF">AFGHANISTAN</option>
                                 <option value="AL">ALBANIA</option>
@@ -655,7 +656,7 @@
                                     
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success text-white">Update Profile</button>
+                                            <input type="submit" class="btn btn-success text-white" value="Update Profile">
                                         </div>
                                     </div>
                                 </form>
