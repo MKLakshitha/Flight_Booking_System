@@ -27,7 +27,7 @@
    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
-<body background="assets/css/HomeBack.png">
+<body background="assets/css/HomeBack.png" >
 
     <div class="box" style="top:100px;" ></div>
           <div img class="box-img" style="background-image:url(assets/css/lOGIN.png); top:100px;">
@@ -42,18 +42,18 @@
                          <div class="inner-form">
                             <h4 class="memberno" style="top:130px; left:40px;">Membership Number</h4>
                               <div>
-                                <input class="inputBox1" style="top:140px; left:240px;"type="text" name="memberno">
+                                <input class="inputBox1"  style="top:140px; left:240px; padding-left:20px;"type="text" name="memberno">
                               </div>
                         <br>
                          
                             <h4 class="memberno" style="top:185px; left:40px;">Nick Name</h4>
                               <div>
-                                <input class="inputBox1" type="text" name="user" style="top:195px; left:240px;">
+                                <input class="inputBox1" type="text" name="user" style="top:195px; left:240px; padding-left:20px;">
                               </div>
                         <br> 
                             <h4 class="password" style="top:240px; left:40px;">Password</h4>
                               <div>
-                                <input class="inputBox2" type="password" style="top:250px; left:240px;">
+                                <input class="inputBox2" type="password" style="top:250px; left:240px;padding-left:20px;">
                               </div>
                         </div>
                         <br>
@@ -64,7 +64,7 @@
                         <div>
                           <input class="inputBox" type="submit" style="top:380px;" value="LOG IN">
                         </div>
-                          <p class="join" style="top:420px;">Not a Member? <a href="#">Join Now</a> </p>
+                          <p class="join" style="top:420px;">Not a Member? <a href="Register.jsp">Join Now</a> </p>
                     </form>
                   </div>
               </div>

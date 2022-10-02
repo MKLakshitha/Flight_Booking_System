@@ -1,0 +1,10 @@
+Version: 1.1.0
+  - Updated Bootstrap to version 5.2.0
+  - Updated all outdated third party vendor libraries to their latest versions
+  - Fixed css font variables quotes
+
+Version: 1.0.1
+  - Fixed breadcrumbs padding issue
+
+Version: 1.0.0
+  - Initial Release
