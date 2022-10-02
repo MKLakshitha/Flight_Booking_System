@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>phonix/covid19</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <div class="nav-links">
+                    <i class="fa fa-times" onclick="hideMenu()" ></i>
+                    <ul><li><a href="index.html">Home</a></li></ul>
+                    <ul><li><a href="symptoms.html">Symptoms</a></li></ul>
+                    <ul><li><a href="q&a.html">Q&A</a></li></ul>
+                    <ul><li><a href="rules.html">RULES</a></li></ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        <div class="text-box">
+        <p>
+            For people aged 2 years or older—including passengers and workers—CDC recommends properly wearing a high-quality mask or respirator over the nose and mouth in indoor areas of public transportation (such as airplanes, trains, buses, ferries) 
+            and transportation hubs (such as airports, stations, and seaports). When people properly wear a high-quality mask or respirator, 
+            they protect themselves and those around them, and help keep travel and public transportation safer for everyone. Wearing a 
+            high-quality mask or respirator is most beneficial in crowded or poorly ventilated locations, such as airport jetways.
+            CDC also encourages operators of public transportation and transportation hubs to support mask wearing by all people, including 
+            employees.
+        </p>
+        </div>
+    </section>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";  
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";  
+        }
+    </script>
+    </body>
+    </html>
