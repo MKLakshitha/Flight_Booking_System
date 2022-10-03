@@ -42,40 +42,40 @@ public class ForgotPassword extends HttpServlet {
 		int otpvalue = 0;
 		HttpSession mySession = request.getSession();
 		
-		if(email!=null || !email.equals("")) {
-			Random rand = new Random();
-			otpvalue = rand.nextInt(1255650);
-			String to = email;
-			Properties props = new Properties();
-			props.put("mail.smtp.host", "smtp.google.com");
-			props.put("mail.smtp.socketFactory.port", "465");
-			props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-			props.put("mail.smtp.auth", "true");
-			props.put("mail.smtp.port", "465");
-			Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
-				protected PasswordAuthentication getPasswordAuthentication() {
-					// PROVIDE A VALID G-MAIL AND ITS PASSWORD
-					// MINE DOESN'T WORK
-					return new PasswordAuthentication("", "");
-				}
-			});
-			try {
-				MimeMessage message = new MimeMessage(session);
-				message.setFrom(new InternetAddress(email));
-				message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-				message.setSubject("One Time Password");
-				message.setText("your OTP is: " + otpvalue);
-				Transport.send(message);
-				System.out.println("message sent successfully"+otpvalue);
-			}catch (MessagingException e) {
-				System.out.println("message sent successfully"+otpvalue);
-				throw new RuntimeException(e);
-			}
-			
-// 			Just for the demonstration purposes. ---Avoids the mail scenario---
+//		if(email!=null || !email.equals("")) {
 //			Random rand = new Random();
 //			otpvalue = rand.nextInt(1255650);
-//			System.out.println("message sent successfully"+otpvalue);
+//			String to = email;
+//			Properties props = new Properties();
+//			props.put("mail.smtp.host", "smtp.google.com");
+//			props.put("mail.smtp.socketFactory.port", "465");
+//			props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+//			props.put("mail.smtp.auth", "true");
+//			props.put("mail.smtp.port", "465");
+//			Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+//				protected PasswordAuthentication getPasswordAuthentication() {
+//					// PROVIDE A VALID G-MAIL AND ITS PASSWORD
+//					// MINE DOESN'T WORK
+//					return new PasswordAuthentication("kavindulakshitha84@gmail.com", "oozjgovuwfkohbsi");
+//				}
+//			});
+//			try {
+//				MimeMessage message = new MimeMessage(session);
+//				message.setFrom(new InternetAddress(email));
+//				message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+//				message.setSubject("One Time Password");
+//				message.setText("your OTP is: " + otpvalue);
+//				Transport.send(message);
+//				System.out.println("message sent successfully"+otpvalue);
+//			}catch (MessagingException e) {
+//				System.out.println("message sent successfully"+otpvalue);
+//				throw new RuntimeException(e);
+//			}
+			
+// 			Just for the demonstration purposes. ---Avoids the mail scenario---
+			Random rand = new Random();
+			otpvalue = rand.nextInt(1255650);
+			System.out.println("message sent successfully"+otpvalue);
 
 			dispatcher = request.getRequestDispatcher("EnterOtp.jsp");
 			request.setAttribute("message","OTP is sent to your email id");
@@ -85,4 +85,3 @@ public class ForgotPassword extends HttpServlet {
 			dispatcher.forward(request, response);
 		}
 	}
-}

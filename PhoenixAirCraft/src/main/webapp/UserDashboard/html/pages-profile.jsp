@@ -74,8 +74,8 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.jsp" >Home</a></li>
-          <li><a href="Flights.jsp">Flight</a></li>
+          <li><a href="../../index.jsp" >Home</a></li>
+          <li><a href="../../Flights.jsp">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
           <li><a href="UserDashboard/html/UserDashboard.jsp" class="active">Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -313,7 +313,7 @@
   	        	        
 
   	        	      
-                                <center class="m-t-30"> <img src="../assets/images/icons8-user-100.png"  class="rounded-circle" width="150" />
+                                <center class="m-t-30"> <img src="../../assets/img/UserMale.png"  class="rounded-circle" width="150" />
                                     <h4 class="card-title m-t-10"><%= rs.getString("name") %></h4>
                                     <h6 class="card-subtitle"><%=rs.getString("role") %></h6>
 
@@ -351,7 +351,9 @@
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
+                            <span style="color: red; font-size:12px;">${error}</span>
                                 <form class="form-horizontal form-material mx-2" method="get" action="../../register">
+                                
                                     <div class="form-group">
                                         <label class="col-md-12">Full Name</label>
                                         <div class="col-md-12">

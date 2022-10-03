@@ -49,18 +49,34 @@ try {
 			st= (Statement) con.createStatement();
 
 		    sql ="select * from Users where memberID= '"+memberNo+"'";
-		
+		    RequestDispatcher dispatcher = null;
 		    ResultSet rs = st.executeQuery(sql);
 		    while(rs.next()) {
 		    	 pass = rs.getString("password");
 		    }
-	         if(password.equals(pass)) {
-	        	 RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
-		     	 rd.forward(request,response);
-	         }
-	         else {
-	        	 response.sendRedirect("UserDashboard/html/error-404.jsp");
-	         }
+		    if (u_username == null || u_username.equals("")) {
+				request.setAttribute("status", "invalidUsn");
+				dispatcher = request.getRequestDispatcher("login.jsp");
+				dispatcher.forward(request, response);
+			}
+		    if (password == null || password.equals("")) {
+				request.setAttribute("status", "invalidPsswd");
+				dispatcher = request.getRequestDispatcher("login.jsp");
+				dispatcher.forward(request, response);
+			}
+		    if (memberNo == null || memberNo.equals("")) {
+				request.setAttribute("status", "invalidMemberNo");
+				dispatcher = request.getRequestDispatcher("login.jsp");
+				dispatcher.forward(request, response);
+			}
+		   	 if(password.equals(pass)) {
+		        	 RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
+			     	 rd.forward(request,response);
+		     }else {
+		    	 request.setAttribute("status", "failed");
+		    	 dispatcher = request.getRequestDispatcher("login.jsp");
+				 dispatcher.forward(request, response);
+		     }
 
 	     		
 		    

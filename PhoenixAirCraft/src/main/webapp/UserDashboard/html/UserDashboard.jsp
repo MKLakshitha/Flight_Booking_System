@@ -74,8 +74,8 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.jsp" >Home</a></li>
-          <li><a href="Flights.jsp">Flight</a></li>
+          <li><a href="../../index.jsp" >Home</a></li>
+          <li><a href="../../Flights.jsp">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
           <li><a href="UserDashboard/html/UserDashboard.jsp" class="active">Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>

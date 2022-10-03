@@ -177,12 +177,13 @@ try {
 	    int i = ps.executeUpdate();
 	    if(i > 0)
 	    {
-	     RequestDispatcher rd = request.getRequestDispatcher("UserDashboard/html/pages-profile.jsp");
-	     rd.forward(request,response);
+	    	response.sendRedirect("UserDashboard/html/pages-profile.jsp");
 	    }
 	    else
 	    {
-	    response.sendRedirect("error-404.jsp");
+	      request.setAttribute("error","Invalid Updation Please Check Again!");
+		     RequestDispatcher rd = request.getRequestDispatcher("UserDashboard/html/pages-profile.jsp");
+		     rd.forward(request,response);
 	    } 
 	}
 	catch(Exception e) {
