@@ -117,4 +117,14 @@
     <servlet-name>accountUpdate</servlet-name>
     <url-pattern>/accountUpdate</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Staff</display-name>
+    <servlet-name>Staff</servlet-name>
+    <servlet-class>com.Kavindu.Staff</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Staff</servlet-name>
+    <url-pattern>/Staff</url-pattern>
+  </servlet-mapping>
 </web-app>

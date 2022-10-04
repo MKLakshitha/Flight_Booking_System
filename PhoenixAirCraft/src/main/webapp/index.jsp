@@ -34,6 +34,7 @@
 </head>
 
 <body>
+<input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -1034,7 +1035,16 @@ function autocomplete(inp, arr) {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="alert/dist/sweetalert.css">
+   <script>
+		var status = document.getElementById("status").value;
+         if(status=="success"){
+			swal("Flight Inserted Successfully", "Insert Success", "success");
+		}
 
+	</script>
 </body>
 
 </html>

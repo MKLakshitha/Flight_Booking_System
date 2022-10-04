@@ -60,7 +60,8 @@
 <![endif]-->
 </head>
 
-<body>
+<body >
+
    <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
        
@@ -256,8 +257,72 @@
                     </div>
                     <div class="col-6">
                         <div class="text-end upgrade-btn">
-                            <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/" class="btn btn-primary text-white"
-                                target="Flights.jsp">Book a Flight</a>
+                            <a href="#popup1" class="btn btn-primary text-white"
+                                target="">Add New Flight</a>
+
+<style>
+
+
+
+.overlay {
+  position: fixed;
+  top: 170px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  height: 500px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+</style>
                         </div>
                     </div>
                 </div>
@@ -378,6 +443,37 @@ try {
                             </div>
                         </div>
                     </div>
+                                                   
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2 style="text-align:center; color:blue; font-weight:bold;">Enter Flight Details</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<form action="../../staff" method="post" style="color:black; font-weight:bold;">
+			    Airline<br>
+			    <input type="text" class="input-form" name="Airline"><br>
+			    			    Depature<br>
+			    <input type="text" class="input-form" name="Depature"><br>
+			    			    Destination<br>
+			    <input type="text" class="input-form" name="Destination"><br>
+			    Date and Time<br>
+			    <input type="datetime-local" class="input-form" name="DateTime"><br>
+			    			    Price<br>
+			    <input type="number" class="input-form" name="Price"><br>
+			    <input type="submit" class="btn btn-primary" style="width:370px; margin:5px;">
+			</form>
+			<style>
+			.input-form{
+			  padding:5px 0px 3px 15px;
+			  margin:5px;
+			  width:370px;
+			  border-radius:5px;
+			  color:gray;
+			}
+			</style>
+		</div>
+	</div>
+</div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- Table -->
@@ -458,6 +554,13 @@ function checkAll(bx) {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+    <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="alert/dist/sweetalert.css">
+
+
+  
 </body>
 
 </html>
