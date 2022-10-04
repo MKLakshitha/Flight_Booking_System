@@ -199,30 +199,23 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin6" style="margin-top:100px;">
+        <aside class="left-sidebar" data-sidebarbg="skin6" style="margin-top:100px; ">
             <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
+            <div class="scroll-sidebar" >
                 <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="UserDashboard.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
-                                    class="hide-menu">Dashboard</span></a></li>
+                <nav class="sidebar-nav" >
+                    <ul id="sidebarnav" >
+                      
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="pages-profile.jsp" aria-expanded="false"><i
                                     class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
+                           <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="UserDashboard.jsp" aria-expanded="false"><i class="mdi mdi-airplane"></i><span
+                                    class="hide-menu">Available Flights</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="UserBooking.jsp" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
+                                href="UserBooking.jsp" aria-expanded="false"><i class="mdi mdi-cart"></i><span
                                     class="hide-menu">My Bookings</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span
-                                    class="hide-menu">Icon</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="starter-kit.html" aria-expanded="false"><i class="mdi mdi-file"></i><span
-                                    class="hide-menu">Blank</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="error-404.html" aria-expanded="false"><i class="mdi mdi-alert-outline"></i><span
-                                    class="hide-menu">404</span></a></li>
+                     
                         <li class="text-center p-40 upgrade-btn">
                             <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/"
                                 class="btn d-block w-100 btn-danger text-white" target="_blank">Tell Us</a>

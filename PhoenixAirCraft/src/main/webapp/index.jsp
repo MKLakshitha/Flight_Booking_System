@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@page import="java.sql.*" %>
 
 <head>
   <meta charset="utf-8">
@@ -43,7 +44,36 @@
        <img src="assets/img/Phoenix.svg" alt=""> 
         <h1>Phoenix Airline</h1>
       </a>
+      <%!String role; %>
+    <%
 
+
+    HttpSession sessionUser = request.getSession(false);
+    String user= sessionUser.getAttribute("user").toString();
+  
+
+try {
+	        Statement st;
+	        String sql;
+			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+			st= (Statement) con.createStatement();
+
+		    sql ="select * from Users where memberID='"+sessionUser.getAttribute("MemberID")+"'";
+			ResultSet rs = st.executeQuery(sql);
+			while(rs.next()){
+			
+			if(rs.getString("role").equals("User")){
+				role="UserDashboard/html/UserDashboard.jsp";
+			}
+			else if(rs.getString("role").equals("Staff")){
+				role="StaffDashboard/html/StaffDashboard.jsp";
+			}
+			else if(rs.getString("role").equals("admin")){
+				role="AdminDashboard/html/AdminDashboard.jsp";
+			}
+    %>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
@@ -51,7 +81,7 @@
           <li><a href="index.jsp" class="active">Home</a></li>
           <li><a href="Flights.jsp">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
-          <li><a href="UserDashboard/html/UserDashboard.jsp">Dashboard</a></li>
+          <li><a href=<%=role %>>Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
 				<li><a href="about.html">Phoenix Airline</a></li>
@@ -63,8 +93,14 @@
             </ul>
           </li>
           <%
-          HttpSession sessionUser = request.getSession(false);
-          String user= sessionUser.getAttribute("user").toString();
+			
+			}
+}catch(Exception e) {
+	e.printStackTrace();
+ }
+	 
+
+
           %>
          
                <li class="dropdown" style="margin-top:17px;"> <a href="myAccount.jsp"><span>Hi,<%=user %></span><img  src="assets/img/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
