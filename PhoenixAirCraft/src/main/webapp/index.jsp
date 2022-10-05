@@ -76,7 +76,7 @@ try {
 
 			}
 			else if(rs.getString("role").equals("admin")){
-				role="AdminDashboard/html/AdminDashboard.jsp";
+				role="adminDashboard/html/adminDashboard.jsp";
 			}
     %>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
