@@ -249,6 +249,9 @@
                                 href="Users.jsp" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span
                                     class="hide-menu">Users</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="Staff.jsp" aria-expanded="false"><i class="mdi mdi-account-star-variant"></i><span
+                                    class="hide-menu">STAFF-Grade(2)</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Tickets.jsp" aria-expanded="false"><i class="mdi mdi-ticket"></i><span
                                     class="hide-menu">Tickets</span></a></li>
 

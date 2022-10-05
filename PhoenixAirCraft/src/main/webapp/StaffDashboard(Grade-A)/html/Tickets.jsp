@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html dir="ltr" lang="en">        
 <%@page import="java.sql.*" %>
 <%@page import="com.Kavindu.*"%>
@@ -218,6 +218,9 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Users.jsp" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span
                                     class="hide-menu">Users</span></a></li>
+                                                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="Staff.jsp" aria-expanded="false"><i class="mdi mdi-account-star-variant"></i><span
+                                    class="hide-menu">STAFF-Grade(2)</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Tickets.jsp" aria-expanded="false"><i class="mdi mdi-ticket"></i><span
                                     class="hide-menu">Tickets</span></a></li>
@@ -256,8 +259,8 @@
                     </div>
                     <div class="col-6">
                         <div class="text-end upgrade-btn">
-                            <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/" class="btn btn-primary text-white"
-                                target="Flights.jsp">Book a Flight</a>
+                            <a href="#popup1" class="btn btn-primary text-white"
+                                >Add a New Ticket</a>
                         </div>
                     </div>
                 </div>
@@ -281,100 +284,315 @@
                 <!-- ============================================================== -->
                 <%  
   
+                try {
+        	        Statement st;
+        	        String sql;
+        			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+        			Class.forName("com.mysql.cj.jdbc.Driver");
+        			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+        			st= (Statement) con.createStatement();
+        			
+        			
+        	
 
-
-try {
-	        Statement st;
-	        String sql;
-			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
-			st= (Statement) con.createStatement();
-			
-			
-	
-
-			    
-		    sql ="Select * from Tickets";
-			
-			ResultSet rs = st.executeQuery(sql);
-			
-	        %>
-                            <div class="row">
-                    <!-- column -->
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <!-- title -->
-                                <div class="d-md-flex">
-                                    <div>
-                                        <h4 class="card-title">Ticket Details</h4>
-                                        <h5 class="card-subtitle" style="font-size:14px">Overview of Tickets</h5>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <div class="dl">
-                                            <select class="form-select shadow-none">
-                                                <option value="0" >5</option>
-                                                <option value="1" selected>10</option>
-                                                <option value="2">20</option>
-                                                <option value="3">25</option>
-                                            </select>
+        			    
+        		    sql ="Select * from Tickets";
+        			
+        			ResultSet rs = st.executeQuery(sql);
+        			
+        	        %>
+                        <div class="row">
+                            <!-- column -->
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!-- title -->
+                                        <div class="d-md-flex">
+                                            <div>
+                                                <h4 class="card-title">Ticket Details</h4>
+                                                <h5 class="card-subtitle" style="font-size:14px">Overview of Tickets</h5>
+                                            </div>
+                                            <div class="ms-auto">
+                                                <div class="dl">
+                                                    <select class="form-select shadow-none">
+                                                        <option value="0" >5</option>
+                                                        <option value="1" selected>10</option>
+                                                        <option value="2">20</option>
+                                                        <option value="3">25</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <!-- title -->
-                                <div class="table-responsive">
-                                    <table class="table mb-0 table-hover align-middle text-nowrap" id="example">
-                                        <thead>
-                                            <tr>
-                                            	<th class="border-top-0">Ticket ID</th>
-                                                <th class="border-top-0">Depature</th>
-                                                <th class="border-top-0">Destination</th>
-                                                <th class="border-top-0">Date and Time</th>
-                                                <th class="border-top-0">Class</th>
-                                                <th class="border-top-0">Seats</th>
-                                                <th class="border-top-0">Price</th>
-                                               
+                                        <!-- title -->
+                                        <div class="table-responsive">
+                                            <table class="table mb-0 table-hover align-middle text-nowrap" id="example">
+                                                <thead>
+                                                    <tr>
+                                                    	<th class="border-top-0">Ticket ID</th>
+                                                        <th class="border-top-0">Depature</th>
+                                                        <th class="border-top-0">Destination</th>
+                                                        <th class="border-top-0">Date and Time</th>
+                                                        <th class="border-top-0">Class</th>
+                                                        <th class="border-top-0">Seats</th>
+                                                        <th class="border-top-0">Price</th>
+														                                                <th class="border-top-0">Edit <i class="mdi mdi-ethernet-cable-off"></i></th>
+												<th class="border-top-0">Delete <i class="mdi mdi-delete-circle"></i></th>
+                                                        
 
-                                                
+<style>
 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <%while(rs.next()){
-     											 %>
 
-                
 
-                                            <tr>
-                                            
-                                                <td>
+.overlay {
+  position: fixed;
+  top: 170px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
 
-                                                      
-                                                <label class="badge bg-primary"><%=rs.getString("ticketID") %></label>
-                                                       
-                                                </td>
-                                                
-                                                <td><%=rs.getString("Depature") %></</td>
-                                                <td><%=rs.getString("Destination") %></td>
-                                                <td><%=rs.getString("DateTime") %></td>
-                                                <td>
-                                                    <label class="badge bg-success"><%=rs.getString("class") %></label>
-                                                </td>
-											    <td><%=rs.getString("seats") %>
-                                             </td>
-												<td><h4 class="badge bg-warning" style="font-size:16px;">$<%=rs.getString("price") %>.00 U.S</h4></td>
-                                            </tr>
-                                            <% }%>
-                                        </tbody>
-                                           <% 	
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+.popup {
+  margin: 10px auto;
+  height: 600px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+</style>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <%while(rs.next()){
+             											 %>
+
+                        
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2 style="text-align:center; color:blue; font-weight:bold;">Update a Available Ticket Details</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<form action="../../editTickets?id=<%=rs.getString("ticketID") %>" method="post" style="color:black; font-weight:bold;">
+			    <span style="color:black; font-weight:bold;">Depature</span><br>
+			    <input type="text" class="input-form" name="depature" ><br>
+			    			    					   <span style="color:black; font-weight:bold;"> Destination</span>	  <br>
+			    <input type="text" class="input-form" name="destination" ><br>
+			    	    <span style="color:black; font-weight:bold;">Date and Time</span><br>
+			    <input type="datetime-local" class="input-form" name="DateTime" ><br>
+			    		    <span style="color:black; font-weight:bold;">Class</span>	    <br>
+			    <input type="text" class="input-form" name="Class" ><br>
+			      <span style="color:black; font-weight:bold;">Seats</span>	    <br>
+			    <input type="text" class="input-form" name="seats" ><br>
+			    			    		    <span style="color:black; font-weight:bold;">Price</span><br>
+			     <input type="number" class="input-form" name="price" ><br>
+			    			    		 
+
+			    <input type="submit" style="width:370px; margin:5px;"class="btn btn-primary">
+			    
+			</form>
 			
-    }    
+<script>
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
 
-  %> 
+/*An array containing all the country names in the world:*/
+var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+			
+			</script>
+			<style>
+			.input-form{
+			  padding:5px 0px 4px 15px;
+			  margin:5px;
+			  width:370px;
+			  border-radius:5px;
+			  color:gray;
+			}
+						.input-form1{
+			  padding:5px 0px 2px 15px;
+			  margin:5px;
+			  width:370px;
+			  border-radius:5px;
+			  color:gray;
+			}
+			</style>
+		</div>
+	</div>
+
+</div>
+                                                    <tr>
+                                                    
+                                                        <td>
+
+                                                              
+                                                        <label class="badge bg-primary"><%=rs.getString("ticketID") %></label>
+                                                               
+                                                        </td>
+                                                        
+                                                        <td><%=rs.getString("Depature") %></</td>
+                                                        <td><%=rs.getString("Destination") %></td>
+                                                        <td><%=rs.getString("DateTime") %></td>
+                                                        <td>
+                                                            <label class="badge bg-success"><%=rs.getString("class") %></label>
+                                                        </td>
+        											    <td><%=rs.getString("seats") %>
+                                                       </td>
+        												<td><h4 class="badge bg-warning" style="font-size:16px;">$<%=rs.getString("price") %>.00 U.S</h4></td>
+        										     <td><a href="#popup2"><img src="../assets/img/icons8-edit-64.png" style="width:40px; height:40px;"></a></td>
+                                                <td><a href="../../DeleteTicket?id=<%=rs.getString("ticketID") %>" id=""><img src="../assets/img/icons8-delete-100.png" style="width:40px; height:40px;"></a></td>
+                                                    </tr>
+                                                    <% }%>
+                                                </tbody>
+                                                   <% 	
+        		} catch (ClassNotFoundException | SQLException e) {
+        			// TODO Auto-generated catch block
+        			e.printStackTrace();
+        			
+            }    
+
+          %> 
+
+  
+        
                                     </table>
                                 </div>
                             </div>
@@ -399,6 +617,45 @@ try {
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>
+           
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2 style="text-align:center; color:blue; font-weight:bold;"> New Ticket</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<form action="../../newTicket" method="post" style="color:black; font-weight:bold;">
+			Ticket ID<br>
+			    <input type="number" class="input-form1" name="ticketID"><br>
+			    Depature<br>
+			    <input type="text" class="input-form1" name="Depature"><br>
+			    Destination<br>
+			    <input type="text" class="input-form1" name="Destination"><br>
+			    			    Date and Time<br>
+			    <input type="datetime-local" class="input-form1" name="DateTime"><br>
+			    			    Class<br>
+			    <input type="text" class="input-form1" name="Class"><br>
+			    Seats<br>
+			    <input type="number" class="input-form1" name="Seats"><br>
+			     Price<br>
+			    <input type="number" class="input-form1" name="Price"><br>
+
+			 
+			    				    
+			    <input type="submit" class="btn btn-primary" style="width:370px; margin:5px;">
+			</form>
+			<style>
+			.input-form{
+			  padding:5px 0px 3px 15px;
+			  margin:5px;
+			  width:370px;
+			  border-radius:5px;
+			  color:gray;
+			}
+			</style>
+		</div>
+	</div>
+</div>
+        
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
@@ -459,7 +716,6 @@ function checkAll(bx) {
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
-
 
 
 </html>

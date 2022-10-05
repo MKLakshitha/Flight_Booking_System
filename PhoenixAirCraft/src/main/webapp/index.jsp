@@ -71,6 +71,10 @@ try {
 			else if(rs.getString("role").equals("Staff")){
 				role="StaffDashboard/html/StaffDashboard.jsp";
 			}
+			else if(rs.getString("role").equals("Staff(A)")){
+				role="StaffDashboard(Grade-A)/html/StaffDashboard.jsp";
+
+			}
 			else if(rs.getString("role").equals("admin")){
 				role="AdminDashboard/html/AdminDashboard.jsp";
 			}
@@ -1043,6 +1047,10 @@ function autocomplete(inp, arr) {
          if(status=="success"){
 			swal("Flight Inserted Successfully", "Insert Success", "success");
 		}
+         else if(status=="AddBooking"){
+        	 swal("New User Booking Inserted Successfully", "Insert Success", "success");
+
+         }
 
 	</script>
 </body>

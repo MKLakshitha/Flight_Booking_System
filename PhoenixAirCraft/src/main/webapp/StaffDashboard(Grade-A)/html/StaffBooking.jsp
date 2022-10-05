@@ -60,7 +60,8 @@
 <![endif]-->
 </head>
 
-<body>
+<body >
+
    <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
        
@@ -74,10 +75,10 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="../..//index.jsp">Home</a></li>
+          <li><a href="../../index.jsp" >Home</a></li>
           <li><a href="../../Flights.jsp">Flight</a></li>
           <li><a href="services.html">Tickets</a></li>
-          <li><a href="UserDashboard.jsp" class="active">Dashboard</a></li>
+          <li><a href="UserDashboard/html/UserDashboard.jsp" class="active">Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
 				<li><a href="about.html">Phoenix Airline</a></li>
@@ -101,7 +102,7 @@
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown" style="text-allign:center;">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/images/icons8-male-user-50.png" alt="user" class="rounded-circle" width="31" style="margin-left:30px;"> <span>Hi,<%=user %></span>
+                                <img src="../assets/images/icons8-male-user-50.png" alt="user" class="rounded-circle" width="31" style="margin-left:30px;">Hi,<%=user %>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="pages-profile.jsp"><i class="ti-user m-r-5 m-l-5"></i>
@@ -218,6 +219,9 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Users.jsp" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span
                                     class="hide-menu">Users</span></a></li>
+                                                  <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="Staff.jsp" aria-expanded="false"><i class="mdi mdi-account-star-variant"></i><span
+                                    class="hide-menu">STAFF-Grade(2)</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Tickets.jsp" aria-expanded="false"><i class="mdi mdi-ticket"></i><span
                                     class="hide-menu">Tickets</span></a></li>
@@ -256,8 +260,139 @@
                     </div>
                     <div class="col-6">
                         <div class="text-end upgrade-btn">
-                            <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/" class="btn btn-primary text-white"
-                                target="Flights.jsp">Book a Flight</a>
+                            <a href="#popup1" class="btn btn-primary text-white"
+                                target="">Add New Booking</a>
+
+<style>
+
+
+
+.overlay {
+  position: fixed;
+  top: 170px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 10px auto;
+  height: 600px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+</style>
+
+<style>
+
+
+
+.overlay {
+  position: fixed;
+  top: 170px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup1 {
+  
+  margin: -40px auto;
+  height: 660px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup1 h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup1 .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup1 .close:hover {
+  color: #06D85F;
+}
+.popup1 .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+</style>
                         </div>
                     </div>
                 </div>
@@ -291,11 +426,9 @@ try {
 			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
 			st= (Statement) con.createStatement();
 			
-			
-	
-			
+
 			    
-		    sql ="Select * from UserBookings";
+		    sql ="Select * from UserBookings ";
 			
 			ResultSet rs = st.executeQuery(sql);
 			
@@ -308,8 +441,8 @@ try {
                                 <!-- title -->
                                 <div class="d-md-flex">
                                     <div>
-                                        <h4 class="card-title">My Bookings</h4>
-                                        <h5 class="card-subtitle" style="font-size:14px">Overview of Bookings</h5>
+                                        <h4 class="card-title">All User Bookings</h4>
+                                        <h5 class="card-subtitle" style="font-size:14px">Overview of User Booking Details</h5>
                                     </div>
                                     <div class="ms-auto">
                                         <div class="dl">
@@ -327,16 +460,16 @@ try {
                                     <table class="table mb-0 table-hover align-middle text-nowrap" id="example">
                                         <thead>
                                             <tr>
-                                            	<th class="border-top-0">Member ID</th>
+                                            <th class="border-top-0">Member ID</th>
                                                 <th class="border-top-0">Flight ID</th>
-                                                <th class="border-top-0">Airline</th>
+                                                
                                                 <th class="border-top-0">Depature</th>
                                                 <th class="border-top-0">Destination</th>
                                                 <th class="border-top-0">Date and Time</th>
                                                 <th class="border-top-0">Passengers</th>
-
-                                                <th class="border-top-0">Total Price</th>
-
+                                                <th class="border-top-0">Total</th>
+                                                <th class="border-top-0">Edit <i class="mdi mdi-ethernet-cable-off"></i></th>
+												<th class="border-top-0">Delete <i class="mdi mdi-delete-circle"></i></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -346,24 +479,73 @@ try {
                 
 
                                             <tr>
-                                            
-                                                <td>
+                                                                                                                                        
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2 style="text-align:center; color:blue; font-weight:bold;">Update User Booking Details</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<form action="../../editBokking?id=<%=rs.getString("MemberID") %>" method="post" style="color:black; font-weight:bold;">
+			    <span style="color:black; font-weight:bold;">Airline</span><br>
+			    <input type="text" class="input-form" name="Airline" ><br>
+			    	    <span style="color:black; font-weight:bold;">Depature</span><br>
+			    <input type="text" class="input-form" name="Depature" ><br>
+			    		    <span style="color:black; font-weight:bold;">Destination</span>	    <br>
+			    <input type="text" class="input-form" name="Destination" ><br>
+			    			    		    <span style="color:black; font-weight:bold;">Passengers</span><br>
+			     <input type="number" class="input-form" name="Passengers" ><br>
+			    			    		    <span style="color:black; font-weight:bold;">Date and Time</span><br>
+			    <input type="datetime-local" class="input-form" name="DateTime" ><br>
+			    					    		    <span style="color:black; font-weight:bold;">  Total</span>	  <br>
+			    <input type="number" class="input-form" name="Total" ><br>
+			    <input type="submit" style="width:370px; margin:5px;"class="btn btn-primary">
+			    
+			</form>
+			<style>
+			.input-form{
+			  padding:5px 0px 3px 15px;
+			  margin:5px;
+			  width:370px;
+			  border-radius:5px;
+			  color:gray;
+			}
+						.input-form1{
+			  padding:0px 0px 0px 15px;
+			  margin:5px;
+			  width:370px;
+			  border-radius:5px;
+			  color:gray;
+			}
+			</style>
+		</div>
+	</div>
 
-                                                      
-                                                <label class="badge bg-primary"><%=rs.getString("MemberID") %></label>
-                                                       
+</div>
+                                            
+                                               <td ><h5 class="badge bg-primary"><%=rs.getString("MemberID") %></h5></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="m-r-10"><a
+                                                                class="btn btn-circle d-flex btn-info text-white"><%=rs.getString("FlightId") %></a>
+                                                        </div>
+                                                        <div class="">
+                                                            <h4 class="m-b-0 font-16"><%=rs.getString("Airline") %></h4>
+                                                        </div>
+                                                    </div>
                                                 </td>
-                                                <td><%=rs.getString("FlightId") %></td>
-                                                <td><%=rs.getString("Airline") %></</td>
                                                 <td><%=rs.getString("Depature") %></td>
                                                 <td><%=rs.getString("Destination") %></td>
                                                 <td>
                                                     <label class="badge bg-success"><%=rs.getString("DateTime") %></label>
                                                 </td>
-											    <td><%=rs.getString("Passengers") %></td>
-                                               
-												<td><h4 class="badge bg-warning" style="font-size:16px;">$<%=rs.getString("total") %>.00 U.S</h4></td>
-                                            </tr>
+												                                                <td><%=rs.getString("Passengers") %></td>
+                                                <td>
+                                                    <h5  class="badge bg-danger" style="font-size:16px;">$<%=rs.getString("Total") %> U.S</h5>
+                                                </td>
+                                                <td><a href="#popup2"><img src="../assets/img/icons8-edit-64.png" style="width:40px; height:40px;"></a></td>
+                                                <td><a href="../../DeleteBookings?id=<%=rs.getString("MemberID") %>" id=""><img src="../assets/img/icons8-delete-100.png" style="width:40px; height:40px;"></a></td>
+                                            
+</tr>
                                             <% }%>
                                         </tbody>
                                            <% 	
@@ -379,6 +561,43 @@ try {
                             </div>
                         </div>
                     </div>
+   
+<div id="popup1" class="overlay">
+	<div class="popup1">
+		<h2 style="text-align:center; color:blue; font-weight:bold;">Enter User Booking Details</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<form action="../../StaffA" method="post" style="color:black; font-weight:bold;">
+			MemberID<br>
+			    <input type="number" class="input-form1" name="MemberID"><br>
+			    FlightID<br>
+			    <input type="text" class="input-form1" name="FlightID"><br>
+			    Airline<br>
+			    <input type="text" class="input-form1" name="Airline"><br>
+			    			    Depature<br>
+			    <input type="text" class="input-form1" name="Depature"><br>
+			    			    Destination<br>
+			    <input type="text" class="input-form1" name="Destination"><br>
+			    Date and Time<br>
+			    <input type="datetime-local" class="input-form1" name="DateTime"><br>
+			     Passengers<br>
+			    <input type="number" class="input-form1" name="Passengers"><br>
+			    			    Total<br>
+			    <input type="number" class="input-form1" name="Total"><br>
+			    <input type="submit" class="btn btn-primary" style="width:370px; margin:5px;">
+			</form>
+			<style>
+			.input-form{
+			  padding:5px 0px 3px 15px;
+			  margin:5px;
+			  width:370px;
+			  border-radius:5px;
+			  color:gray;
+			}
+			</style>
+		</div>
+	</div>
+</div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- Table -->
@@ -433,6 +652,8 @@ function checkAll(bx) {
 }
 </script>
     
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+   <div id="preloader"></div>
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -457,6 +678,13 @@ function checkAll(bx) {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+    <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="alert/dist/sweetalert.css">
+
+
+  
 </body>
 
 </html>

@@ -260,7 +260,7 @@
                     <div class="col-6">
                         <div class="text-end upgrade-btn">
                             <a href="#popup1" class="btn btn-primary text-white"
-                                >Add a New User</a>
+                                >Add a New Staff</a>
                         </div>
                     </div>
                 </div>
@@ -296,7 +296,7 @@
         	
 
         			    
-        		    sql ="Select * from Users where role ='User'";
+        		    sql ="Select * from Users where role ='Staff'";
         			
         			ResultSet rs = st.executeQuery(sql);
         			
@@ -309,8 +309,8 @@
                                         <!-- title -->
                                         <div class="d-md-flex">
                                             <div>
-                                                <h4 class="card-title">Users Details</h4>
-                                                <h5 class="card-subtitle" style="font-size:14px">Overview of Users</h5>
+                                                <h4 class="card-title">Staff Details</h4>
+                                                <h5 class="card-subtitle" style="font-size:14px">Overview of Staff Grade-2</h5>
                                             </div>
                                             <div class="ms-auto">
                                                 <div class="dl">
@@ -412,7 +412,7 @@
                         
 <div id="popup2" class="overlay">
 	<div class="popup">
-		<h2 style="text-align:center; color:blue; font-weight:bold;">Update User Details</h2>
+		<h2 style="text-align:center; color:blue; font-weight:bold;">Update Staff Details</h2>
 		<a class="close" href="#">&times;</a>
 		<div class="content">
 			<form action="../../editUsers?id=<%=rs.getString("memberID") %>" method="post" style="color:black; font-weight:bold;">
@@ -621,7 +621,7 @@ autocomplete(document.getElementById("myInput"), countries);
            
 <div id="popup1" class="overlay">
 	<div class="popup">
-		<h2 style="text-align:center; color:blue; font-weight:bold;"> New User</h2>
+		<h2 style="text-align:center; color:blue; font-weight:bold;"> New Staff Member</h2>
 		<a class="close" href="#">&times;</a>
 		<div class="content">
 			<form action="../../addUsers" method="post" style="color:black; font-weight:bold;">

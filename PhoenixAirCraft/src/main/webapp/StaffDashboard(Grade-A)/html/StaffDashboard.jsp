@@ -219,6 +219,9 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Users.jsp" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span
                                     class="hide-menu">Users</span></a></li>
+                                                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="Staff.jsp" aria-expanded="false"><i class="mdi mdi-account-star-variant"></i><span
+                                    class="hide-menu">STAFF-Grade(2)</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Tickets.jsp" aria-expanded="false"><i class="mdi mdi-ticket"></i><span
                                     class="hide-menu">Tickets</span></a></li>
@@ -396,8 +399,8 @@ try {
                                                 <th class="border-top-0">Destination</th>
                                                 <th class="border-top-0">Date and Time</th>
                                                 <th class="border-top-0">Price</th>
-                                               
-
+                                                <th class="border-top-0">Edit <i class="mdi mdi-ethernet-cable-off"></i></th>
+												<th class="border-top-0">Delete <i class="mdi mdi-delete-circle"></i></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -427,7 +430,45 @@ try {
                                                 <td>
                                                     <h5  class="badge bg-danger" style="font-size:16px;">$<%=rs.getString("Price") %> U.S</h5>
                                                 </td>
-                                            </tr>
+                                                <td><a href="#popup2"><img src="../assets/img/icons8-edit-64.png" style="width:40px; height:40px;"></a></td>
+                                                <td><a href="../../Delete?id=<%=rs.getString("id") %>" id=""><img src="../assets/img/icons8-delete-100.png" style="width:40px; height:40px;"></a></td>
+                                            
+                                                                                            
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2 style="text-align:center; color:blue; font-weight:bold;">Update Flight Details</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<form action="../../EditFlights?id=<%=rs.getString("id") %>" method="post" style="color:black; font-weight:bold;">
+			    <span style="color:black; font-weight:bold;">Airline</span><br>
+			    <input type="text" class="input-form" name="Airline" ><br>
+			    	    <span style="color:black; font-weight:bold;">Depature</span><br>
+			    <input type="text" class="input-form" name="Depature" ><br>
+			    		    <span style="color:black; font-weight:bold;">Destination</span>	    <br>
+			    <input type="text" class="input-form" name="Destination" ><br>
+			    			    		    <span style="color:black; font-weight:bold;">Date and Time</span><br>
+			    <input type="datetime-local" class="input-form" name="DateTime" ><br>
+			    					    		    <span style="color:black; font-weight:bold;">  Price</span>	  <br>
+			    <input type="number" class="input-form" name="Price" ><br>
+	
+			    <input type="submit" style="width:370px; margin:5px;"class="btn btn-primary"><br>
+			   
+			    
+			</form>
+			<style>
+			.input-form{
+			  padding:5px 0px 3px 15px;
+			  margin:5px;
+			  width:370px;
+			  border-radius:5px;
+			  color:gray;
+			}
+			</style>
+		</div>
+	</div>
+
+</div>
+</tr>
                                             <% }%>
                                         </tbody>
                                            <% 	
@@ -443,7 +484,7 @@ try {
                             </div>
                         </div>
                     </div>
-                                                   
+   
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<h2 style="text-align:center; color:blue; font-weight:bold;">Enter Flight Details</h2>
