@@ -81,3 +81,27 @@
     </div>
   </header><!-- End Header -->
   <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/page-header.jpg');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>About</h2>
+              <p> <p>Launched in 2020, Sri Lanka’s National Carrier is an award winning airline with a solid reputation for service, comfort, safety, reliability, and punctuality.</p> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>About</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
