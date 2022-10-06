@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
  <link rel="stylesheet" href="styles.css">
   <meta charset="utf-8">
@@ -43,12 +44,12 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
- <link rel="stylesheet" href="styles.css">
+
       
 </head>
 
 
-<body >
+<body>
    <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
        
@@ -96,30 +97,27 @@
     </div>
   </header>
   <div class="text-box">
-                <h1>How COVID-19 spreads</h1>
-                <p>
-                    When someone who has COVID-19 coughs or exhales they release droplets of infected fluid.
-                    Most of these droplets fall on nearby surfaces and objects - such as desks, tables or telephones.<br>
-                    People could catch COVID-19 by touching contaminated surfaces or objects and then touching their eyes,
-                    nose or mouth.If they are standing within one meter of a person with COVID-19 they <br>can catch it by 
-                    breathing in droplets coughed out or exhaled by them.In other words,COVID-19 spreads in a similar way 
-                    to flu. Most persons infected with COVID-19 experience mild symptoms <br>and recover.
-                    However, some go on to experience more serious illness and may require hospital care.
-                    Risk of serious illness rises with age people over 40 seem to be more vulnerable than those <br>under 40.
-                    People with weakened immune systems and people with conditions such as diabetes,
-                    heart and lung disease are also more vulnerable to serious illness.   
-                </p>
-                <a href="seemore.jsp" class="hero-btn">See More</a>
-            </div>
-        </section>
-        <script>
-            var navLinks = document.getElementById("navLinks");
-            function showMenu(){
-                navLinks.style.right = "0";  
-            }
-            function hideMenu(){
-                navLinks.style.right = "-200px";  
-            }
-        </script>
+        <p>
+            For people aged 2 years or older—including passengers and workers—CDC recommends properly wearing a high-quality mask or respirator over the nose and mouth in indoor areas of public transportation (such as airplanes, trains, buses, ferries) 
+            and transportation hubs (such as airports, stations, and seaports). When people properly wear a high-quality mask or respirator, 
+            they protect themselves and those around them, and help keep travel and public transportation safer for everyone. Wearing a 
+            high-quality mask or respirator is most beneficial in crowded or poorly ventilated locations, such as airport jetways.
+            CDC also encourages operators of public transportation and transportation hubs to support mask wearing by all people, including 
+            employees.
+        </p>
+                        <a href="symptoms.jsp" class="hero-btn">See More</a>
+        </div>
+    </section>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";  
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";  
+        }
+    </script>
+
+
 </body>
 </html>

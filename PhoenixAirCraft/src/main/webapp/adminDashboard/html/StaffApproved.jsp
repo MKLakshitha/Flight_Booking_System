@@ -230,6 +230,9 @@
                                                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="StaffApproved.jsp" aria-expanded="false"><i class="mdi mdi-account-settings-variant"></i><span
                                     class="hide-menu">Staff Approval</span></a></li>
+                                                                           <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="UserBlocking.jsp" aria-expanded="false"><i class="mdi mdi-account-settings-variant"></i><span
+                                    class="hide-menu">Block Users</span></a></li>
                                       <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="UserIP.jsp" aria-expanded="false"><i class="mdi mdi-cellphone-link"></i><span
                                     class="hide-menu">IP Checking/Last Login</span></a></li>

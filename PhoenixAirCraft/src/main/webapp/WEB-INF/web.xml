@@ -297,4 +297,24 @@
     <servlet-name>ApproveStaff</servlet-name>
     <url-pattern>/ApproveStaff</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UnblockUser</display-name>
+    <servlet-name>UnblockUser</servlet-name>
+    <servlet-class>com.Kavindu.UnblockUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UnblockUser</servlet-name>
+    <url-pattern>/UnblockUser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BlockUser</display-name>
+    <servlet-name>BlockUser</servlet-name>
+    <servlet-class>com.Kavindu.BlockUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BlockUser</servlet-name>
+    <url-pattern>/BlockUser</url-pattern>
+  </servlet-mapping>
 </web-app>

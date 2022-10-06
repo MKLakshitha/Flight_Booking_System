@@ -85,15 +85,15 @@ try {
         <ul>
           <li><a href="index.jsp" class="active">Home</a></li>
           <li><a href="Flights.jsp">Flight</a></li>
-          <li><a href="services.html">Tickets</a></li>
+       
           <li><a href=<%=role %>>Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-				<li><a href="about.html">Phoenix Airline</a></li>
-              <li><a href="pricing.html">Offers</a></li>
-              <li><a href="services.html">Services</a></li>       
-              <li><a href="contact.html">Contact Us</a></li>  
-              <li><a  href="get-a-quote.html">Get a Quote</a></li>
+				<li><a href="index.jsp">Phoenix Airline</a></li>
+              <li><a href="pricing.jsp">Offers</a></li>
+              <li><a href="services.jsp">Services</a></li>       
+              <li><a href="contact.jsp">Contact Us</a></li>  
+              <li><a  href="get-a-quote.jsp">Get a Quote</a></li>
 
             </ul>
           </li>
@@ -136,7 +136,7 @@ try {
           <h2 data-aos="fade-up">Life is Short And<br> The World is Wide!</h2>
           <p data-aos="fade-up" data-aos-delay="100">To Get the best of your adventure you just need to leave and<br>
 go where you like. We are waiting for you.</p>
-           <button type="button" id="btn-booking">Book Your Flight</button>
+           <a href="Flights.jsp"><button type="button" id="">Book Your Flight</button></a>
            
           
 

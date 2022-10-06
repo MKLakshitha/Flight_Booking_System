@@ -54,7 +54,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
+    <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
        
       <a href="index.html" class="logo d-flex align-items-center">
@@ -62,34 +62,73 @@
        <img src="assets/img/Phoenix.svg" alt=""> 
         <h1>Phoenix Airline</h1>
       </a>
+      <%!String role; %>
+    <%
 
+
+    HttpSession sessionUser = request.getSession(false);
+    String user= sessionUser.getAttribute("user").toString();
+  
+
+try {
+	        Statement st;
+	        String sql;
+			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+			st= (Statement) con.createStatement();
+
+		    sql ="select * from Users where memberID='"+sessionUser.getAttribute("MemberID")+"'";
+			ResultSet rs = st.executeQuery(sql);
+			while(rs.next()){
+			
+			if(rs.getString("role").equals("User")){
+				role="UserDashboard/html/UserDashboard.jsp";
+			}
+			else if(rs.getString("role").equals("Staff")){
+				role="StaffDashboard/html/StaffDashboard.jsp";
+			}
+			else if(rs.getString("role").equals("Staff(A)")){
+				role="StaffDashboard(Grade-A)/html/StaffDashboard.jsp";
+
+			}
+			else if(rs.getString("role").equals("admin")){
+				role="adminDashboard/html/adminDashboard.jsp";
+			}
+    %>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.jsp" class="active">Home</a></li>
-          <li><a href="Flights.jsp">Flight</a></li>
-          <li><a href="services.html">Tickets</a></li>
-          <li><a href="pricing.html">Dashboard</a></li>
+          <li><a href="index.jsp" >Home</a></li>
+          <li><a href="Flights.jsp" class="active">Flight</a></li>
+       
+          <li><a href=<%=role %>>Dashboard</a></li>
           <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-				<li><a href="about.html">Phoenix Airline</a></li>
-              <li><a href="pricing.html">Offers</a></li>
-              <li><a href="services.html">Services</a></li>       
-              <li><a href="contact.html">Contact Us</a></li>  
-              <li><a  href="get-a-quote.html">Get a Quote</a></li>
+				<li><a href="index.jsp">Phoenix Airline</a></li>
+              <li><a href="pricing.jsp">Offers</a></li>
+              <li><a href="services.jsp">Services</a></li>       
+              <li><a href="contact.jsp">Contact Us</a></li>  
+              <li><a  href="get-a-quote.jsp">Get a Quote</a></li>
 
             </ul>
           </li>
           <%
-          HttpSession sessionUser = request.getSession(false);
-          String user= sessionUser.getAttribute("user").toString();
+			
+			}
+}catch(Exception e) {
+	e.printStackTrace();
+ }
+	 
+
+
           %>
          
                <li class="dropdown" style="margin-top:17px;"> <a href="myAccount.jsp"><span>Hi,<%=user %></span><img  src="assets/img/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                <a href="#"> </a>
                            <ul>
-				<li><a href="ManageAccount.jsp">Manage Account</a></li>
+				<li><a href="UserDashboard/html/pages-profile.jsp">Manage Account</a></li>
               <li><a href="login.jsp">Log Out</a></li>
             
 
@@ -103,7 +142,7 @@
       </nav><!-- .navbar -->
 
     </div>
-  </header>  <!-- End Header -->
+  </header>< <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
 

@@ -230,6 +230,9 @@
                                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="StaffApproved.jsp" aria-expanded="false"><i class="mdi mdi-account-settings-variant"></i><span
                                     class="hide-menu">Staff Approval</span></a></li>
+                                                                           <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="UserBlocking.jsp" aria-expanded="false"><i class="mdi mdi-account-settings-variant"></i><span
+                                    class="hide-menu">Block Users</span></a></li>
                                                                                                                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="UserIP.jsp" aria-expanded="false"><i class="mdi mdi-cellphone-link"></i><span
                                     class="hide-menu">IP Checking/Last Login</span></a></li>
@@ -346,8 +349,8 @@
                                                         <th class="border-top-0">Address</th>
                                                         <th class="border-top-0">Country</th>
 														                                                <th class="border-top-0">Edit <i class="mdi mdi-ethernet-cable-off"></i></th>
-														                                                <th class="border-top-0">Actions <i class="mdi mdi-account-settings-variant"></i></th>
-													<th class="border-top-0">Actions <i class="mdi mdi-account-settings-variant"></i></th>
+														                                                <th class="border-top-0">Make G-1 <i class="mdi mdi-account-settings-variant"></i></th>
+													<th class="border-top-0">Make User <i class="mdi mdi-account-settings-variant"></i></th>
 												<th class="border-top-0">Delete <i class="mdi mdi-delete-circle"></i></th>
                                                         
 
@@ -591,8 +594,8 @@ autocomplete(document.getElementById("myInput"), countries);
         												<%=rs.getString("city") %></td>
         												<td><h4 class="badge bg-warning" style="font-size:16px;"><%=rs.getString("country") %></h4></td>
         										     <td><a href="#popup2"><img src="../assets/img/icons8-edit-64.png" style="width:40px; height:40px;"></a></td>
-        										     		       <td><a href="../../MakeUser?id=<%=rs.getString("memberID") %>"><span style="padding:8px; color:#fff;font-weight:bold; background:blue; border-radius:10px;">Make User</span></a></td>
-        										       <td><a href="../../MakeG1?id=<%=rs.getString("memberID") %>"><span style="padding:8px; color:#fff;  font-weight:bold; background:blue; border-radius:10px;">Make (G-1)</span></a></td>
+        										       <td><a href="../../MakeG1?id=<%=rs.getString("memberID") %>"><img src="../assets/img/icons8-staff-78.png" style="width:45px; height:45px; margin-left:20px;"></a></td>
+        										       <td><a href="../../MakeUser?id=<%=rs.getString("memberID") %>"><img src="../assets/img/profile.png" style="width:30px; height:30px; margin-left:20px;"></a></td>
                                                 <td><a href="../../DeleteUsers?id=<%=rs.getString("memberID") %>" id=""><img src="../assets/img/icons8-delete-100.png" style="width:40px; height:40px;"></a></td>
                                                     </tr>
                                                     <% }%>

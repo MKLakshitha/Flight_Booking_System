@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,8 +58,37 @@
                         <h6 class="card-title text-primary">Phoenix Airline Invoice</h6><img src="assets/img/Phoenix.svg" class="img-fluid rounded-start" alt="..." style="width:40px; height:40px; position: absolute;
 left: 15.57%;
 right: 85.2%; margin-bottom:1px; margin-top:8px;">
-                        
- <%HttpSession sessionPay = request.getSession(false);
+               <%!		    String name,address,lane,country,phone,email;  %>         
+ <% 	HttpSession sessionUser = request.getSession(false);
+	
+	 String memberNo= sessionUser.getAttribute("MemberID").toString();
+
+try {
+	        Statement st;
+	        String sql,pass = null;
+			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+			st= (Statement) con.createStatement();
+			 
+		    sql ="select * from Users where memberID= '"+memberNo+"'";
+
+		    ResultSet rs= st.executeQuery(sql);
+            while(rs.next()){
+            	name=rs.getString("name");
+            	address=rs.getString("add1");
+            	lane=rs.getString("add2");
+            	country=rs.getString("country");
+            	phone=rs.getString("phone");
+            	email=rs.getString("email");
+            	
+            }
+}catch(Exception e){
+	e.printStackTrace();
+}
+ 
+ 
+ HttpSession sessionPay = request.getSession(false);
 	String id= sessionPay.getAttribute("id").toString();
 	String price= sessionPay.getAttribute("price").toString();
 	String Depature= sessionPay.getAttribute("Depature").toString();
@@ -98,14 +127,14 @@ right: 85.2%; margin-bottom:1px; margin-top:8px;">
                                 <ul class="list list-unstyled mb-0">
                                 
                                     <li>
-                                        <h5 class="my-2">Sample Name</h5>
+                                        <h5 class="my-2"> <%=name %></h5>
                                     </li>
                 
-                                    <li>Address</li>
-                                    <li>lane</li>
-                                    <li>Country</li>
-                                    <li>Mobile no</li>
-                                    <li><a href="#" data-abc="true">username@gmail.com</a></li>
+                                    <li><%=address %></li>
+                                    <li><%=lane %></li>
+                                    <li><%=country %></li>
+                                    <li> <%=phone %></li>
+                                    <li><a href="#" data-abc="true"><%=email %></a></li>
                                 </ul>
                             </div>
                             <div class="mb-2 ml-auto"> <span class="text-muted">Payment Details:</span>
@@ -242,7 +271,7 @@ font-size: 18px;
 line-height: 24px;
 
 color: #000000;">Name of passenger:
-Sample Name</div>
+<%=name %></div>
 <div style="position: absolute;
 width: 74px;
 height: 48px;
