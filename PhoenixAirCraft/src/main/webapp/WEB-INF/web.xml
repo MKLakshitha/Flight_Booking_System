@@ -257,4 +257,44 @@
     <servlet-name>editTickets</servlet-name>
     <url-pattern>/editTickets</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MakeG1</display-name>
+    <servlet-name>MakeG1</servlet-name>
+    <servlet-class>com.Kavindu.MakeG1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MakeG1</servlet-name>
+    <url-pattern>/MakeG1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MakeG2</display-name>
+    <servlet-name>MakeG2</servlet-name>
+    <servlet-class>com.Kavindu.MakeG2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MakeG2</servlet-name>
+    <url-pattern>/MakeG2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MakeUser</display-name>
+    <servlet-name>MakeUser</servlet-name>
+    <servlet-class>com.Kavindu.MakeUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MakeUser</servlet-name>
+    <url-pattern>/MakeUser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ApproveStaff</display-name>
+    <servlet-name>ApproveStaff</servlet-name>
+    <servlet-class>com.Kavindu.ApproveStaff</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ApproveStaff</servlet-name>
+    <url-pattern>/ApproveStaff</url-pattern>
+  </servlet-mapping>
 </web-app>
