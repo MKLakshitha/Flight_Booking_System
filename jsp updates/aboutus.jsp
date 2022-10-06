@@ -36,6 +36,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -105,6 +106,7 @@
         </div>
       </nav>
     </div><!-- End Breadcrumbs -->
+
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
@@ -147,6 +149,7 @@
 
       </div>
     </section><!-- End About Us Section -->
+
     <!-- ======= Stats Counter Section ======= -->
     <section id="stats-counter" class="stats-counter pt-0">
       <div class="container" data-aos="fade-up">
@@ -185,7 +188,8 @@
 
       </div>
     </section><!-- End Stats Counter Section -->
-<!-- ======= Our Team Section ======= -->
+
+    <!-- ======= Our Team Section ======= -->
     <section id="team" class="team pt-0">
       <div class="container" data-aos="fade-up">
 
@@ -199,13 +203,12 @@
 
           <div class="col-lg-4 col-md-6 d-flex">
             <div class="member">
-              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+              <img src="../webapp/images/WhatsApp Image 2022-10-06 at 22.38.05.jpeg" class="img-fluid" alt="">
               <div class="member-content">
-                <h4>Walter White</h4>
+                <h4>MK Lakshitha – 23610
+                </h4>
                 <span>Web Development</span>
-                <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                </p>
+              
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -215,15 +218,63 @@
               </div>
             </div>
           </div><!-- End Team Member -->
- <div class="col-lg-4 col-md-6 d-flex">
+          <div class="col-lg-4 col-md-6 d-flex">
             <div class="member">
-              <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+              <img src="../webapp/images/WhatsApp Image 2022-10-06 at 18.36.29.jpeg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>KGB Akash – 22883</h4>
+                <span>Web Development</span>
+                
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="member">
+              <img src="../webapp/images/Screenshot 2022-10-06 234838.png" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>LHCMD Silva – 22783
+                </h4>
+                <span>Web Development</span>
+              
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="member">
+              <img src="../webapp/images/WhatsApp Image 2022-10-06 at 17.53.43.jpeg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>NS Anjana – 23885</h4>
+                <span>Web Development</span>
+                
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="member">
+              <img src="../webapp/images/WhatsApp Image 2022-10-06 at 19.09.33.jpeg" class="img-fluid" alt="">
               <div class="member-content">
                 <h4>Sarah Jhinson</h4>
                 <span>Marketing</span>
-                <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                </p>
+                
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -233,15 +284,14 @@
               </div>
             </div>
           </div><!-- End Team Member -->
-<div class="col-lg-4 col-md-6 d-flex">
+
+          <div class="col-lg-4 col-md-6 d-flex">
             <div class="member">
-              <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+              <img src="../webapp/images/photo_2021-12-25_21-33-34.jpg" class="img-fluid" alt="">
               <div class="member-content">
-                <h4>William Anderson</h4>
+                <h4>TCD Ruberu – 23189</h4>
                 <span>Content</span>
-                <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                </p>
+                
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -253,7 +303,8 @@
           </div><!-- End Team Member -->
 
         </div>
-</div>
+
+      </div>
     </section><!-- End Our Team Section -->
 
     <!-- ======= Testimonials Section ======= -->
@@ -273,12 +324,13 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  I would highly recommend. They are great to work with. 
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
-<div class="swiper-slide">
+
+            <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
@@ -288,7 +340,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Very User Friendly and love it.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -304,41 +356,13 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
- <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                   site is beautiful! It is easy to navigate.and more helpful.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
+           
             </div><!-- End testimonial item -->
 
           </div>
@@ -347,7 +371,8 @@
 
       </div>
     </section><!-- End Testimonials Section -->
-<!-- ======= Frequently Asked Questions Section ======= -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
 
@@ -380,7 +405,7 @@
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
                     <i class="bi bi-question-circle question-icon"></i>
-                    What devices can I use with phnx airline Wi-Fi?
+                    What devices can I use with pheonix airline Wi-Fi?
                   </button>
                 </h3>
                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
@@ -448,7 +473,7 @@ These bookings must include one adult for every infant when booking online. This
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
-    <div class="container">
+    <div class="container">                                   
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
           <a href="index.html" class="logo d-flex align-items-center">
@@ -488,7 +513,7 @@ These bookings must include one adult for every infant when booking online. This
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
           <p>
-            colombo,NY 535022 <br>
+            colombo,535022 <br>
             Sri Lanka <br><br>
             <strong>Phone:</strong> +94 589 55488 55<br>
             <strong>Email:</strong> info@example.com<br>
