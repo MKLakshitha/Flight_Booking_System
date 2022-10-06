@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html dir="ltr" lang="en">        
 <%@page import="java.sql.*" %>
 <%@page import="com.Kavindu.*"%>
@@ -214,9 +214,6 @@
                                                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Tickets.jsp" aria-expanded="false"><i class="mdi mdi-ticket"></i><span
                                     class="hide-menu">Tickets</span></a></li>
-
-                        
-                        
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="StaffBooking.jsp" aria-expanded="false"><i class="mdi mdi-cart"></i><span
                                     class="hide-menu">User Bookings</span></a></li>
@@ -233,10 +230,13 @@
                                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="StaffApproved.jsp" aria-expanded="false"><i class="mdi mdi-account-settings-variant"></i><span
                                     class="hide-menu">Staff Approval</span></a></li>
-                                       <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="UserIP.jsp" aria-expanded="false"><i class="mdi mdi-cellphone-link"></i><span
                                     class="hide-menu">IP Checking/Last Login</span></a></li>
-<li class="text-center p-40 upgrade-btn">
+
+
+                        
+                        <li class="text-center p-40 upgrade-btn">
                             <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/"
                                 class="btn d-block w-100 btn-danger text-white" target="_blank">Tell Us</a>
                         </li>
@@ -270,7 +270,7 @@
                     <div class="col-6">
                         <div class="text-end upgrade-btn">
                             <a href="#popup1" class="btn btn-primary text-white"
-                                >Add a New Ticket</a>
+                                >Add a New Staff-G1</a>
                         </div>
                     </div>
                 </div>
@@ -306,7 +306,7 @@
         	
 
         			    
-        		    sql ="Select * from Tickets";
+        		    sql ="Select * from Users where role ='Staff(A)'";
         			
         			ResultSet rs = st.executeQuery(sql);
         			
@@ -319,8 +319,8 @@
                                         <!-- title -->
                                         <div class="d-md-flex">
                                             <div>
-                                                <h4 class="card-title">Ticket Details</h4>
-                                                <h5 class="card-subtitle" style="font-size:14px">Overview of Tickets</h5>
+                                                <h4 class="card-title">Staff Details</h4>
+                                                <h5 class="card-subtitle" style="font-size:14px">Overview of Staff Grade-1</h5>
                                             </div>
                                             <div class="ms-auto">
                                                 <div class="dl">
@@ -338,14 +338,16 @@
                                             <table class="table mb-0 table-hover align-middle text-nowrap" id="example">
                                                 <thead>
                                                     <tr>
-                                                    	<th class="border-top-0">Ticket ID</th>
-                                                        <th class="border-top-0">Depature</th>
-                                                        <th class="border-top-0">Destination</th>
-                                                        <th class="border-top-0">Date and Time</th>
-                                                        <th class="border-top-0">Class</th>
-                                                        <th class="border-top-0">Seats</th>
-                                                        <th class="border-top-0">Price</th>
+                                                    	<th class="border-top-0">Member ID</th>
+                                                        <th class="border-top-0">Name</th>
+                                                        <th class="border-top-0">Date of Birth</th>
+                                                        <th class="border-top-0">Phone</th>
+                                                        <th class="border-top-0">Email</th>
+                                                        <th class="border-top-0">Address</th>
+                                                        <th class="border-top-0">Country</th>
 														                                                <th class="border-top-0">Edit <i class="mdi mdi-ethernet-cable-off"></i></th>
+														                                                <th class="border-top-0">Actions <i class="mdi mdi-account-settings-variant"></i></th>
+													<th class="border-top-0">Actions <i class="mdi mdi-account-settings-variant"></i></th>
 												<th class="border-top-0">Delete <i class="mdi mdi-delete-circle"></i></th>
                                                         
 
@@ -422,23 +424,22 @@
                         
 <div id="popup2" class="overlay">
 	<div class="popup">
-		<h2 style="text-align:center; color:blue; font-weight:bold;">Update a Available Ticket Details</h2>
+		<h2 style="text-align:center; color:blue; font-weight:bold;">Update Staff Details</h2>
 		<a class="close" href="#">&times;</a>
 		<div class="content">
-			<form action="../../editTickets?id=<%=rs.getString("ticketID") %>" method="post" style="color:black; font-weight:bold;">
-			    <span style="color:black; font-weight:bold;">Depature</span><br>
-			    <input type="text" class="input-form" name="depature" ><br>
-			    			    					   <span style="color:black; font-weight:bold;"> Destination</span>	  <br>
-			    <input type="text" class="input-form" name="destination" ><br>
-			    	    <span style="color:black; font-weight:bold;">Date and Time</span><br>
-			    <input type="datetime-local" class="input-form" name="DateTime" ><br>
-			    		    <span style="color:black; font-weight:bold;">Class</span>	    <br>
-			    <input type="text" class="input-form" name="Class" ><br>
-			      <span style="color:black; font-weight:bold;">Seats</span>	    <br>
-			    <input type="text" class="input-form" name="seats" ><br>
-			    			    		    <span style="color:black; font-weight:bold;">Price</span><br>
-			     <input type="number" class="input-form" name="price" ><br>
-			    			    		 
+			<form action="../../editUsers?id=<%=rs.getString("memberID") %>" method="post" style="color:black; font-weight:bold;">
+			    <span style="color:black; font-weight:bold;">Name</span><br>
+			    <input type="text" class="input-form" name="name" ><br>
+			    			    					   <span style="color:black; font-weight:bold;">  Date of Birth</span>	  <br>
+			    <input type="date" class="input-form" name="dob" ><br>
+			    	    <span style="color:black; font-weight:bold;">Phone</span><br>
+			    <input type="number" class="input-form" name="phone" ><br>
+			    		    <span style="color:black; font-weight:bold;">Email</span>	    <br>
+			    <input type="email" class="input-form" name="email" ><br>
+			    			    		    <span style="color:black; font-weight:bold;">Address</span><br>
+			     <input type="text" class="input-form" name="address" ><br>
+			    			    		    <span style="color:black; font-weight:bold;">Country</span><br>
+			    <input type="text" class="input-form" name="country" id="myInput"><br>
 
 			    <input type="submit" style="width:370px; margin:5px;"class="btn btn-primary">
 			    
@@ -551,14 +552,14 @@ autocomplete(document.getElementById("myInput"), countries);
 			</script>
 			<style>
 			.input-form{
-			  padding:5px 0px 4px 15px;
+			  padding:5px 0px 3px 15px;
 			  margin:5px;
 			  width:370px;
 			  border-radius:5px;
 			  color:gray;
 			}
 						.input-form1{
-			  padding:5px 0px 2px 15px;
+			  padding:0px 0px 0px 15px;
 			  margin:5px;
 			  width:370px;
 			  border-radius:5px;
@@ -574,21 +575,25 @@ autocomplete(document.getElementById("myInput"), countries);
                                                         <td>
 
                                                               
-                                                        <label class="badge bg-primary"><%=rs.getString("ticketID") %></label>
+                                                        <label class="badge bg-primary"><%=rs.getString("memberID") %></label>
                                                                
                                                         </td>
                                                         
-                                                        <td><%=rs.getString("Depature") %></</td>
-                                                        <td><%=rs.getString("Destination") %></td>
-                                                        <td><%=rs.getString("DateTime") %></td>
+                                                        <td><%=rs.getString("name") %></</td>
+                                                        <td><%=rs.getString("dob") %></td>
+                                                        <td><%=rs.getString("phone") %></td>
                                                         <td>
-                                                            <label class="badge bg-success"><%=rs.getString("class") %></label>
+                                                            <label class="badge bg-success"><%=rs.getString("email") %></label>
                                                         </td>
-        											    <td><%=rs.getString("seats") %>
-                                                       </td>
-        												<td><h4 class="badge bg-warning" style="font-size:16px;">$<%=rs.getString("price") %>.00 U.S</h4></td>
+        											    <td><%=rs.getString("add1") %>
+                                                        <%=rs.getString("add2") %>
+                                                        <%=rs.getString("add3") %>
+        												<%=rs.getString("city") %></td>
+        												<td><h4 class="badge bg-warning" style="font-size:16px;"><%=rs.getString("country") %></h4></td>
         										     <td><a href="#popup2"><img src="../assets/img/icons8-edit-64.png" style="width:40px; height:40px;"></a></td>
-                                                <td><a href="../../DeleteTicket?id=<%=rs.getString("ticketID") %>" id=""><img src="../assets/img/icons8-delete-100.png" style="width:40px; height:40px;"></a></td>
+        										     		       <td><a href="../../MakeUser?id=<%=rs.getString("memberID") %>"><span style="padding:8px; color:#fff;font-weight:bold; background:blue; border-radius:10px;">Make User</span></a></td>
+        										       <td><a href="../../MakeG2?id=<%=rs.getString("memberID") %>"><span style="padding:8px; color:#fff;  font-weight:bold; background:blue; border-radius:10px;">Make (G-2)</span></a></td>
+                                                <td><a href="../../DeleteUsers?id=<%=rs.getString("memberID") %>" id=""><img src="../assets/img/icons8-delete-100.png" style="width:40px; height:40px;"></a></td>
                                                     </tr>
                                                     <% }%>
                                                 </tbody>
@@ -630,26 +635,26 @@ autocomplete(document.getElementById("myInput"), countries);
            
 <div id="popup1" class="overlay">
 	<div class="popup">
-		<h2 style="text-align:center; color:blue; font-weight:bold;"> New Ticket</h2>
+		<h2 style="text-align:center; color:blue; font-weight:bold;"> New Staff Member</h2>
 		<a class="close" href="#">&times;</a>
 		<div class="content">
-			<form action="../../newTicket" method="post" style="color:black; font-weight:bold;">
-			Ticket ID<br>
-			    <input type="number" class="input-form1" name="ticketID"><br>
-			    Depature<br>
-			    <input type="text" class="input-form1" name="Depature"><br>
-			    Destination<br>
-			    <input type="text" class="input-form1" name="Destination"><br>
-			    			    Date and Time<br>
-			    <input type="datetime-local" class="input-form1" name="DateTime"><br>
-			    			    Class<br>
-			    <input type="text" class="input-form1" name="Class"><br>
-			    Seats<br>
-			    <input type="number" class="input-form1" name="Seats"><br>
-			     Price<br>
-			    <input type="number" class="input-form1" name="Price"><br>
+			<form action="../../addUsers" method="post" style="color:black; font-weight:bold;">
+			MemberID<br>
+			    <input type="number" class="input-form1" name="MemberID"><br>
+			    Name<br>
+			    <input type="text" class="input-form1" name="name"><br>
+			    Date Of Birth<br>
+			    <input type="date" class="input-form1" name="dob"><br>
+			    			    Phone<br>
+			    <input type="number" class="input-form1" name="phone"><br>
+			    			    Email<br>
+			    <input type="email" class="input-form1" name="email"><br>
+			    Address<br>
+			    <input type="text" class="input-form1" name="address"><br>
+			     Country<br>
+			    <input type="text" class="input-form1" name="Country"><br>
 
-			 
+			   User <input type="radio" Style="margin:0px 30px 0px 5px;" name="role" value="User">Staff-Grade(2)<input type="radio" class="" Style="margin:0px 30px 0px 5px;"name="role" value="Staff">Staff-Grade(1)<input type="radio" class="" Style="margin:0px 0px 0px 5px;"name="role" value="Staff(A)"><br>
 			    				    
 			    <input type="submit" class="btn btn-primary" style="width:370px; margin:5px;">
 			</form>
@@ -726,6 +731,7 @@ function checkAll(bx) {
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
+
 
 
 </html>

@@ -209,8 +209,11 @@
                                 href="pages-profile.jsp" aria-expanded="false"><i
                                     class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="StaffDashboard.jsp" aria-expanded="false"><i class="mdi mdi-airplane"></i><span
+                                href="adminDashboard.jsp" aria-expanded="false"><i class="mdi mdi-airplane"></i><span
                                     class="hide-menu">Available Flights</span></a></li>
+                                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="Tickets.jsp" aria-expanded="false"><i class="mdi mdi-ticket"></i><span
+                                    class="hide-menu">Tickets</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="StaffBooking.jsp" aria-expanded="false"><i class="mdi mdi-cart"></i><span
                                     class="hide-menu">User Bookings</span></a></li>
@@ -221,9 +224,16 @@
                                                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Staff.jsp" aria-expanded="false"><i class="mdi mdi-account-star-variant"></i><span
                                     class="hide-menu">STAFF-Grade(2)</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="Tickets.jsp" aria-expanded="false"><i class="mdi mdi-ticket"></i><span
-                                    class="hide-menu">Tickets</span></a></li>
+                                                                          <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="Staff(sp).jsp" aria-expanded="false"><i class="mdi mdi-account-check"></i><span
+                                    class="hide-menu">STAFF-Grade(1)</span></a></li>
+                                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="StaffApproved.jsp" aria-expanded="false"><i class="mdi mdi-account-settings-variant"></i><span
+                                    class="hide-menu">Staff Approval</span></a></li>
+                                                                                                               <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="UserIP.jsp" aria-expanded="false"><i class="mdi mdi-cellphone-link"></i><span
+                                    class="hide-menu">IP Checking/Last Login</span></a></li>
+                       
 
                         
                         <li class="text-center p-40 upgrade-btn">
@@ -260,7 +270,7 @@
                     <div class="col-6">
                         <div class="text-end upgrade-btn">
                             <a href="#popup1" class="btn btn-primary text-white"
-                                >Add a New Staff</a>
+                                >Add a New Staff-G2</a>
                         </div>
                     </div>
                 </div>
@@ -336,6 +346,8 @@
                                                         <th class="border-top-0">Address</th>
                                                         <th class="border-top-0">Country</th>
 														                                                <th class="border-top-0">Edit <i class="mdi mdi-ethernet-cable-off"></i></th>
+														                                                <th class="border-top-0">Actions <i class="mdi mdi-account-settings-variant"></i></th>
+													<th class="border-top-0">Actions <i class="mdi mdi-account-settings-variant"></i></th>
 												<th class="border-top-0">Delete <i class="mdi mdi-delete-circle"></i></th>
                                                         
 
@@ -579,6 +591,8 @@ autocomplete(document.getElementById("myInput"), countries);
         												<%=rs.getString("city") %></td>
         												<td><h4 class="badge bg-warning" style="font-size:16px;"><%=rs.getString("country") %></h4></td>
         										     <td><a href="#popup2"><img src="../assets/img/icons8-edit-64.png" style="width:40px; height:40px;"></a></td>
+        										     		       <td><a href="../../MakeUser?id=<%=rs.getString("memberID") %>"><span style="padding:8px; color:#fff;font-weight:bold; background:blue; border-radius:10px;">Make User</span></a></td>
+        										       <td><a href="../../MakeG1?id=<%=rs.getString("memberID") %>"><span style="padding:8px; color:#fff;  font-weight:bold; background:blue; border-radius:10px;">Make (G-1)</span></a></td>
                                                 <td><a href="../../DeleteUsers?id=<%=rs.getString("memberID") %>" id=""><img src="../assets/img/icons8-delete-100.png" style="width:40px; height:40px;"></a></td>
                                                     </tr>
                                                     <% }%>

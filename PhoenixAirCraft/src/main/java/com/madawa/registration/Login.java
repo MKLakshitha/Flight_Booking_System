@@ -1,6 +1,7 @@
 package com.madawa.registration;
 
 import jakarta.servlet.RequestDispatcher;
+import java.net.InetAddress;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -15,6 +16,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.UUID;
+import java.util.*;
 
 /* Data from the Login.jsp will be validated here */
 /*
@@ -39,6 +41,13 @@ public class Login extends HttpServlet {
 		HttpSession sessionUser = request.getSession(true);
 		sessionUser.setAttribute("user",u_username);
 		sessionUser.setAttribute("MemberID",memberNo);
+		InetAddress myIP = null;
+		try {
+			 myIP = InetAddress.getLocalHost();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
 
 try {
 	        Statement st;
@@ -47,8 +56,10 @@ try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
 			st= (Statement) con.createStatement();
-
+			java.util.Date date = new java.util.Date();  
 		    sql ="select * from Users where memberID= '"+memberNo+"'";
+		    String qry= "Update Users set IP= '"+myIP.getHostAddress().toString()+"' , Hostname='"+myIP.getHostName()+"' , lastLogin='"+date.toString()+"' where memberID='"+memberNo+"'";
+		    st.executeUpdate(qry);
 		    RequestDispatcher dispatcher = null;
 		    ResultSet rs = st.executeQuery(sql);
 		    while(rs.next()) {
@@ -69,6 +80,10 @@ try {
 				dispatcher = request.getRequestDispatcher("login.jsp");
 				dispatcher.forward(request, response);
 			}
+		    
+		    String query="Update Users set status='pending' where memberID='"+memberNo+"'";
+		    st.executeUpdate(query);
+		    
 		   	 if(password.equals(pass)) {
 		        	 RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
 			     	 rd.forward(request,response);

@@ -239,8 +239,11 @@
                                 href="pages-profile.jsp" aria-expanded="false"><i
                                     class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="StaffDashboard.jsp" aria-expanded="false"><i class="mdi mdi-airplane"></i><span
+                                href="adminDashboard.jsp" aria-expanded="false"><i class="mdi mdi-airplane"></i><span
                                     class="hide-menu">Available Flights</span></a></li>
+                                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="Tickets.jsp" aria-expanded="false"><i class="mdi mdi-ticket"></i><span
+                                    class="hide-menu">Tickets</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="StaffBooking.jsp" aria-expanded="false"><i class="mdi mdi-cart"></i><span
                                     class="hide-menu">User Bookings</span></a></li>
@@ -251,9 +254,16 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Staff.jsp" aria-expanded="false"><i class="mdi mdi-account-star-variant"></i><span
                                     class="hide-menu">STAFF-Grade(2)</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="Tickets.jsp" aria-expanded="false"><i class="mdi mdi-ticket"></i><span
-                                    class="hide-menu">Tickets</span></a></li>
+                                                                           <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="Staff(sp).jsp" aria-expanded="false"><i class="mdi mdi-account-check"></i><span
+                                    class="hide-menu">STAFF-Grade(1)</span></a></li>
+                                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="StaffApproved.jsp" aria-expanded="false"><i class="mdi mdi-account-settings-variant"></i><span
+                                    class="hide-menu">Staff Approval</span></a></li>
+                                                                                                                                                   <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="UserIP.jsp" aria-expanded="false"><i class="mdi mdi-cellphone-link"></i><span
+                                    class="hide-menu">IP Checking/Last Login</span></a></li>
+                    
 
                         
                         <li class="text-center p-40 upgrade-btn">
