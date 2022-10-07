@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
@@ -46,8 +47,7 @@ public class DeleteUsers extends HttpServlet {
 		            sql= "Delete from Users where memberID = '"+id+"'";
 		            st.executeUpdate(sql);
 				
-				     
-				   response.sendRedirect("StaffDashboard(Grade-A)/html/Users.jsp");
+		            response.sendRedirect( "StaffDashboard(Grade-A)/html/Users.jsp");
 				    
 		            
 				    

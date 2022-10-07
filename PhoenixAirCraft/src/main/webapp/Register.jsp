@@ -5,7 +5,6 @@
 <head>
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<!-- help me -->
   <title>Phoenix Airline</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -26,7 +25,7 @@
   <!-- Vendor CSS Files -->
 
  
-  <!-- Template Main CSS File -->
+ 
     <link href="assets/css/main.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,12 +76,7 @@
     <script src="/flysmiles/Scripts/jquery.validate.js" type="text/javascript"></script>
     <link href="/flysmiles/Content/menu-min.css" rel="stylesheet" type="text/css">
     <link href="/flysmiles/Content/font-awesome.min.css" rel="stylesheet">
-    <!--[if IE 6]>
-    <style>
-    body {behavior: url("csshover3.htc");}
-    #menu li .drop {background:url("img/drop.gif") no-repeat right 8px; 
-    </style>	
-    <![endif]-->
+ 
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
     <script src="/flysmiles/Scripts/bootstrap.min.js" type="text/javascript"></script>
     <link href="/flysmiles/Content/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
@@ -142,8 +136,7 @@
 
 </head>
 
-<body background="assets/img/sky.jpeg" style="height:2200px;  background-repeat: no-repeat; background-size: 100% 100%;
-  ">
+<body background="assets/img/sky.jpeg" style="height:2200px;  background-repeat: no-repeat; background-size: 100% 100%; ">
     <div class="wrapper">
          <img src="assets/img/Phoenix.svg" alt="" style="margin:10px 0px 10px 30px; height:65px; width:65px;"><h2 class="joinnow"style=" margin-left:50px; margin-top:20px; width:1000px;">Join with Phoenix Airline</h2>
         <div class="inner-wrapper">

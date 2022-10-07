@@ -317,4 +317,24 @@
     <servlet-name>BlockUser</servlet-name>
     <url-pattern>/BlockUser</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteFlight</display-name>
+    <servlet-name>DeleteFlight</servlet-name>
+    <servlet-class>com.Kavindu.DeleteFlight</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteFlight</servlet-name>
+    <url-pattern>/DeleteFlight</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditFly</display-name>
+    <servlet-name>EditFly</servlet-name>
+    <servlet-class>com.Kavindu.EditFly</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditFly</servlet-name>
+    <url-pattern>/EditFly</url-pattern>
+  </servlet-mapping>
 </web-app>

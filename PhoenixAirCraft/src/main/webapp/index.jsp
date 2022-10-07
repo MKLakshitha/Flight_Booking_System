@@ -29,6 +29,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+      <link rel="stylesheet" href="static/css/chat.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -490,50 +493,6 @@ function autocomplete(inp, arr) {
       </div>
     </section><!-- End Featured Services Section -->
     <!-- ======= About Us Section ======= -->
-    <section id="about" class="about pt-0">
-  <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4">
-          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" >
-            <img src="assets/img/about.jpg" class="img-fluid" alt="" style="margin-top:100px;">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn" ></a>
-          </div>
-          <div class="col-lg-6 content order-last  order-lg-first">
-            <h3>About Us</h3>
-            <p style="color:black;">
-              Occasionally we have to interpret an international treaty - one, perhaps, affecting airlines and liability for injury to passengers or damage to goods. Then, of course, we have to look to the precedents of other member nations in resolving issues.At Phoenix Airlines, we have built a business around the love of travel that has lasted three-quarters of a century. And I'm pretty sure we were just getting started.</p>
-
-            <ul>
-              <li data-aos="fade-up" data-aos-delay="100">
-                <i class="bi bi-diagram-3"></i>
-                <div>
-                  <h5>Travelling with children</h5>
-                  <p style="color:black;">Offer the toys one at a time, replacing each toy with a fresh one once the child shows signs of boredom.</p>
-                </div>
-              </li>
-              <li data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-fullscreen-exit"></i>
-                <div>
-                  <h5>Special assistance</h5>
-                  <p style="color:black;">
-When you arrive at the airport you should go to as assistance point. This can be inside or outside of the terminal. Assistance points will usually have some type of disability related logo, and include a buzzer or telephone to enable you to call for assistance should they not be staffed at that time.</p>
-                </div>
-              </li>
-              <li data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-broadcast"></i>
-                <div>
-                  <h5>Payment options</h5>
-                  <p style="color:black;">Cash (bills and change): Cash is one of the most common ways to pay for purchases.
-</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Us Section -->
-
     <!-- ======= Stats Counter Section ======= -->
     <section id="stats-counter" class="stats-counter pt-0">
       <div class="container" data-aos="fade-up">
@@ -1009,10 +968,47 @@ These bookings must include one adult for every infant when booking online. This
   </footer>
 
   <!-- End Footer -->
+  <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+        <div class="content">
+            <div class="full-chat-block">
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp" style="color:black;"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1038,6 +1034,9 @@ These bookings must include one adult for every infant when booking online. This
          }
 
 	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
 </body>
 
 </html>

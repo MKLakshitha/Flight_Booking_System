@@ -9,19 +9,18 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- * Servlet implementation class DeleteBookings
+ * Servlet implementation class DeleteFlight
  */
-public class DeleteBookings extends HttpServlet {
+public class DeleteFlight extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DeleteBookings() {
+    public DeleteFlight() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,30 +32,29 @@ public class DeleteBookings extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 
-		try {
-			        Statement st;
-			        String sql;
-					String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
-					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con = DriverManager.getConnection(url,"root","Kavindu84");
-					st= (Statement) con.createStatement();
-					
-					String id = request.getParameter("id");
-				
-		            RequestDispatcher dispatcher=null;
-		            sql= "Delete from UserBookings where MemberID = '"+id+"'";
-		            st.executeUpdate(sql);
-				
-		           response.sendRedirect( "StaffDashboard(Grade-A)/html/StaffBooking.jsp");
-				    
-				    
-		            
-				    
+try {
+	        Statement st;
+	        String sql;
+			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
+			st= (Statement) con.createStatement();
+			
+			String id = request.getParameter("id");
+		
+            RequestDispatcher dispatcher=null;
+            sql= "Delete from Flights where id = '"+id+"'";
+            st.executeUpdate(sql);
+		
+		     
+		   response.sendRedirect("adminDashboard/html/adminDashboard.jsp");
+		    
+            
+		    
 
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
-
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
 	}
 
 	/**

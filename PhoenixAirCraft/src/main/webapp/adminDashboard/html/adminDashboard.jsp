@@ -476,7 +476,7 @@ try {
                                                     <h5  class="badge bg-danger" style="font-size:16px;">$<%=rs.getString("Price") %> U.S</h5>
                                                 </td>
                                                 <td><a href="#popup2"><img src="../assets/img/icons8-edit-64.png" style="width:40px; height:40px;"></a></td>
-                                                <td><a href="../../Delete?id=<%=rs.getString("id") %>" id=""><img src="../assets/img/icons8-delete-100.png" style="width:40px; height:40px;"></a></td>
+                                                <td><a href="../../DeleteFlight?id=<%=rs.getString("id") %>" id=""><img src="../assets/img/icons8-delete-100.png" style="width:40px; height:40px;"></a></td>
                                             
                                                                                             
 <div id="popup2" class="overlay">
@@ -484,7 +484,7 @@ try {
 		<h2 style="text-align:center; color:blue; font-weight:bold;">Update Flight Details</h2>
 		<a class="close" href="#">&times;</a>
 		<div class="content">
-			<form action="../../EditFlights?id=<%=rs.getString("id") %>" method="post" style="color:black; font-weight:bold;">
+			<form action="../../EditFly?id=<%=rs.getString("id") %>" method="post" style="color:black; font-weight:bold;">
 			    <span style="color:black; font-weight:bold;">Airline</span><br>
 			    <input type="text" class="input-form" name="Airline" ><br>
 			    	    <span style="color:black; font-weight:bold;">Depature</span><br>

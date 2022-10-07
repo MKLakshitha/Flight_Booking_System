@@ -440,7 +440,7 @@ font-size: 18px;
 line-height: 22px;
 
 color: #000000;">Name of passenger:
-Sample Name</div>
+<%=name %></div>
 <div style="position: absolute;
 width: 135px;
 height: 44px;

@@ -10,20 +10,18 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- * Servlet implementation class editBookings
+ * Servlet implementation class EditFly
  */
-@WebServlet("/editBokking")
-public class editBookings extends HttpServlet {
+public class EditFly extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public editBookings() {
+    public EditFly() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,15 +31,7 @@ public class editBookings extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 
 try {
 	        Statement st;
@@ -55,31 +45,33 @@ try {
 			String Depature = request.getParameter("Depature");
 			String Destination = request.getParameter("Destination");
 			String DateTime = request.getParameter("DateTime");
-			String Passengers = request.getParameter("Passengers");
-			String Total = request.getParameter("Total");
+			String Price = request.getParameter("Price");
 
             RequestDispatcher dispatcher=null;
             String id = request.getParameter("id");
 
-            sql= "Update UserBookings set Airline=?,Depature=?,Destination=?,Passengers=?,DateTime=?,Total=? where MemberID='"+id+"'";
+            sql= "Update Flights set Airline=?,Depature=?,Destination=?,Price=?,DateTime=? where id='"+id+"'";
 		   
 		     PreparedStatement ps = con.prepareStatement(sql);
 		    
 		    ps.setString(1,Airline);
 		    ps.setString(2,Depature);
 		    ps.setString(3,Destination);
-		    ps.setString(4,Passengers);
+		    ps.setString(4,Price);
 		    ps.setString(5,DateTime);
-		    ps.setString(6,Total);
 		    int i = ps.executeUpdate();
 		    if(i > 0)
 		    {
-		    	response.sendRedirect( "StaffDashboard(Grade-A)/html/StaffBooking.jsp");
+		    	
+			    	 response.sendRedirect( "adminDashboard/html/adminDashboard.jsp");
+			     
+			   
 		    }
 		    else
 		    {
-		      
-		    	response.sendRedirect("StaffDashboard(Grade-A)/html/StaffBooking.jsp");
+		      request.setAttribute("error","Invalid Updation Please Check Again!");
+			     RequestDispatcher rd = request.getRequestDispatcher("adminDashboard/html/pages-profile.jsp");
+			     rd.forward(request,response);
 		    } 
             
 		    
@@ -88,6 +80,14 @@ try {
 		e.printStackTrace();
 	}
 
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }
