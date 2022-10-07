@@ -128,7 +128,7 @@ try {
     </div>
   </header>  <!-- End Header -->
 
-  <main id="main">
+   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
@@ -137,7 +137,7 @@ try {
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
               <h2>Pricing</h2>
-              <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <p>GET 25% DISCOUNT ON YOUR NEXT ADVENTURE<Br>Fly with SriLankan Airlines, to any of our destinations</p>
             </div>
           </div>
         </div>
@@ -150,9 +150,6 @@ try {
           </ol>
         </div>
       </nav>
-    </div><!-- End Breadcrumbs -->
-
-    <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
 
@@ -163,11 +160,11 @@ try {
               <h3>Free Plan</h3>
               <h4><sup>$</sup>0<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                <li><i class="bi bi-check"></i> Industry-leading ticketing system</li>
+                <li><i class="bi bi-check"></i> Messaging across web, mobile and social</li>
+                <li><i class="bi bi-check"></i> Email, voice, SMS, and live chat support</li>
+                <li class="na"><i class="bi bi-x"></i> <span>Service Level Agreement (SLA) management</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>+Extra Services</span></li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -178,11 +175,11 @@ try {
               <h3>Business Plan</h3>
               <h4><sup>$</sup>29<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
+                <li><i class="bi bi-check"></i> Industry-leading ticketing system</li>
+                <li><i class="bi bi-check"></i> Messaging across web, mobile and social</li>
+                <li><i class="bi bi-check"></i> Email, voice, SMS, and live chat support</li>
+                <li><i class="bi bi-check"></i> Service Level Agreement (SLA) management</li>
+                <li><i class="bi bi-check"></i> +Extra Services</li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -193,11 +190,11 @@ try {
               <h3>Developer Plan</h3>
               <h4><sup>$</sup>49<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
+                <li><i class="bi bi-check"></i> Industry-leading ticketing system</li>
+                <li><i class="bi bi-check"></i> Messaging across web, mobile and social</li>
+                <li><i class="bi bi-check"></i> Email, voice, SMS, and live chat support</li>
+                <li><i class="bi bi-check"></i> Service Level Agreement (SLA) management</li>
+                <li><i class="bi bi-check"></i> +Extra Services</li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -206,90 +203,27 @@ try {
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section><!-- End Pricing Section -->  </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Horizontal Pricing Section ======= -->
-    <section id="horizontal-pricing" class="horizontal-pricing pt-0">
-      <div class="container" data-aos="fade-up">
+    <!-- ======= Pricing Section ======= -->
+  
 
-        <div class="section-header">
-          <span>Horizontal Pricing</span>
-          <h2>Horizontal Pricing</h2>
-
-        </div>
-
-        <div class="row gy-4 pricing-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Free Plan</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>0<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-              <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="row gy-4 pricing-item featured mt-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Business Plan</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>29<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bi bi-check"></i> <strong>Nec feugiat nisl pretium</strong></li>
-              <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="row gy-4 pricing-item mt-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Developer Plan</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>49<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-      </div>
-    </section><!-- End Horizontal Pricing Section -->
+   
 
   </main><!-- End #main -->
-
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
-    <div class="container">
+    <div class="container">                                   
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span>Logis</span>
+          <a href="about.jsp" class="logo d-flex align-items-center">
+            <span>About</span>
+            
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                    <img src="assets/img/Phoenix.svg" style="width:100px; height:100px; margin:30px 0px 30px 0px;">
+          <p>Occasionally we have to interpret an international treaty - one, perhaps, affecting airlines and liability for injury to passengers or damage to goods. Then, of course, we have to look to the precedents of other member nations in resolving issues.At Phoenix Airlines, we have built a business around the love of travel that has lasted three-quarters of a century. And I'm pretty sure we were just getting started.</p>
+
           <div class="social-links d-flex mt-4">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -300,7 +234,7 @@ try {
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
-          <ul>
+          <ul  >
             <li><a href="#">Home</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Services</a></li>
@@ -312,22 +246,21 @@ try {
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Touring</a></li>
+            <li><a href="#">Cargo Service</a></li>
+            <li><a href="#">Best Deals</a></li>
+            <li><a href="#">24/hr call center</a></li>
+            <li><a href="#">Care and sharing hands</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
           <p>
-            A108 Adam Street <br>
-            New York, NY 535022<br>
-            United States <br><br>
-            <strong>Phone:</strong> +1 5589 55488 55<br>
-            <strong>Email:</strong> info@example.com<br>
+            colombo,535022 <br>
+            Sri Lanka <br><br>
+            <strong>Phone:</strong> +94 589 55488 55<br>
+            <strong>Email:</strong> Phoenix.com/en_uk/lk<br>
           </p>
 
         </div>
@@ -337,18 +270,18 @@ try {
 
     <div class="container mt-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Phoenix Air Line</span></strong>. All Rights Reserved<img src="assets/img/Phoenix.svg" style="margin-left:10px;width:30px; height:30px;">
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="index.jsp">Phoenix Airlines</a>
       </div>
     </div>
 
-  </footer><!-- End Footer -->
+  </footer>
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

@@ -106,20 +106,24 @@ try {
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.jsp">Home</a></li>
-          <li><a href="Flights.jsp">Flight</a></li>
-       
-          <li><a href=<%=role %> class="active">Dashboard</a></li>
-          <li class="dropdown"><a href="about.jsp"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+          <li><a href="../../index.jsp" >Home</a></li>
+          <li><a href="../../Flights.jsp">Flight</a></li>
+
+          <li><a href="<%=role %>" class="active">Dashboard</a></li>
+          <li class="dropdown"><a href="../../about.jsp"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-				<li><a href="index.jsp">Phoenix Airline</a></li>
-              <li><a href="pricing.jsp">Offers</a></li>
-              <li><a href="services.jsp">Services</a></li>       
-              <li><a href="contact.jsp">Contact Us</a></li>  
-              <li><a  href="get-a-quote.jsp">Get a Quote</a></li>
+				<li><a href="../about.html">Phoenix Airline</a></li>
+              <li><a href="../pricing.html">Offers</a></li>
+              <li><a href="../services.html">Services</a></li>       
+              <li><a href="../contact.html">Contact Us</a></li>  
+              <li><a  href="../get-a-quote.html">Get a Quote</a></li>
 
             </ul>
+          </li>            
+
+            </ul>
+
           </li>
           <%
 			
@@ -132,7 +136,7 @@ try {
 
           %>
          
-               <li class="dropdown" style="margin-top:17px;"> <a href="myAccount.jsp"><span>Hi,<%=user %></span><img  src="../assets/images/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
+               <li class="dropdown" style="margin-bottom:20px;"> <a href="myAccount.jsp"><span>Hi,<%=user %></span><img  src="../assets/images/icons8-male-user-50.png" alt="" style="visibility:visible; width:35px;height:35px; margin-left:5px;  color:blue;"><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                <a href="#"> </a>
                            <ul>
 				<li><a href="UserDashboard/html/pages-profile.jsp">Manage Account</a></li>

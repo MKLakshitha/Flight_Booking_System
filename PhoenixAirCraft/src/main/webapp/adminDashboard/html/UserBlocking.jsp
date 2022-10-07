@@ -74,17 +74,17 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="../..//index.jsp">Home</a></li>
+          <li><a href="../../index.jsp" >Home</a></li>
           <li><a href="../../Flights.jsp">Flight</a></li>
-          <li><a href="services.html">Tickets</a></li>
-          <li><a href="UserDashboard.jsp" class="active">Dashboard</a></li>
-          <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+
+          <li><a href="adminDashboard/html/adminDashboard.jsp" class="active">Dashboard</a></li>
+          <li class="dropdown"><a href="../../about.jsp"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-				<li><a href="about.html">Phoenix Airline</a></li>
-              <li><a href="pricing.html">Offers</a></li>
-              <li><a href="services.html">Services</a></li>       
-              <li><a href="contact.html">Contact Us</a></li>  
-              <li><a  href="get-a-quote.html">Get a Quote</a></li>
+				<li><a href="../about.html">Phoenix Airline</a></li>
+              <li><a href="../pricing.html">Offers</a></li>
+              <li><a href="../services.html">Services</a></li>       
+              <li><a href="../contact.html">Contact Us</a></li>  
+              <li><a  href="../get-a-quote.html">Get a Quote</a></li>
 
             </ul>
           </li>            

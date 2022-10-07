@@ -74,23 +74,24 @@
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
-        <ul>
+       <ul>
           <li><a href="../../index.jsp" >Home</a></li>
           <li><a href="../../Flights.jsp">Flight</a></li>
-          <li><a href="services.html">Tickets</a></li>
-          <li><a href="UserDashboard/html/UserDashboard.jsp" class="active">Dashboard</a></li>
-          <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+
+          <li><a href="StaffDashboard(Grade-A)/html/StaffDashboard.jsp" class="active">Dashboard</a></li>
+          <li class="dropdown"><a href="../../about.jsp"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-				<li><a href="about.html">Phoenix Airline</a></li>
-              <li><a href="pricing.html">Offers</a></li>
-              <li><a href="services.html">Services</a></li>       
-              <li><a href="contact.html">Contact Us</a></li>  
-              <li><a  href="get-a-quote.html">Get a Quote</a></li>
+				<li><a href="../about.html">Phoenix Airline</a></li>
+              <li><a href="../pricing.html">Offers</a></li>
+              <li><a href="../services.html">Services</a></li>       
+              <li><a href="../contact.html">Contact Us</a></li>  
+              <li><a  href="../get-a-quote.html">Get a Quote</a></li>
 
             </ul>
           </li>            
 
             </ul>
+
                          <%
           HttpSession sessionUser = request.getSession(false);
           String user= sessionUser.getAttribute("user").toString();

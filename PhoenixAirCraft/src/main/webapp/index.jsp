@@ -87,7 +87,7 @@ try {
           <li><a href="Flights.jsp">Flight</a></li>
        
           <li><a href=<%=role %>>Dashboard</a></li>
-          <li class="dropdown"><a href="about.html"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="about.jsp"><span>About Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
 				<li><a href="index.jsp">Phoenix Airline</a></li>
               <li><a href="pricing.jsp">Offers</a></li>
@@ -452,7 +452,7 @@ function autocomplete(inp, arr) {
   <main id="main">
 
     <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
+     <section id="featured-services" class="featured-services">
       <div class="container">
 
         <div class="row gy-4">
@@ -461,7 +461,7 @@ function autocomplete(inp, arr) {
             <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
             <div>
               <h4 class="title">Bag</h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <p class="description">Those who need to store baggage temporarily can use the secure short-term baggage storage facility on Level 5 of Terminal</p>
               <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -470,8 +470,8 @@ function autocomplete(inp, arr) {
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
             <div>
-              <h4 class="title">Dolor Sitema</h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title">Meals</h4>
+              <p class="description">An airline meal, airline food, or in-flight meal is a meal served to passengers on board a commercial airliner. These meals are prepared by specialist airline catering services and normally served to passengers using an airline service trolley.</p>
               <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
@@ -479,8 +479,8 @@ function autocomplete(inp, arr) {
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
             <div>
-              <h4 class="title">Sed ut perspiciatis</h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4 class="title">checked baggages </h4>
+              <p class="description">as a service we take the responsibility of all the passengers. so we do check every baggages by our Airline as a service for the passengers.</p>
               <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
@@ -489,41 +489,42 @@ function autocomplete(inp, arr) {
 
       </div>
     </section><!-- End Featured Services Section -->
-
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about pt-0">
-      <div class="container" data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
 
         <div class="row gy-4">
-          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" >
+            <img src="assets/img/about.jpg" class="img-fluid" alt="" style="margin-top:100px;">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn" ></a>
           </div>
           <div class="col-lg-6 content order-last  order-lg-first">
             <h3>About Us</h3>
-            <p>
-              Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.
-            </p>
+            <p style="color:black;">
+              Occasionally we have to interpret an international treaty - one, perhaps, affecting airlines and liability for injury to passengers or damage to goods. Then, of course, we have to look to the precedents of other member nations in resolving issues.At Phoenix Airlines, we have built a business around the love of travel that has lasted three-quarters of a century. And I'm pretty sure we were just getting started.</p>
+
             <ul>
               <li data-aos="fade-up" data-aos-delay="100">
                 <i class="bi bi-diagram-3"></i>
                 <div>
-                  <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                  <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+                  <h5>Travelling with children</h5>
+                  <p style="color:black;">Offer the toys one at a time, replacing each toy with a fresh one once the child shows signs of boredom.</p>
                 </div>
               </li>
               <li data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-fullscreen-exit"></i>
                 <div>
-                  <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                  <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+                  <h5>Special assistance</h5>
+                  <p style="color:black;">
+When you arrive at the airport you should go to as assistance point. This can be inside or outside of the terminal. Assistance points will usually have some type of disability related logo, and include a buzzer or telephone to enable you to call for assistance should they not be staffed at that time.</p>
                 </div>
               </li>
               <li data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-broadcast"></i>
                 <div>
-                  <h5>Voluptatem et qui exercitationem</h5>
-                  <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
+                  <h5>Payment options</h5>
+                  <p style="color:black;">Cash (bills and change): Cash is one of the most common ways to pay for purchases.
+</p>
                 </div>
               </li>
             </ul>
@@ -533,6 +534,46 @@ function autocomplete(inp, arr) {
       </div>
     </section><!-- End About Us Section -->
 
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter pt-0">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Services Section ======= -->
     <!-- ======= Services Section ======= -->
     <section id="service" class="services pt-0">
       <div class="container" data-aos="fade-up">
@@ -551,7 +592,8 @@ function autocomplete(inp, arr) {
                 <img src="assets/img/storage-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Storage</a></h3>
-              <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus itaqueofficiis odit</p>
+              <p>The schedule of all maintenance tasks and repetitive ground checks (together with the corresponding Job Cards) as specified in the Airbus documentation during 
+                aircraft parking and storage can assist operators in this activity.</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -561,7 +603,8 @@ function autocomplete(inp, arr) {
                 <img src="assets/img/logistics-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Logistics</a></h3>
-              <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt molestiae dolor ipsam ducimus occaecati nisi</p>
+              <p>Logistics management and aviation are two of the most crucial areas of growth in companies throughout Texas and the United States. NAFTA, Alliance Airport, Love Field and the expansion of D/FW International 
+                Airport make the Dallas/Fort Worth metroplex a major force in the aviation logistics field.</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -571,7 +614,9 @@ function autocomplete(inp, arr) {
                 <img src="assets/img/cargo-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Cargo</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+              <p>When looking at the various types of cargo transported by air, they fall into two main groups: General Cargo and Special Cargo.
+                Special Cargo is then divided up into smaller specialized sub-groups.
+                It is these specialized sub-groups we will take a much closer look at further on.</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -581,7 +626,9 @@ function autocomplete(inp, arr) {
                 <img src="assets/img/trucking-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Trucking</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+              <p>To provide greater convenience to our express air customers, Polar offers scheduled trucking services.
+                Forward cargo quickly and dependably—from air to ground to final destination—using a single carrier.
+                Our trucking fleet features GPS tracking systems, roller bed floors, dry vans, and refrigerated trucks. Our services include:</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -591,7 +638,9 @@ function autocomplete(inp, arr) {
                 <img src="assets/img/packaging-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Packaging</a></h3>
-              <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur maiores beatae consequatur magni voluptates</p>
+              <p>Packaging offers strength and durability that are demanded during transportation. 
+                Tex Year has kept paying effort to R&D and innovation in order to assure the workable packaging on products,
+                 stability, safety, and the consistence which is not compromised by temperature or weight variation. </p>
             </div>
           </div><!-- End Card Item -->
 
@@ -601,14 +650,15 @@ function autocomplete(inp, arr) {
                 <img src="assets/img/warehousing-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Warehousing</a></h3>
-              <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
+              <p>As part of our laundry and logistics screening facility, we offer warehousing and supply chain management services to airlines.
+                We operate a bonded warehouse providing you with confidence that your supplies are as secure as they would be in an airside facility.</p>
             </div>
           </div><!-- End Card Item -->
 
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section><!-- End Services Section -->    <!-- ======= Call To Action Section ======= -->
 
     <!-- ======= Call To Action Section ======= -->
     <section id="call-to-action" class="call-to-action">
@@ -617,7 +667,7 @@ function autocomplete(inp, arr) {
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
             <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>We would be more than happy to help you. If you are unable to find what you are looking for here, please call</p>
             <a class="cta-btn" href="#">Call To Action</a>
           </div>
         </div>
@@ -626,6 +676,7 @@ function autocomplete(inp, arr) {
     </section><!-- End Call To Action Section -->
 
     <!-- ======= Features Section ======= -->
+        <!-- ======= Features Section ======= -->
     <section id="features" class="features">
       <div class="container">
 
@@ -635,15 +686,14 @@ function autocomplete(inp, arr) {
             <img src="assets/img/features-1.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Best Customer Service</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+          
             </p>
-            <ul>
-              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+            <ul style="color:black;">
+              <li><i class="bi bi-check"></i>24 hr care and sefety. </li>
+              <li><i class="bi bi-check"></i>Kindness and unblievable support to Passengers. </li>
+              <li><i class="bi bi-check"></i>Just having satisfied customers isn't good enough anymore</li>
             </ul>
           </div>
         </div><!-- Features Item -->
@@ -653,64 +703,19 @@ function autocomplete(inp, arr) {
             <img src="assets/img/features-2.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1">
-            <h3>Corporis temporibus maiores provident</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div><!-- Features Item -->
-
-        <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
-          <div class="col-md-5">
-            <img src="assets/img/features-3.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-            <ul>
-              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+            <h3>Best Home Delivery Service</h3>  
+                        <ul style="color:black;">
+              <li><i class="bi bi-check"></i>100% Guranteed. </li>
+              <li><i class="bi bi-check"></i>Safety and Durable. </li>
+            
             </ul>
-          </div>
+                   
         </div><!-- Features Item -->
-
-        <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
-          <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/features-4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 order-2 order-md-1">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div><!-- Features Item -->
-
       </div>
     </section><!-- End Features Section -->
-
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing pt-0">
+     <section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <span>Pricing</span>
-          <h2>Pricing</h2>
-
-        </div>
 
         <div class="row gy-4">
 
@@ -719,11 +724,11 @@ function autocomplete(inp, arr) {
               <h3>Free Plan</h3>
               <h4><sup>$</sup>0<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                <li><i class="bi bi-check"></i> Industry-leading ticketing system</li>
+                <li><i class="bi bi-check"></i> Messaging across web, mobile and social</li>
+                <li><i class="bi bi-check"></i> Email, voice, SMS, and live chat support</li>
+                <li class="na"><i class="bi bi-x"></i> <span>Service Level Agreement (SLA) management</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>+Extra Services</span></li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -734,11 +739,11 @@ function autocomplete(inp, arr) {
               <h3>Business Plan</h3>
               <h4><sup>$</sup>29<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
+                <li><i class="bi bi-check"></i> Industry-leading ticketing system</li>
+                <li><i class="bi bi-check"></i> Messaging across web, mobile and social</li>
+                <li><i class="bi bi-check"></i> Email, voice, SMS, and live chat support</li>
+                <li><i class="bi bi-check"></i> Service Level Agreement (SLA) management</li>
+                <li><i class="bi bi-check"></i> +Extra Services</li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -749,11 +754,11 @@ function autocomplete(inp, arr) {
               <h3>Developer Plan</h3>
               <h4><sup>$</sup>49<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
+                <li><i class="bi bi-check"></i> Industry-leading ticketing system</li>
+                <li><i class="bi bi-check"></i> Messaging across web, mobile and social</li>
+                <li><i class="bi bi-check"></i> Email, voice, SMS, and live chat support</li>
+                <li><i class="bi bi-check"></i> Service Level Agreement (SLA) management</li>
+                <li><i class="bi bi-check"></i> +Extra Services</li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -765,7 +770,7 @@ function autocomplete(inp, arr) {
     </section><!-- End Pricing Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+<section id="testimonials" class="testimonials">
       <div class="container">
 
         <div class="slides-1 swiper" data-aos="fade-up">
@@ -773,15 +778,15 @@ function autocomplete(inp, arr) {
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <img src="images/Kavindu.png" class="testimonial-img" alt="">
+                <h3>Kavindu Lakshitha</h3>
+                <h4>Ceo &amp;Phoenix Air line</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  I would highly recommend. They are great to work with. 
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -789,15 +794,15 @@ function autocomplete(inp, arr) {
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <img src="images/madawa.png" class="testimonial-img" alt="">
+                <h3>Madawa de Silva</h3>
+                <h4>Operations manager</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Very User Friendly and love it.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -805,50 +810,21 @@ function autocomplete(inp, arr) {
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <img src="images/Ridmi.png" class="testimonial-img" alt="">
+                <h3>Ridmi Bandara</h3>
+                <h4>Receptionist</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                   site is beautiful! It is easy to navigate.and more helpful.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
+           
             </div><!-- End testimonial item -->
 
           </div>
@@ -859,7 +835,7 @@ function autocomplete(inp, arr) {
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq">
+<section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -877,12 +853,12 @@ function autocomplete(inp, arr) {
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Non consectetur a erat nam at lectus urna duis?
+                    What can I use pheonix airline Wi-Fi for?
                   </button>
                 </h3>
                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    You can use SriLankan's in-flight wi-fi network to surf the internet, use email, instant messaging and social networking like you would on ground.
                   </div>
                 </div>
               </div><!-- # Faq item-->
@@ -891,12 +867,19 @@ function autocomplete(inp, arr) {
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                    What devices can I use with pheonix airline Wi-Fi?
                   </button>
                 </h3>
                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Card types available are Visa, Master, AMEX, JCB CUP, MAESTRO  
+                    Some card types will be shown only for applicable payment currencies
+                    Supported currencies for each card type are as follows.  
+                    JCB - USD, EUR, THB, GBP, CHF, HKD, SDG, JPY
+                    Maestro – GBP, EUR, SGD, USD, JPY, HKD, MYR, THB, SAR, AED, QAR, KWD, CHF
+                    AMEX – LKR, GBP, EUR, SGD, USD, JPY, HKD, MYR, THB, SAR, AED, QAR, KWD, CHF
+                    UnionPay - USD, CNY, HKD (only for flights departing China & Hong Kong)
+                    
                   </div>
                 </div>
               </div><!-- # Faq item-->
@@ -905,12 +888,14 @@ function autocomplete(inp, arr) {
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                    Can my child travel alone on a pheonix Airlins Flight?
                   </button>
                 </h3>
                 <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    Children between the ages of 5 and 16 travelling alone are classified as Unaccompanied Minors. When booking a ticket for an unaccompanied minor,
+                     please make sure that you keep the airline alerted to ensure that special arrangements are made for the care of the Unaccompanied Minor during their travel.
+                     Tickets for Unaccompanied minors cannot be purchased online. Please contact nearest ticket office, global call center in such instances.
                   </div>
                 </div>
               </div><!-- # Faq item-->
@@ -919,31 +904,24 @@ function autocomplete(inp, arr) {
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                    What is the classification for Adult, Young Adult, Child, and Infant?
                   </button>
                 </h3>
                 <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Young adults (12-15 years of age and before reaching the 16th birthday)
+These bookings must include an adult when booking online. Young adults can travel alone but these flights can only be booked through our Global Contact Center or at your nearest ticket office
+
+Children (under 12 years and between age 2 and 11 years)
+Cannot travel alone and these bookings must include an adult.
+
+Infants (under 2 years of age)
+These bookings must include one adult for every infant when booking online. This is because infants are seated on an adult’s lap instead of getting their own seats. Please contact us via our Global Contact Center or through your nearest ticket office.
+
                   </div>
                 </div>
               </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-                  </button>
-                </h3>
-                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
             </div>
 
           </div>
@@ -955,15 +933,22 @@ function autocomplete(inp, arr) {
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
+    <div>
+          <iframe style="border:0; width: 100%; height: 340px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5757962996736!2d80.03938421482283!3d6.821334421521578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2523b05555555%3A0x546c34cd99f6f488!2sNSBM%20Green%20University!5e0!3m2!1sen!2slk!4v1665120632620!5m2!1sen!2slk" " frameborder="0" allowfullscreen></iframe>
+        </div><!-- End Google Maps -->
+  
   <footer id="footer" class="footer">
 
-    <div class="container">
+    <div class="container">                                   
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span>Logis</span>
+          <a href="about.jsp" class="logo d-flex align-items-center">
+            <span>About</span>
+            
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                    <img src="assets/img/Phoenix.svg" style="width:100px; height:100px; margin:30px 0px 30px 0px;">
+          <p>Occasionally we have to interpret an international treaty - one, perhaps, affecting airlines and liability for injury to passengers or damage to goods. Then, of course, we have to look to the precedents of other member nations in resolving issues.At Phoenix Airlines, we have built a business around the love of travel that has lasted three-quarters of a century. And I'm pretty sure we were just getting started.</p>
+
           <div class="social-links d-flex mt-4">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -974,7 +959,7 @@ function autocomplete(inp, arr) {
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
-          <ul>
+          <ul  >
             <li><a href="#">Home</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Services</a></li>
@@ -986,22 +971,21 @@ function autocomplete(inp, arr) {
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Touring</a></li>
+            <li><a href="#">Cargo Service</a></li>
+            <li><a href="#">Best Deals</a></li>
+            <li><a href="#">24/hr call center</a></li>
+            <li><a href="#">Care and sharing hands</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
           <p>
-            A108 Adam Street <br>
-            New York, NY 535022<br>
-            United States <br><br>
-            <strong>Phone:</strong> +1 5589 55488 55<br>
-            <strong>Email:</strong> info@example.com<br>
+            colombo,535022 <br>
+            Sri Lanka <br><br>
+            <strong>Phone:</strong> +94 589 55488 55<br>
+            <strong>Email:</strong> Phoenix.com/en_uk/lk<br>
           </p>
 
         </div>
@@ -1011,18 +995,19 @@ function autocomplete(inp, arr) {
 
     <div class="container mt-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Phoenix Air Line</span></strong>. All Rights Reserved<img src="assets/img/Phoenix.svg" style="margin-left:10px;width:30px; height:30px;">
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="index.jsp">Phoenix Airlines</a>
       </div>
     </div>
 
-  </footer><!-- End Footer -->
+  </footer>
+
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

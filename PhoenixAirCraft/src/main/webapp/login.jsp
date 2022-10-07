@@ -99,9 +99,13 @@
 		else if(status=="invalidPsswd"){
 			swal("Enter a password", "Empty Field", "error");
 		}
+		else if(status=="pending"){
+			swal("Wait until admin to Approve Your Account", "", "error");
+		}
 		else if(status=="resetSuccess"){
 			swal("Password Reset Successful", "", "success");
 		}
+		
 		else if(status=="resetFailed"){
 			swal("Password Reset Faied", "", "error");
 		}

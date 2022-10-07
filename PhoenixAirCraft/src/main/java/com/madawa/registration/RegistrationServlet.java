@@ -65,8 +65,16 @@ try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
 			st= (Statement) con.createStatement();
-
-		    sql ="Insert into Users values ('"+memberID+"','"+name+"','"+password+"','"+DOB+"','"+Phone+"','"+email+"','"+add1+"','"+add2+"','"+add3+"','"+city+"','"+state+"','"+country+"','"+role+"')";
+			String encrypt ="";
+             char [] chars = password.toCharArray();
+             for (char c : chars) {
+            	 c+=3;
+            	 encrypt+=c;
+             }
+             HttpSession encryption = request.getSession(true);
+             encryption.setAttribute("encrypt",encrypt);
+             
+		    sql ="Insert into Users(memberID,name,password,dob,phone,email,add1,add2,add3,city,state,country,role,status) values ('"+memberID+"','"+name+"','"+encrypt+"','"+DOB+"','"+Phone+"','"+email+"','"+add1+"','"+add2+"','"+add3+"','"+city+"','"+state+"','"+country+"','"+role+"','pending')";
 			
 		    st.executeUpdate(sql);
 }catch(Exception e) {

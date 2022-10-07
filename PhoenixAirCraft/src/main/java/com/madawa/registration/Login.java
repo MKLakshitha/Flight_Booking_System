@@ -51,7 +51,7 @@ public class Login extends HttpServlet {
 
 try {
 	        Statement st;
-	        String sql,pass = null;
+	        String sql,pass = null,status=null,role=null;
 			String url="jdbc:mysql://localhost:3306/Phoenix_Airline_System?useSSL=false&allowPublicKeyRetrieval=True";
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,"root","Kavindu84");
@@ -64,6 +64,8 @@ try {
 		    ResultSet rs = st.executeQuery(sql);
 		    while(rs.next()) {
 		    	 pass = rs.getString("password");
+		    	 status = rs.getString("status");
+		    	 role =rs.getString("role");
 		    }
 		    if (u_username == null || u_username.equals("")) {
 				request.setAttribute("status", "invalidUsn");
@@ -80,11 +82,23 @@ try {
 				dispatcher = request.getRequestDispatcher("login.jsp");
 				dispatcher.forward(request, response);
 			}
+		    if (role.equals("Staff")&&status.equals("pending")) {
+				request.setAttribute("status", "pending");
+				dispatcher = request.getRequestDispatcher("login.jsp");
+				dispatcher.forward(request, response);
+			}
 		    
-		    String query="Update Users set status='pending' where memberID='"+memberNo+"'";
-		    st.executeUpdate(query);
+		    //String query="Update Users set status='pending' where memberID='"+memberNo+"'";
+		    //st.executeUpdate(query);
+		    String decrypt="";
+            char[] charset = pass.toCharArray();
+            for(char f : charset){
+                f-=3;
+                decrypt+=f;
+            }
 		    
-		   	 if(password.equals(pass)) {
+          
+		   	 if(password.equals(decrypt)) {
 		        	 RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
 			     	 rd.forward(request,response);
 		     }else {
