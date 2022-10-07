@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body
+{
+    position: absolute;
+    width: 1440px;
+    height: 768px;
+
+    background-size: 1440px 768px;
+    
+}
+
+.box
+{
+    position: absolute;
+    width: 1078px;
+    height: 531px;
+    left: 150px;
+    top: 70px;
+    background: rgba(212, 237, 248, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+ .box-img
+{
+    position: absolute;
+    width: 428px;
+    height: 530px;
+    left: 150px;
+    top: 70px;
+    
+    border-radius: 15px 0px 0px 15px;
+    background-size: 428px 530px;
+
+} 
+
+.container
+{
+    position: absolute;
+    width: 522px;
+    height: 473px;
+    left: 500px;
+    top: 30px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.user
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 250px;
+    top: 25px;
+}
+
+.userimage{
+    color: #0000FF;
+}
+
+.login
+{
+    position: absolute;
+    width: 173px;
+    height: 29px;
+    left: 175px;
+    top: 45px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+/* identical to box height */
+
+
+    color: #050555;
+
+}
+.form
+{
+    position: absolute;
+    width: 451px;
+    height: 167px;
+
+}
+
+.inputBox1
+{
+    box-sizing: border-box;
+    position: absolute;
+    width: 210px;
+    height: 29px;
+    left: 185px;
+    top: 50px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: none;
+}
+
+.inputBox2
+{
+    box-sizing: border-box;
+    position: absolute;
+    width: 210px;
+    height: 29px;
+    left: 185px;
+    top: 95px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-style: none;
+
+}
+
+.memberno
+{
+    position: absolute;
+    width: 143px;
+    height: 17px;
+    left: 16px;
+    top: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+/* identical to box height */
+
+
+    color: #000000;
+
+}
+
+.password
+{
+    position: absolute;
+    width: 67px;
+    height: 17px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+/* identical to box height */
+
+
+    color: #000000;
+
+}
+
+.checkBox
+{
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    
+    background: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.signed
+{
+    position: absolute;
+    width: 106px;
+    height: 15px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #3F3C3C;
+
+}
+.forget
+{
+    position: absolute;
+width: 138px;
+height: 15px;
+
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #0000FF;
+
+}
+
+.inputBox
+{
+    box-sizing: border-box;
+    position: absolute;
+    width: 110px;
+    height: 26px;
+    left: 280px;
+    top: 250px;
+    color: #FFFFFF;
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.join
+{
+    position: absolute;
+    width: 171px;
+    height: 17px;
+    left: 137px;
+    top: 300px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #000000;
+
+}
